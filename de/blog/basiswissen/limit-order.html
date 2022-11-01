@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wie funktioniert eine Börsenampel?</title>
+    <meta name="description" content="Du legst dein Geld selbst an. Weißt aber nicht wann du investieren sollst. 
+        Es gibt Börsenampeln, die dir dabei helfen. Damit schlägst du den Markt.">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link href="../../fonts" rel="stylesheet">
+
+    <!-- Canonical-->
+    <link rel=“canonical” href=“https://inloopo.com/de/blog/basiswissen/limit-order” />
+
+
+    <!-- Flavicon Icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div class="reading-progress"></div>
+
+
+
+    <div class="wrapper">
+
+
+        <!-- HEADER -->
+
+
+        <header>
+            <nav>
+                <a href="../../" class="logo"><img src="../../images/logo.svg" width="150" height=""
+                        alt="Logo Inloopo"></a>
+                <input type="checkbox" id="toggle-button">
+                <label for="toggle-button" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul>
+                    <li><a href="../../investieren">Investieren</a></li>
+                    <li><a href="../../copytrading">Copy Trading</a></li>
+                    <li><a href="../alle-artikel">Blog</a></li>
+                    <li><a href="../../ueber-mich">Über mich</a></li>
+                    <li><a href="../../kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+
+
+        <!-- TEASER -->
+
+        <main>
+            <div id="container">
+            </div>
+
+
+            <aside class="toc" id="toc">
+                <h6>Inhaltsverzeichnis</h6>
+                <ol class="toc__nav">
+                    <li>
+                        <a href="#point01" class="toc__link">1. Limit Ordertypen</a>
+                    </li>
+                    <li>
+                        <a href="#point02" class="toc__link">2. Was ist eine Limit Order?</a>
+                    </li>
+                    <li>
+                        <a href="#point03" class="toc__link">3. Was ist eine Buy Limit Order?</a>
+                    </li>
+                    <li><a href="#point04" class="toc__link">4. Was ist eine Sell Limit Order?</a></li>
+                    <li>
+                        <a href="#point05" class="toc__link">5. Wie funktioniert eine Limit Order?</a>
+                    </li>
+                    <li><a href="#point06" class="toc__link">6. Wie platzierst du eine Limit Order bei deinem
+                            Broker?</a></li>
+                    <li>
+                        <a href="#point07" class="toc__link">7. Wie lange ist eine Limit Order gültig?</a>
+                    </li>
+                    <li><a href="#point08" class="toc__link">8. Limit Order Kosten
+                            umgehen?</a></li>
+                    <li>
+                        <a href="#point09" class="toc__link">9. Aktien Limit Order
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#point10" class="toc__link">10. Market Order vs Limit Order</a>
+                    </li>
+                    <li>
+                        <a href="#point11" class="toc__link">11. Unterschied Limit Order und Stop Order</a>
+                    </li>
+                    <li>
+                        <a href="#point12" class="toc__link">12. Limit oder Stop Order? Was benutzt du wann</a>
+                    </li>
+                    <li>
+                        <a href="#point13" class="toc__link">13. Stop Loss und Limit Order gleichzeitig benutzen</a>
+                    </li>
+                    <li>
+                        <a href="#point14" class="toc__link">14. Wann wird eine Limit Order ausgeführt und wann
+                            nicht?</a>
+                    </li>
+                </ol>
+            </aside>
+
+
+            <div class="wrapper-content-blog">
+
+                <h1 class="article__main-heading">Die Limit Order – Erklärung mit 6 Tipps und Beispielen</h1>
+                <div class="article__info-box">
+                    <div class="article__info">
+                        <img class="article__info--img" src="../images/author-philipp-kozalla.png" alt="Autor"
+                            width="80" height="80">
+                        <p class="article__info--details">Philipp Kozalla <br>24.10.2022</p>
+                    </div>
+                    <div class="animated_share">
+                        <div class="animated_share_btn">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://inloopo.com/de/blog/basiswissen/limit-order"
+                                target="_blank"><img class="article__social-media-icon"
+                                    src="../images/icon-facebook.svg" width="20" height="" alt="Facebook Icon"></a>
+                            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmasterblogging.com%2Fbest-travel-blogs%2F&media=https://inloopo.com/de/blog/basiswissen/limit-order"
+                                target="_blank"><img class="article__social-media-icon"
+                                    src="../images/icon-pinterest.svg" width="20" height="" alt="Pinterest Icon"></a>
+                            <a href="https://twitter.com/share?url=https://inloopo.com/de/blog/basiswissen/limit-order"
+                                target="_blank"><img class="article__social-media-icon" src="../images/icon-twitter.svg"
+                                    width="20" height="" alt="Twitter Icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <p>Du möchtest deine Trades mit einer Limit Order ausführen, weil du gehört hast, dass du damit deine
+                    Gewinne über dem aktuellen Kurs realisieren kannst. Aber was bedeutet Limit Order? Wie funktioniert
+                    eine Order Limit und wann setzt du sie ein? Die Limit Order ist für mich der zweitwichtigste
+                    Ordertyp. Du erfährst, wie du mit dieser Order höhere Gewinne erzielst. </p>
+
+                <figure class="article__figure">
+                    <img src="../images/image-article-limit-ordertypen.svg" alt="Limit Order als Grafik" width="730"
+                        height="">
+                </figure>
+
+
+
+                <!-- Hauptinhalt -->
+
+                <section>
+                    <h2 class="article__heading-two  visible" id="point01">Limit Ordertypen</h2>
+                    <p>Mit den Limit Ordertypen kontrollierst du den Kauf- oder Verkaufspreis. Es gibt wie bei einer
+                        <a class="link" href="stop-order-stop-buy-order-stop-loss-einfach-erklaert" target="_blank">Stop
+                            Order</a> zwei
+                        Untertypen: Die Buy Limit Order (Limit Order Kauf) und die Sell Limit Order
+                        (Limit Order Verkauf).
+                    </p>
+                    <p>Die Buy Limit Order ermöglicht es dir, ein Finanzprodukt günstiger zu kaufen. Mit der Sell Limit
+                        Order legst du einen Preis fest, zu welchem du ein Wertpapier verkaufen möchtest. </p>
+                    <p>Der Vorteil der Limit Order ist, dass es niemals zur negativen Slippage kommen kann, denn dieser
+                        Ordertyp garantiert einen bestimmten oder besseren Preis. Mit einer Limit Order brauchst du die
+                        Märkte nicht ständig zu verfolgen.</p>
+                    <p>Der Nachteil: Die Limit Order wird nicht ausgeführt, wenn der Kurs deinen angegebenen Preis nicht
+                        kreuzt. Deine Position wird nie geöffnet bzw. geschlossen und du verpasst eine Möglichkeit zu
+                        handeln.</p>
+                    <p>Die Funktionsweise der Limit Order ist bei allen Finanzinstrumenten gleich. Es gibt keinen
+                        Unterschied zwischen Aktien, ETF’s, CFD’s, Zertifikate, Optionen oder Futures.</p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point02">Was ist eine Limit Order?</h2>
+                    <p>Eine Limit Order ist ein Ordertyp, den du neben Stop Order, Market Order oder Stop Limit Order
+                        bei deinem Broker auswählen kannst. Soweit die Limit Order Definition.
+                    </p>
+                    <p>Mit einer Limit Order öffnest oder schließt du Positionen zu gewünschten Kursen, die du auf Basis
+                        deiner Vermutungen frei wählst. Du gibst deinen Broker also die Anweisung, ein Finanzprodukt zu
+                        einem von dir festgelegten Preis oder besser zu kaufen oder zu verkaufen.</p>
+                    <p>Du hast damit die Möglichkeit Gewinne zu höheren Kursen mitzunehmen oder weitere Wertpapiere zu
+                        tieferen Kursen zu kaufen.</p>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #1</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Mit der Limit Order kannst du deine Position nicht vor Verlusten absichern. Ich benutze die
+                            Limit Order ausschließlich zur Gewinnsicherung, für das Erreichen meines geplanten Ziels.
+                        </p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point03">Was ist eine Buy Limit Order?</h2>
+                    <figure class="article__figure"><img src="../images/image-article-limit-buy-order.svg"
+                            alt="Grafik für Limit Kauf Order" width="730"></figure>
+                    <p>Eine Buy Limit Order ist eine Order, mit der ein Kaufpreis festgelegt wird. Der Kaufpreis sollte
+                        unter dem aktuellen Kurswert liegen. Deine Limit Buy Order wird dann ausgeführt, wenn der Kurs
+                        darunterfällt: Du kaufst das Finanzprodukt und öffnest eine Position. </p>
+                    <p>Du verwendest eine Limit Kauf Order also dann, wenn du erwartest, dass die Kurse kurzfristig
+                        fallen und du zu einem tieferen Kurs kaufen möchtest. Dieses Vorgehen ermöglicht es dir, höhere
+                        Gewinne zu erzielen, weil dein Einstiegskurs tiefer ist als der Kurs zum Zeitpunkt, zu welchem
+                        du die Order in den Markt legst.</p>
+                    <figure class="article__figure">
+                        <img src="../images/image-article-limit-buy-order-beispiel.jpg"
+                            alt="Limit Order Kauf Beispiel mit S&P 500 ETF" width="730">
+                        <figcaption class="article__caption">Ein Buy Limit Beispiel. Der Aktienmarkt befindet sich in
+                            einem stabilen Aufwärtstrend und du möchtest eine Position im S&P 500 ETF kaufen. Allerdings
+                            bist du aktuell (08.02.2021) der Meinung, dass der Preis zu hoch ist und möchtest gerne
+                            automatisch in der nächsten Korrektur zu einem festgelegten Preis kaufen. Der Kurs steht
+                            aktuell bei 327,10 € und du denkst, dass die nächste Korrektur bis zum vorherigen Hoch bei
+                            321,61 € geht. Also platzierst du dein Buy Limit zum Kurs von 321,61 € mit unbegrenzter
+                            Gültigkeit (GTC). Nach zwei Wochen, am 23. Februar 2021, wird der Limit Kurs erreicht und
+                            die Order automatisch ausgeführt. Deine Position ist eröffnet.
+                        </figcaption>
+                    </figure>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #2</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Du kannst dein Buy Limit auf der Höhe vom letzten Hoch, welches du auf dem Tageschart siehst,
+                            setzen. Das funktioniert in
+                            vielen Situationen.
+                        </p>
+                    </div>
+                </section>
+
+                <section>
+                    <h2 class="article__heading-two" id="point04">Was ist eine Sell Limit Order?
+                    </h2>
+                    <figure class="article__figure"><img src="../images/image-article-limit-sell-order.svg"
+                            alt="Grafik für Limit Verkauf Order" width="730"></figure>
+                    <p>Eine Sell Limit Order ist eine Order, die einen Verkaufspreis definiert, der über dem aktuellen
+                        Kurs liegt. Mit der Sell Limit Order verkaufst du bzw. schließt du eine Position. Sie wird
+                        ausgeführt, wenn der Kurs den festgelegten Limit Kurs überschreitet.
+                    </p>
+                    <p>Mit einer Limit Sell Order kannst du deine Trading Ziele realisieren. Du definierst, wann du
+                        deine Position schließen möchtest. Genau an diesem Punkt setzt du dein Sell Limit Kurs. Sobald
+                        deine Position eröffnet wurde, sei es mit Stop Buy Order, Limit Buy Order oder Market Order,
+                        legst du eine Limit Sell Order in den Markt.</p>
+                    <p>Du kannst dir nun sicher sein, dass du Gewinn machst, und bist nicht frustriert, weil die Kurse
+                        dann doch fallen und du nicht mehr weißt, wann du aussteigen sollst.
+                    </p>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #3</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Wenn, du wie die Profis deine Trades direkt von Anfang an durchplanen willst,
+                            verwendest du eine Bracket Order. Diese kombinierte Order verbindet dein Kauf der Position
+                            mit der anschließenden Risikoabsicherung (Stop Loss) und dem Ziel (Sell Limit).
+                        </p>
+                    </div>
+                    <figure class="article__figure">
+                        <img src="../images/image-article-limit-sell-order-beispiel.jpg"
+                            alt="Limit Order Verkauf Beispiel mit S&P 500 ETF" width="730">
+                        <figcaption class="article__caption">Ein Beispiel für Limit Order Verkauf. Du hast eine Position
+                            im ETF auf den S&P 500 und möchtest Gewinne realisieren. Nach der Positionseröffnung im
+                            Februar 2021, gehst du davon aus, dass der S&P 500 ETF den Kurs von 400 € erreichen wird. An
+                            diesem Punkt platzierst du dein Sell Limit mit unbegrenzter Gültigkeit (GTC). Acht Monate
+                            später, am 23. Oktober 2021, wird deine Limit Sell Order erreicht und Gewinne werden
+                            realisiert. Deine Position ist geschlossen.
+                        </figcaption>
+                    </figure>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #4</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Eine Möglichkeit, um dein Kursziel zu definieren, ist einen Trendkanal zu bauen. Verbinde
+                            dafür
+                            die vorherigen Hochs miteinander. Dein Ziel liegt dann an dieser Linie in der Zukunft.
+                        </p>
+                    </div>
+                </section>
+
+
+
+                <section>
+                    <h3 class="article__heading-three" id="point05">Wie funktioniert eine Limit Order?</h3>
+                    <p>In der Limit Order werden folgende Informationen gespeichert:</p>
+                    <ol class="article__list">
+                        <li>Das Wertpapier (Bsp. ein ETF auf den S&P 500)</li>
+                        <li>Der Limit Kurs</li>
+                        <li>Die Anzahl</li>
+                        <li>Gültigkeit der Order (meistens GTC – Good till canceld)</li>
+                    </ol>
+                    <p>Wenn der Kurs des Wertpapiers den gewünschten Limit Kurs erreicht, wird die Order zum
+                        definierten Preis oder besser ausgeführt. Voraussetzung dafür ist die ausreichende
+                        Liquidität zum aktuellen Zeitpunkt. Sollte der Kurs den festgelegten Preis niemals
+                        erreichen, wird die Order nicht ausgeführt.</p>
+                </section>
+
+
+                <section>
+                    <h3 class="article__heading-three" id="point06">Wie platzierst du eine Limit Order bei deinem
+                        Broker?</h3>
+                    <p>Bei den meisten Brokern wählst du zuerst aus, ob du eine Position kaufen oder verkaufen
+                        möchtest. Erst danach wählst du den Ordertyp – in diesem Fall Limit Order – aus.</p>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #5</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Broker können Limit Orders nicht zulassen, wenn sie unlogisch sind. Das heißt, wenn ein
+                            Kauflimit zu einem höheren Kurs als dem aktuellen Kurs platziert wird, wirst du vor der
+                            Platzierung auf den Fehler hingewiesen.
+                        </p>
+                    </div>
+                    <p>Du gehst folgendermaßen bei der Platzierung der Limit Order vor:
+                    </p>
+                    <ol class="article__list">
+                        <li>Du wählst des Handelsprodukts, wie ein ETF auf den S&P 500, aus.
+                        </li>
+                        <li>Du gibst an, ob du kaufst oder verkaufst.</li>
+                        <li>Du wählst unter dem Punkt Order Limit aus.</li>
+                        <li>Du legst Kurs, Anzahl sowie Gültigkeit fest.</li>
+                        <li>Order platzieren: Du klickst „Order platzieren“ bzw. „Order abschließen“.</li>
+                    </ol>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Wichtiger Hinweis</h6>
+                    </div>
+                    <div class="article__box">
+                        <h4>Limit Order bei einem Broker</h4>
+                        <p>Bei den meisten Brokern wird nicht angezeigt, ob es sich um eine Buy Limit Order oder
+                            Sell Limit Order handelt, da dies mit der vorherigen Auswahl (Kaufen oder Verkaufen)
+                            definiert wurde.</p>
+                        <p>Mit der Auswahl 1. Kaufen und 2. Limit Order ergibt sich die Buy Limit Order (Kauf Limit
+                            Order). Mit der Auswahl 1. Verkaufen und 2. Limit Order ergibt sich die Sell Limit Order
+                            (Verkauf Limit Order).</p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point07">Wie lange ist eine Limit Order gültig?</h2>
+                    <p>Die Gültigkeit der Limit Order hängt von den Richtlinien deines Brokers ab. Bei vielen
+                        Brokern sind Limit Order standardmäßig auf den aktuellen Handelstag (Good-for-day)
+                        eingestellt. Nicht ausgeführte Orders werden dann am Tagesende gelöscht.
+                    </p>
+                    <p>Andere Broker bieten eine bestimmte Anzahl von Tagen der Gültigkeit an: Beispielsweise 30
+                        Tage oder 60 Tage. Somit ist die Order bis zu einem bestimmten Datum gültig
+                        (Good-till-date).</p>
+                    <p>Die dritte Möglichkeit ist die unbeschränkte Gültigkeit. Die Order Limit ist dann so lange
+                        gültig, bis sie ausgeführt oder von dir storniert wird (Good-till-cancelled).</p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point08">Limit Order Kosten</h2>
+                    <p>Bei vielen Online Brokern sind die Orderkosten für alle Ordertypen gleich. Das heißt, es gibt
+                        keinen Unterschied mehr zwischen den Kosten einer Market Order oder einer Limit Order. Durch
+                        die Digitalisierung der Brokerlandschaft sind die Orderkosten rapide gefallen und bei
+                        manchen ist das Handeln einiger Aktien oder ETF’s sogar kostenlos möglich.
+                    </p>
+                    <p>Bevor du dich für einen Broker entscheidest, informiere dich unbedingt über die jeweiligen
+                        Orderkosten und auch über die Finanzprodukte, die du mit dem Broker handeln kannst. Denn
+                        viele Onlinebroker haben zwar sehr geringe oder keine Orderkosten, allerdings können auch
+                        nicht alle Aktien oder ETF’s gehandelt werden.</p>
+                    <div class="article__box--info-item">
+                        <h6 class="article__box--info">Tipp #6</h6>
+                    </div>
+                    <div class="article__box">
+                        <p>Sollte das Platzieren einer Limit Order teurer sein als eine Market Order, empfehle ich
+                            dir unbedingt den Broker zu wechseln.</p>
+                        </p>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point09">Aktien Limit Order</h2>
+                    <p>Ein Aktienkauf mit Limit Order ist wie ein Kauf eines Gebrauchtwagens mit Preisverhandlung.
+                        Du bekommst den Gebrauchtwagen nur, wenn der Verkäufer auf deinen Verhandlungspreis (Limit
+                        Preis) eingeht. Auf den Aktienmarkt übertragen, kaufst oder verkaufst du deine Aktien nur,
+                        wenn dein Limit Kurs erreicht wird.</p>
+                    <p>Ob du Aktien mit einer Limit Order oder mit einer Stop Order kaufst hängt von deiner
+                        Strategie ab. Wenn deine Strategie beispielsweise darauf beruht Dividenden Aktien günstig an
+                        Unterstützungsbereichen zu kaufen, dann verwendest du die Limit Order. Dieses Vorgehen macht
+                        besonders nach Aktiencrashs Sinn. Denn dann bekommst du die Aktien sehr günstig.
+                    </p>
+                    <p>Ich persönlich bevorzuge es mit einer Stop Order zu kaufen, denn meine Strategien beruhen auf
+                        Trendfortsetzung nach einer Bodenbildung.</p>
+                </section>
+
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point10">Market Order vs Limit Order</h2>
+                    <p>Eine Market Order ist ein Ordertyp, der direkt zum aktuellen Kurs ausgeführt wird. Während
+                        eine Limit Order erst dann in Kraft tritt, wenn der selbstgewählte Preis vom Kurs erreicht
+                        wird.</p>
+                    <p>Ein Beispiel zur Veranschaulichung. Ein Gebrauchtwagen soll 10.000 € kosten. Wenn du den
+                        Wagen nun per Market Order kaufst und die 10.000 € direkt bezahlst, bist du dir sicher, dass
+                        du den Wagen bekommst.</p>
+                    <p>Wenn du allerdings den Wagen per Limit Order für 9.000 € kaufen möchtest, wirst du den Wagen
+                        wahrscheinlich erst mal nicht bekommen. Der Verkäufer rechnet damit, dass er einen anderen
+                        Kunden findet, der den Wagen zum Marktpreis nimmt.</p>
+                    <p>Im Fall, dass der Verkäufer keinen Abnehmer findet und die Fahrzeugpreise fallen, erhältst du
+                        den Wagen zum angebotene Limit Preis von 9.000 €. Damit hast du ihn 10 % günstiger gekauft.
+                    </p>
+                    <p>Sollten die Fahrzeugpreise nicht fallen, wirst du allerdings niemals den Wagen für den Preis
+                        bekommen.</p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point11">Unterschied Limit Order und Stop Order</h2>
+                    <p>Beide Ordertypen sind einstufige Kauf- oder Verkaufsaufträge eines Wertpapiers, wenn ein
+                        bestimmter Preis erreicht wird. Der wesentliche Unterschied zwischen Limit Order und Stop
+                        Order liegt darin, dass sie spiegelverkehrt zu benutzen sind.</p>
+                    <p>Außerdem kommt es bei einer Limit Order niemals zu Slippagen. Bei einer Stop Order jedoch
+                        schon. Dies liegt an der Position des Limit oder Stop Kurses in Bezug auf den aktuellen
+                        Kurs.</p>
+                    <p>Es gibt noch die Stop Limit Order, die eine zweistufige Order und eher mit einer einfachen
+                        Stop Order zu vergleichen ist. Bei der Stop Limit Order wird erst die Stop Order aktiviert.
+                        Danach kommt die Limit Order zum Einsatz. Das ermöglicht es, die Slippage der Stop Order zu
+                        begrenzen.</p>
+                    <diV class="responsive table">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Stop Order</th>
+                                    <th>Limit Order</th>
+                                    <th>Stop Limit Order</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ein Kurswert (Stop)</td>
+                                    <td>Ein Kurswert (Limit)</td>
+                                    <td>Zwei Kurswerte (Stop & Limit)</td>
+                                </tr>
+                                <tr>
+                                    <td>Kaufen: Stop Kurs oberhalb des aktuellen Kurswerts.</td>
+                                    <td>Kaufen: Limit Kurs unterhalb des aktuellen Kurswerts</td>
+                                    <td>Kaufen: Stop Kurs oberhalb des aktuellen Kurswerts und Limit Kurs über
+                                        Stop Kurs.</td>
+                                </tr>
+                                <tr>
+                                    <td>Verkaufen: Stop Kurs unterhalb des aktuellen Kurswerts.</td>
+                                    <td>Verkaufen: Limit Kurs oberhalb des aktuellen Kurswerts.</td>
+                                    <td>Verkaufen: Stop Kurs unterhalb des aktuellen Kurswerts und Limit Kurs
+                                        unter Stop Kurs.</td>
+                                </tr>
+                                <tr>
+                                    <td>Mit der Stop Order kannst du deine aktuelle Position absichern
+                                        (Verkaufen)
+                                        oder
+                                        in
+                                        Trendrichtung beim Überschreiten eines bestimmten Kurswertes aufbauen
+                                        (Kaufen).
+                                    </td>
+                                    <td>Mit der Limit Order kannst du deine Gewinne in Trendrichtung mitnehmen
+                                        (Verkaufen)
+                                        oder deine Position in einer Korrektur aufbauen (Kaufen).</td>
+                                    <td>Verwende die Stop Limit Order nur, um eine Position zu eröffnen
+                                        (Kaufen).
+                                        Somit kannst du deine Slippage auf die Differenz zwischen Stop und Limit
+                                        Kurs begrenzen.
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Slippagen zu deinem Nachteil treten oft auf.</td>
+                                    <td>Slippagen zu deinem Nachteil können niemals auftreten.</td>
+                                    <td>Slippagen werden begrenzt, aber man riskiert auch, dass die Order bei
+                                        einem großen Kurssprung nicht ausgeführt wird. </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </diV>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point12">Limit oder Stop Order? Was benutzt du wann</h2>
+                    <p>Du kannst beide Ordertypen in deinem Trading benutzen. Jede Order hat ihre Funktion und wird
+                        in bestimmten Marktsituationen eingesetzt.</p>
+                    <p>Die Limit Kauf Order verwendest du, wenn du zu niedrigeren Kursen als zum aktuellen Zeitpunkt
+                        kaufen möchtest. Beispielsweise, wenn eine Unterstützung erreicht wird. Eine Unterstützung
+                        ist ein starker Wendepunkt des Kurses in der Vergangenheit. </p>
+                    <p>Die Limit Verkauf Order verwendest du, wenn du zu höheren Kursen als zum aktuellen Zeitpunkt
+                        verkaufen möchtest. Also für dein Kursziel nach dem Kauf.</p>
+                    <p>Spiegelverkehrt ist es für die Stop Order. Die Stop Kauforder (Stop Buy Order) verwendest du,
+                        wenn du zu höheren Kursen als zum aktuellen Zeitpunkt kaufen möchtest. Beispielsweise, wenn
+                        ein Widerstandsbereichs durchbrochen wird.
+                    </p>
+                    <p>Ein Widerstandsbereich ist durch relevante Hochpunkte in der Vergangenheit gekennzeichnet,
+                        die nicht überschritten wurden. Wird ein Widerstandsbereich überschritten, ist grundsätzlich
+                        von weiter steigenden Kursen auszugehen. Mit der Stop Buy Order kannst du davon profitieren.
+                    </p>
+                    <p>Die Stop Verkaufsorder (Stop Loss Order) verwendest du, wenn du dich gegen unbegrenzte
+                        Verluste deiner aktuellen Position absichern möchtest.
+                    </p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point13">Stop Loss und Limit Order gleichzeitig benutzen
+                    </h2>
+                    <p>Stop und Limit Order gleichzeitig platzieren? Ist das möglich? Ja! Das geht mit dem Ordertyp
+                        OCO (One-Cancels-the-Other).</p>
+                    <p>Du besitzt Aktien oder ETF’s und möchtest deine Verluste begrenzen oder Gewinne automatisch
+                        bei einem bestimmten Kurswert realisieren. Mit der OCO Order kannst du zwei Ordertypen
+                        miteinander kombinieren und wenn eine ausgeführt wird, wird die andere gelöscht.</p>
+                    <p>Ein Beispiel für die Kombination Stop Loss und Limit Order. Du besitzt 100 ETF’S auf den S&P
+                        500. Der aktuelle Kurs liegt bei 100 €. Du möchtest deine Position mit einem Stop Loss bei
+                        90 € absichern für den Fall, dass die Kurse fallen. Für den Fall, dass die Kurse steigen,
+                        möchtest du deine Gewinne automatisch per Limit Order bei einem Kurs von 150 € realisieren.
+                        Exakt diese Kombination ist mit der OCO Order möglich.</p>
+                    <p>Du wählst als Ordertyp OCO Order aus. Dann öffnet sich ein Fenster mit zwei kombinierten
+                        Orders. Dort kannst du nochmals den Ordertyp der jeweiligen Order festlegen, sowie die
+                        Anzahl, Kurs und Gültigkeit. Für die Gewinnsicherung wählst du Limit Order aus, den
+                        jeweiligen Kurs und die Anzahl, die du verkaufen möchtest. Die Gültigkeit sollte bei beiden
+                        Orders GTC (Good till cancel) sein.
+                    </p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point14">Wann wird eine Limit Order ausgeführt und wann
+                        nicht?
+                    </h2>
+                    <p>Eine Limit Order wird aus mehreren Gründen nicht ausgeführt.</p>
+                    <ol class="article__list">
+                        <li>Der gewünschte Kurswert wird nicht oder ist noch nicht erreicht.
+                        </li>
+                        <li>Der gewünschte Kurswert wurde erreicht, allerdings hat das Handelsvolumen (Liquidität)
+                            nicht ausgereicht, um deine Order auszuführen. Dies kann vor allem bei wenig liquiden
+                            Positionen passieren oder wenn deine Order sehr groß ist. Das tägliche Handelsvolumen
+                            kannst du beispielsweise bei <a class="link" target="_blank"
+                                href="https://de.finance.yahoo.com/quote/SXR8.DE/?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAHcwDvptvE0U5P6tDgtvCeARajCQzW47TpgQmpcBcub9W5xedhAN0Jk2bUiU7git8Rr4nOq--63tY5f0VhTRBxc-xTSZwwyj4hY2je1Ap31xR6rXF9rqLKc2lRBo7PTRCfAqOGK0R7MGwMuCSQ-caiEmuD5j2EGsjKGuh67ATr7Q">Yahoo
+                                Finance</a> nachschauen.</li>
+                    </ol>
+                    <figure class="article__figure">
+                        <img src="../images/image-article-limit-order-yahoo-finance.jpg"
+                            alt="Yahoo Finance Handelsvolumen für S&P 500 ETF" width="730">
+                        <figcaption class="article__caption">Das Handelsvolumen für den S&P 500 ETF beträgt 70.495
+                            Stück.
+                        </figcaption>
+                    </figure>
+                </section>
+
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+        <section>
+            <h2 class="site-footer__heading">KW³ Business Ltd</h2>
+            <p class="site-footer__text--center">Dein Business. Deine Freiheit.</p>
+            <p class="site-footer__text--center">
+                <a class="site-footer__link--center" href="../../datenschutz">Datenschutz</a> |
+                <a class="site-footer__link--center" href="../../nutzungsbedingungen">Nutzungsbedingungen</a> |
+                <a class="site-footer__link--center" href="../../risikohinweis">Risikohinweis</a> |
+                <a class="site-footer__link--center" href="../../impressum">Impressum</a>
+            </p>
+            <p class="site-footer__text--center">Copyright © 2022 KW³ Business Ltd</p>
+
+            <div class="wrapper-content  site-footer__text--legal">
+                <p class="site-footer__text">Risiko Offenlegung: Der Handel mit ETFs, Futures oder Aktien birgt ein
+                    hohes
+                    Risiko und ist nicht für jeden Investor geeignet. Ein Investor kann möglicherweise mehr als das
+                    eingezahlte Kapital verlieren. Für den Handel sollte nur Risikokapital verwendet werden, bzw. Teile
+                    des
+                    Risikokapitals. Risikokapital ist Geld, bei dessen Verlust sich keine Änderung der Finanzsituation
+                    ergibt bzw. keinen Einfluss auf das Leben mit sich bringt. Eine in der Vergangenheit erzielte
+                    Performance ist keine Garantie für zukünftige Gewinne.</p>
+                <p class="site-footer__text">
+                    Offenlegung der hypothetischen Performance: Hypothetische Performanceergebnisse haben viele
+                    inhärente
+                    Einschränkungen, von denen einige im Folgenden beschrieben werden. Die dargestellten Ergebnisse des
+                    Kontos können in den Gewinnen und Verlusten stark abweichen. Einer der Einschränkungen der
+                    hypothetischen Ergebnisse ist, dass Sie durch bekannte historische Daten entstanden sind. Darüber
+                    hinaus
+                    beinhaltet der hypothetische Handel kein finanzielles Risiko – kein hypothetischer Track Record kann
+                    die
+                    finanziellen Risiken des tatsächlichen Handels darstellen. Beispielsweise besteht die Möglichkeit,
+                    dass
+                    der Handel bei Verlusten ausgesetzt bzw. abgebrochen wird, dies kann die tatsächlichen Ergebnisse
+                    stark
+                    verändern. Des Weiteren gibt es zahlreiche weitere Faktoren die bei der Umsetzung eines
+                    Handelsprogramms
+                    nicht vollständig in der hypothetischen Performance berücksichtigt werden können und somit die
+                    tatsächlichen Ergebnisse beeinflussen können.</p>
+            </div>
+        </section>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="../../scripts/function.js"></script>
+
+</body>
+
+</html>
