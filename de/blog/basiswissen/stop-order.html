@@ -8,12 +8,41 @@
     <meta name="description" content="Du legst dein Geld selbst an. Weißt aber nicht wann du investieren sollst. 
         Es gibt Börsenampeln, die dir dabei helfen. Damit schlägst du den Markt.">
     <link rel="stylesheet" href="../../styles/styles.css">
-    <link href="../../fonts" rel="stylesheet">
+    <link href="../../fonts/" rel="stylesheet">
+        
+    <!-- Robot -->
+    <meta name="robots" content="index">
 
-    <!-- Canonical-->
-    <link rel=“canonical”
-        href=“https://inloopo.com/de/blog/basiswissen/stop-order-stop-buy-order-stop-loss-einfach-erklaert” />
 
+    <!-- Open Graph -->
+    <meta property="og:title" content="Stop Order, Stop Buy und Stop Loss an Beispielen erklärt">
+    <meta property="og:url" content="https://www.inloopo.com/de/blog/basiswissen/stop-order">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://www.inloopo.com/de/blog/images/stop-order-og.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Lerne wie du eine Limit Order erfolgreich benutzt.">
+    <meta property="og:locale" content="de">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Stop Order, Stop Buy und Stop Loss an Beispielen erklärt",
+          "image": [
+            "https://www.inloopo.com/de/images/stop-order-thumbnail.svg"
+           ],
+          "datePublished": "2022-10-12T08:00:00+08:00",
+          "dateModified": "2022-10-12T09:20:00+08:00",
+          "author": [{
+              "@type": "Person",
+              "name": "Philipp Kozalla",
+              "url": "https://www.inloopo.com/de/ueber-mich"
+          }]
+        }
+        </script>
 
     <!-- Flavicon Icon -->
     <link rel="apple-touch-icon" sizes="57x57" href="../../images/apple-icon-57x57.png">
@@ -49,7 +78,7 @@
 
         <header>
             <nav>
-                <a href="../../" class="logo"><img src="../../images/logo.svg" width="150" height=""
+                <a href="../../" class="logo"><img src="../../images/logo.svg" width="150" 
                         alt="Logo Inloopo"></a>
                 <input type="checkbox" id="toggle-button">
                 <label for="toggle-button" class="toggle-button">
@@ -82,32 +111,30 @@
                 <h6>Inhaltsverzeichnis</h6>
                 <ol class="toc__nav">
                     <li>
-                        <a href="#point01" class="toc__link">1. Stop Ordertypen</a>
+                        <a rel="nofollow" href="#point-typen" class="toc__link">1. Stop Ordertypen</a>
                     </li>
                     <li>
-                        <a href="#point02" class="toc__link">2. Was ist eine Stop Order?</a>
+                        <a rel="nofollow" href="#point-stop" class="toc__link">2. Stop Order</a>
                     </li>
                     <li>
-                        <a href="#point03" class="toc__link">3. Was ist eine Stop Buy Order?</a>
+                        <a rel="nofollow" href="#point-stopbuy" class="toc__link">3. Stop Buy Order</a>
                     </li>
-                    <li><a href="#point04" class="toc__link">4. Was ist eine Stop Loss Order bzw. eine Stop Sell
-                            Order?</a></li>
+                    <li><a rel="nofollow" href="#point-stoploss" class="toc__link">4. Stop Loss Order</a></li>
                     <li>
-                        <a href="#point05" class="toc__link">4.1. Wann solltest du einen Stop Loss benutzen?</a>
+                        <a rel="nofollow" href="#point-nutzen" class="toc__link">4.1. Wann solltest du einen Stop Loss benutzen?</a>
                     </li>
-                    <li><a href="#point06" class="toc__link">4.2. Was ist der beste Stop Loss?</a></li>
+                    <li><a rel="nofollow" href="#point-bestestoploss" class="toc__link">4.2. Der beste Stop Loss</a></li>
                     <li>
-                        <a href="#point07" class="toc__link">5. Was sind die Nachteile einer Stop Order?</a>
+                        <a rel="nofollow" href="#point-nachteile" class="toc__link">5. Nachteile einer Stop Order</a>
                     </li>
-                    <li><a href="#point08" class="toc__link">6. Wie kannst du die Nachteile einer Stop Order
+                    <li><a rel="nofollow" href="#point-nachteileumgehen" class="toc__link">6. Wie kannst du die Nachteile einer Stop Order
                             umgehen?</a></li>
                     <li>
-                        <a href="#point09" class="toc__link">7. Wie platzierst du eine Stop Order bei deinem Broker?
+                        <a rel="nofollow" href="#point-platzierung" class="toc__link">7. Platzierung einer Stop Order bei einem Broker
                         </a>
                     </li>
                     <li>
-                        <a href="#point10" class="toc__link">8. Unterschied Limit Order, Stop Order und Stop Limit
-                            Order</a>
+                        <a rel="nofollow" href="#point-vslimit" class="toc__link">8. Stop vs Limit / vs Stop Limit</a>
                     </li>
                 </ol>
             </aside>
@@ -115,7 +142,7 @@
 
             <div class="wrapper-content-blog">
 
-                <h1 class="article__main-heading">Stop Order, Stop Buy Order und Stop Loss an Beispielen erklärt</h1>
+                <h1 class="article__main-heading">Stop Order, Stop Buy und Stop Loss an Beispielen erklärt</h1>
                 <div class="article__info-box">
                     <div class="article__info">
                         <img class="article__info--img" src="../images/author-philipp-kozalla.png" alt="Autor"
@@ -124,15 +151,15 @@
                     </div>
                     <div class="animated_share">
                         <div class="animated_share_btn">
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://inloopo.com/de/blog/basiswissen/stop-order-stop-buy-order-stop-loss-einfach-erklaert"
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://inloopo.com/de/blog/basiswissen/stop-order"
                                 target="_blank"><img class="article__social-media-icon"
-                                    src="../images/icon-facebook.svg" width="20" height="" alt="Facebook Icon"></a>
-                            <a href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fmasterblogging.com%2Fbest-travel-blogs%2F&media=https://inloopo.com/de/blog/basiswissen/stop-order-stop-buy-order-stop-loss-einfach-erklaert"
+                                    src="../images/icon-facebook.svg" width="20"  alt="Facebook Icon"></a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://inloopo.com/de/blog/basiswissen/stop-order"
                                 target="_blank"><img class="article__social-media-icon"
-                                    src="../images/icon-pinterest.svg" width="20" height="" alt="Pinterest Icon"></a>
-                            <a href="https://twitter.com/share?url=https://inloopo.com/de/blog/basiswissen/stop-order-stop-buy-order-stop-loss-einfach-erklaert"
+                                    src="../images/icon-linkedin.svg" width="20"  alt="LinkedIn Icon"></a>
+                            <a href="https://twitter.com/share?url=https://inloopo.com/de/blog/basiswissen/stop-order"
                                 target="_blank"><img class="article__social-media-icon" src="../images/icon-twitter.svg"
-                                    width="20" height="" alt="Twitter Icon"></a>
+                                    width="20"  alt="Twitter Icon"></a>
                         </div>
                     </div>
                 </div>
@@ -143,7 +170,7 @@
                     gut, wenn du eine Stop Order sicher anwenden könntest, oder?</p>
 
                 <figure class="article__figure">
-                    <img src="../images/image-article-stop-order.svg" alt="Stop Order als Grafik" width="730" height="">
+                    <img src="../../images/stop-order-thumbnail.svg" alt="Stop Order als Grafik" width="730" >
                 </figure>
 
 
@@ -151,7 +178,7 @@
                 <!-- Hauptinhalt -->
 
                 <section>
-                    <h2 class="article__heading-two  visible" id="point01">Stop Ordertypen</h2>
+                    <h2 class="article__heading-two  visible" id="point-typen">Stop Ordertypen</h2>
                     <p>Die Stop Order wird in Stop Buy Order und Stop Loss Order bzw. Stop Sell Order unterteilt. Je
                         nachdem, ob du kaufen oder verkaufen möchtest, wird die ein oder andere ausgeführt.
                     </p>
@@ -162,7 +189,7 @@
 
 
                 <section>
-                    <h2 class="article__heading-two" id="point02">Was ist eine Stop Order?</h2>
+                    <h2 class="article__heading-two" id="point-stop">Was ist eine Stop Order?</h2>
                     <p>Eine Stop Order ist eine Order, welche ab einem bestimmten Kurswert als Market Order – also zum
                         nächstmöglichen Zeitpunkt – ausgeführt wird.
                     </p>
@@ -187,7 +214,7 @@
 
 
                 <section>
-                    <h2 class="article__heading-two" id="point03">Was ist eine Stop Buy Order?</h2>
+                    <h2 class="article__heading-two" id="point-stopbuy">Was ist eine Stop Buy Order?</h2>
                     <figure class="article__figure"><img src="../images/image-article-stop-buy-order.svg"
                             alt="grafische Stop Buy Order Erklärung" width="730"></figure>
                     <p>Eine Stop Buy Order (Stop Order Kauf) ermöglicht es dir eine Position mit dem Trend zu eröffnen.
@@ -217,7 +244,7 @@
                 </section>
 
                 <section>
-                    <h2 class="article__heading-two" id="point04">Was ist eine Stop Loss Order bzw. eine Stop Sell
+                    <h2 class="article__heading-two" id="point-stoploss">Was ist eine Stop Loss Order bzw. eine Stop Sell
                         Order?
                     </h2>
                     <figure class="article__figure"><img src="../images/image-article-stop-loss-order.svg"
@@ -254,11 +281,12 @@
                             weiter und deine Order wird am 30. August 2022 ausgeführt. Deine Gewinne sind gesichert.
                         </figcaption>
                     </figure>
+                </section>
 
 
 
                     <section>
-                        <h3 class="article__heading-three" id="point05">Wann solltest du einen Stop Loss benutzen?</h3>
+                        <h3 class="article__heading-three" id="point-nutzen">Wann solltest du einen Stop Loss benutzen?</h3>
                         <p>Meiner Meinung nach, immer! Abhängig von deiner Strategie platzierst du den Stop Loss am
                             besten
                             am letzten oder vorletzten Tief. </p>
@@ -266,7 +294,7 @@
 
 
                     <section>
-                        <h3 class="article__heading-three" id="point06">Was ist der beste Stop Loss?</h3>
+                        <h3 class="article__heading-three" id="point-bestestoploss">Was ist der beste Stop Loss?</h3>
                         <p>Ich denke, dass es am besten ist, nach Markttechnik den Stop Loss zu setzen. Hierfür
                             verwendest
                             du das letzte oder vorletzte Tief. Wenn es für dich zu schwer ist, die Hoch- und Tiefpunkte
@@ -276,7 +304,7 @@
 
 
                     <section>
-                        <h2 class="article__heading-two" id="point07">Was sind die Nachteile einer Stop Order?</h2>
+                        <h2 class="article__heading-two" id="point-nachteile">Was sind die Nachteile einer Stop Order?</h2>
                         <p>Ein Schwachpunkt der Stop Order ist, dass sie in eine Market Order umgewandelt wird. Eine
                             Market
                             Order wird zum nächstmöglichen Kurs ausgeführt. Der nächstmögliche Kurs kann jedoch anders
@@ -312,7 +340,7 @@
 
 
                     <section>
-                        <h2 class="article__heading-two" id="point08">Wie kannst du die Nachteile einer Stop Order
+                        <h2 class="article__heading-two" id="point-nachteileumgehen">Wie kannst du die Nachteile einer Stop Order
                             umgehen?</h2>
                         <p>Den Nachteil der schlechteren Orderausführung (Slippage) bei einer Stop Order kannst du mit
                             einer
@@ -332,13 +360,12 @@
                                 empfehle
                                 und verwende ich die Stop Limit Order niemals, um eine Position zu schließen! Ich selbst
                                 verwende sie nur, um eine Position zu eröffnen.</p>
-                            </p>
                         </div>
                     </section>
 
 
                     <section>
-                        <h2 class="article__heading-two" id="point09">Wie platzierst du eine Stop Order bei deinem
+                        <h2 class="article__heading-two" id="point-platzierung">Wie platzierst du eine Stop Order bei deinem
                             Broker?
                         </h2>
                         <p>Bei den meisten Brokern wählst du zuerst aus, ob du eine Position Verkaufen oder Kaufen
@@ -372,71 +399,13 @@
                                 <li> Buy Stop Order = Stop Buy Order </li>
                                 <li> Sell Stop Order = Stop Sell oder Stop Loss Order </li>
                             </ul>
-                            </p>
-
                         </div>
-
-
-
-
-
-                        <!-- NAVIGATION FOR SLIDER
-
-                    <div class="radio-navigation">
-                        <form class="radio-navigation__form">
-                            <label>
-                                <input class="radio-navigation__radio" type="radio" name="broker"
-                                    value="Interactive Broker">
-                                <button type="button" class="radio-navigation__button">Interactive Broker</span>
-                            </label>
-                            <label>
-                                <input class="radio-navigation__radio" type="radio" name="broker" value="Robinhood">
-                                <button type="button" class="radio-navigation__button">Robinhood</button>
-                            </label>
-                            <label>
-                                <input class="radio-navigation__radio" type="radio" name="broker" value="Comdirect">
-                                <button type="button" class="radio-navigation__button">Comdirect</button>
-                            </label>
-                        </form>
-                    </div>
-                </section>
-
-
-
-
-                SLIDER NAVIGATION
-
-                <div class="container">
-                    <ul class="slides">
-                        <li id="slide1"><img src="../images/slide-interactive-brokers-stratscreen.jpg" alt="" /></li>
-                        <li id="slide2"><img src="../images/slide-interactive-brokers-kauforder-stop-order.jpg" alt="" />
-                        </li>
-                        <li id="slide3"><img src="../images/slide-interactive-brokers-verkaufsorder-stop-order.jpg"
-                                alt="" />
-                        </li>
-                    </ul>
-
-                    <ul class="thumbnails">
-                        <li>
-                            <a href="#slide1"><img src="../images/slide-interactive-brokers-stratscreen.jpg"></a>
-                        </li>
-                        <li>
-                            <a href="#slide2"><img src="../images/slide-interactive-brokers-kauforder-stop-order.jpg"></a>
-                        </li>
-                        <li>
-                            <a href="#slide3"><img
-                                    src="../images/slide-interactive-brokers-verkaufsorder-stop-order.jpg"></a>
-                        </li>
-                    </ul>
-                </div>
-            -->
-
-
+                    </section>
 
 
 
                         <section>
-                            <h2 class="article__heading-two" id="point10">Unterschied Limit Order, Stop Order und Stop
+                            <h2 class="article__heading-two" id="point-vslimit">Unterschied Limit Order, Stop Order und Stop
                                 Limit
                                 Order</h2>
                             <p>Stop Order und Limit Order sind zwei unterschiedliche Ordertypen. Stop Limit Order ist
@@ -497,6 +466,7 @@
                                     </tbody>
                                 </table>
                             </diV>
+                        </section>
             </div>
         </main>
     </div>
@@ -508,8 +478,8 @@
 
     <footer class="site-footer">
         <section>
-            <h2 class="site-footer__heading">KW³ Business Ltd</h2>
-            <p class="site-footer__text--center">Dein Business. Deine Freiheit.</p>
+            <h2 class="site-footer__heading">inloopo</h2>
+            <p class="site-footer__text--center">Dein Investment. Deine Freiheit.</p>
             <p class="site-footer__text--center">
                 <a class="site-footer__link--center" href="../../datenschutz">Datenschutz</a> |
                 <a class="site-footer__link--center" href="../../nutzungsbedingungen">Nutzungsbedingungen</a> |
@@ -546,7 +516,6 @@
                     tatsächlichen Ergebnisse beeinflussen können.</p>
             </div>
         </section>
-        </div>
     </footer>
 
 

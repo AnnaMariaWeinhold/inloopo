@@ -161,7 +161,68 @@ width: 50%;
 
 
 
+/* ---------------------------------*\
+    #FONTS
+\* ---------------------------------*/
 
+
+/* Cera Pro */
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Light.otf);
+    src: url(../fonts/Cera\ Pro\ Light.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Regular\ Italic.otf);
+    src: url(../fonts/Cera\ Pro\ Regular\ Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Medium.otf);
+    src: url(../fonts/Cera\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Medium.otf);
+    src: url(../fonts/Cera\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Bold.otf);
+    src: url(../fonts/Cera\ Pro\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Black.otf);
+    src: url(../fonts/Cera\ Pro\ Black.ttf);
+}
+
+/* Quattrocento */
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Regular.ttf);
+}
 
 
 /* ---------------------------------*\
@@ -448,6 +509,7 @@ font-weight: bold;
     width: 45%;
     margin-left: 10%;  
     margin-top: 160px;
+    font-weight: 300;
 }
 
 
@@ -670,7 +732,7 @@ justify-content: center;
 
 .column__heading {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -1026,7 +1088,7 @@ padding: 0;
     margin-right: 0;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     justify-items: center;

@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Was sind Ordertypen und wie du die richtige Order wählst</title>
+    <meta name="description" content="Du möchtest eine Order in den Markt legen. Du fragst dich wie du Ordertypen verwendest und wann du sie benutzt. Ich erkläre dir genau das.">
+    <link rel="stylesheet" href="../../styles/styles.css">
+    <link href="../../fonts/" rel="stylesheet">
+
+     <!-- Robot -->
+     <meta name="robots" content="index">
+
+     <!-- Open Graph -->
+    <meta property="og:title" content="Was sind Ordertypen und wie du die richtige Order wählst">
+    <meta property="og:url" content="https://www.inloopo.com/de/blog/basiswissen/ordertypen">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image" content="https://www.inloopo.com/de/blog/images/ordertypen-og.jpg">
+    <meta property="og:type" content="article">
+    <meta property="og:description" content="Selbst investieren. Lerne wie du Ordertypen benutzt.">
+    <meta property="og:locale" content="de">
+
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "headline": "Was sind Ordertypen und wie du die richtige Order wählst",
+          "image": [
+            "https://www.inloopo.com/de/images/ordertypen-thumbnail.svg"
+           ],
+          "datePublished": "2022-11-05T08:00:00+08:00",
+          "dateModified": "2022-11-12T09:20:00+08:00",
+          "author": [{
+              "@type": "Person",
+              "name": "Philipp Kozalla",
+              "url": "https://www.inloopo.com/de/ueber-mich"
+          }]
+        }
+        </script>
+
+
+    <!-- Flavicon Icon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../../images/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../../images/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../../images/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../../images/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../../images/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../../images/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../../images/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../../images/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../images/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../../images/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../images/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div class="reading-progress"></div>
+
+
+
+    <div class="wrapper">
+
+
+        <!-- HEADER -->
+
+
+        <header>
+            <nav>
+                <a href="../../" class="logo"><img src="../../images/logo.svg" width="150" 
+                        alt="Logo Inloopo"></a>
+                <input type="checkbox" id="toggle-button">
+                <label for="toggle-button" class="toggle-button">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </label>
+                <ul>
+                    <li><a href="../../investieren">Investieren</a></li>
+                    <li><a href="../../copytrading">Copy Trading</a></li>
+                    <li><a href="../alle-artikel">Blog</a></li>
+                    <li><a href="../../ueber-mich">Über mich</a></li>
+                    <li><a href="../../kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
+        </header>
+
+
+
+
+
+        <!-- TEASER -->
+
+        <main>
+            <div id="container">
+            </div>
+
+
+            <aside class="toc" id="toc">
+                <h6>Inhaltsverzeichnis</h6>
+                <ol class="toc__nav">
+                    <li>
+                        <a rel="nofollow" href="#point-wastypen" class="toc__link">1. Was sind Ordertypen?</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-welchetypen" class="toc__link">2. Welche Ordertypen gibt es?</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-kaufverkauf" class="toc__link">2.1. Ordertypen für direkte Ausführung</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-kauf" class="toc__link">2.2. Ordertypen Kauf</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-verkauf" class="toc__link">2.3. Ordertypen Verkauf</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-daytrading" class="toc__link">2.4. Daytrading Ordertypen</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-synthtypen" class="toc__link">2.5. Synthetische Ordertypen</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-iceberg" class="toc__link">2.6. Iceberg Ordertyp</a></li>
+                    <li>
+                        <a rel="nofollow" href="#point-broker" class="toc__link">3. Ordertypen und Broker
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-auswahl" class="toc__link">4. Wahl der richtigen Order</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-zusatz" class="toc__link">5. Orderzusätze</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-kosten" class="toc__link">6. Orderkosten</a>
+                    </li>
+                    <li>
+                        <a rel="nofollow" href="#point-schluss" class="toc__link">7. Zusammenfassung</a>
+                    </li>
+                </ol>
+            </aside>
+
+
+            <div class="wrapper-content-blog">
+
+                <h1 class="article__main-heading">Was sind Ordertypen und wie du die richtige Order wählst</h1>
+                <div class="article__info-box">
+                    <div class="article__info">
+                        <img class="article__info--img" src="../images/author-philipp-kozalla.png" alt="Autor"
+                            width="80" height="80">
+                        <p class="article__info--details">Philipp Kozalla <br>05.11.2022</p>
+                    </div>
+                    <div class="animated_share">
+                        <div class="animated_share_btn">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://inloopo.com/de/blog/basiswissen/ordertypen"
+                                target="_blank"><img class="article__social-media-icon"
+                                    src="../images/icon-facebook.svg" width="20"  alt="Facebook Icon"></a>
+                            <a href="https://www.linkedin.com/shareArticle?mini=true&url=https://inloopo.com/de/blog/basiswissen/ordertypen"
+                                target="_blank"><img class="article__social-media-icon"
+                                    src="../images/icon-linkedin.svg" width="20"  alt="LinkedIn Icon"></a>
+                            <a href="https://twitter.com/share?url=https://inloopo.com/de/blog/basiswissen/ordertypen"
+                                target="_blank"><img class="article__social-media-icon" src="../images/icon-twitter.svg"
+                                    width="20"  alt="Twitter Icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <p>Du möchtest dein Geld selbst anlegen, denn du weißt, dass du es besser kannst, als dein Bankberater. 
+                    Bevor du anfängst die ersten Aktien oder ETF's zu handeln, solltest du diese Ordertypen kennen und genau wissen, 
+                    wann du welchen Typ benutzt.
+                    Der Artikel, der dir Ordertypen erklärt, beginnt jetzt.</p>
+                    <p>
+                    Start klar?</p>
+                    <p>Dann los. 
+                    </p>
+
+                <figure class="article__figure">
+                    <img src="../../images/ordertypen-thumbnail.svg" alt="Ordertypen als Grafik" width="730"
+                        >
+                </figure>
+
+
+
+                <!-- Hauptinhalt -->
+
+                <section>
+                    <h2 class="article__heading-two  visible" id="point-wastypen">Was sind Ordertypen?</h2>
+                    <p>Ordertypen im Börsenhandel sind dafür da, Finanzprodukte, wie Aktien, ETFs, CFDs oder Optionen, zu kaufen und zu verkaufen. 
+                        Order sind, wie die Preise an einem Marktstand. Ohne sie würde kein Handel an der Börse möglich sein. Ordertypen Beispiele 
+                        sind Market Order, <a class="link" href="https://www.inloopo.com/de/blog/basiswissen/stop-order">Stop Order</a> oder 
+                        <a class="link" href="https://www.inloopo.com/de/blog/basiswissen/limit-order">Limit Order</a>.
+                    </p>
+                    <p>Die Order der einzelnen Ordertypen platzierst du bei deinem online Broker.</p>
+                    <p>
+                        Wie viele es davon gibt?</p>
+                        <p>Einige. 
+                        </p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point-welchetypen">Welche Ordertypen gibt es?</h2>
+                    <p>Bevor du dich direkt zu Beginn verloren fühlst: Für dich sind die Market Order, Stop Order, 
+                        Limit Order und Stop Limit Order am wichtigsten. Diese werden am häufigsten verwendet.</p>
+                        <p>
+                        Du investierst in Aktien?</p>
+                        <p>
+                        Gut.</p>
+                        <p>Dann freut es dich bestimmt zu hören, dass du jeden Ordertypen für Aktien verwenden kannst. 
+                    </p>
+                    <p>Falls du dich in Richtung Daytrading entwickelst, sind die Ordertypen für Daytrader interessant.</p>
+                    <p>Die Größe eines großen Markteilnehmers wirst du nicht erreichen. Aber Profi könntest du werden. 
+                        Dann kommen kombinierte Ordertypen zukünftig für dich in Frage.</p>
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Für Anfänger</th>
+                                        <th>Für Strategen</th>
+                                        <th>Für Profis</th>
+                                        <th>Für Day Trader</th>
+                                        <th>Für Große</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Market Order</td>
+                                        <td>Stop Order</td>
+                                        <td>OCO</td>
+                                        <td>All or None</td>
+                                        <td>Iceberg</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quote Order</td>
+                                        <td>Limit Order</td>
+                                        <td>Bracket Order</td>
+                                        <td>Immediate or Cancel</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Stop Limit Order</td>
+                                        <td>Market on Close</td>
+                                        <td>Fill or Kill</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Trailing Stop Order</td>
+                                        <td>Market if Touched</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Trailing Stop Limit Order</td>
+                                        <td>Limit on Close</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td>Limit if Touched</td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </diV>
+                </section>
+
+
+                <section>
+                    <h3 class="article__heading-three" id="point-kaufverkauf">Ordertypen für direkte Ausführung</h3>
+                    <h4>Market Order</h4>
+                    <p>Mit einer Market Order kaufst oder verkaufst du direkt die Aktie oder den ETF zum nächstmöglichen 
+                        Zeitpunkt. Dabei wird die Order zum Kurs ausgeführt, bei dem es eine Gegenpartei für deine Order gibt. 
+                        Du verwendest eine Market Order, wenn du die Order sofort ausführen möchtest.</p>
+
+    
+                    <h4>Quote Order</h4>
+                    <p>Die Quote Order zeigt dir einen festgelegten Kurs für dein Finanzprodukt an. In der Regel für 5 Sekunden. 
+                        Diese Order ist ein üblicher Ordertyp bei Direktbanken und vergleichbar mit einer Market Order mit festgelegtem 
+                        Preis. Achte unbedingt darauf, dass dein Broker deine Orderausführung bestätigt. Denn in Einzelfällen kann der 
+                        gestellte Kurs doch nicht akzeptiert werden und du musst den Vorgang wiederholen.
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="article__heading-three" id="point-kauf">Ordertypen Kauf</h3>
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-stop-order.svg" width=""  alt="Grafik für Buy Stop Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Stop Buy</h4>
+                            <p>Du verwendest eine Stop Buy Order, wenn du in Trendrichtung kaufen möchtest. Der Stop Buy Kurs, den du bestimmst, 
+                                muss oberhalb des aktuellen Kurses liegen. Sobald dein definierter Kurs erreicht wird, wird die Order 
+                                bestmöglich ausgeführt. Das heißt der tatsächliche Kaufkurs kann über deinem ursprünglich festgelegten Stop 
+                                Kurs liegen.</p>
+                        </div>
+                    </div>
+
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-limit-order.svg" width=""  alt="Grafik für Buy Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Buy Limit</h4>
+                            <p>Du verwendest diese Order, wenn du zu einem günstigeren Kurs kaufen möchtest. 
+                                Der Buy Limit Kurs, den du definierst, muss unterhalb des aktuellen Kurses liegen. 
+                                Beispielsweise an vorherigen Tiefs. Die Order wird erst ausgeführt, wenn ein Kauf zu diesem Kurs 
+                                oder besser möglich ist. Mit der Buy Limit Order kann es nicht zu Slippagen kommen. </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-stop-limit-order.svg" width=""  alt="Grafik für Buy Stop Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Stop Buy Limit</h4>
+                            <p>Eine Buy Stop Limit Order verwendest du für Finanzprodukte mit wenig Handelsvolumen oder wenn 
+                                du die Slippagen begrenzen möchtest. Es ist eine zweistufige Order, bei der die Stop Buy Order 
+                                über dem aktuellen Kurs liegt. Nachdem der Stop Kurs überschritten ist, wird die Limit Order aktiviert. 
+                                Die Differenz zwischen Stop und Limit Order ist die maximale Slippage, die auftreten kann. Dein Kaufkurs 
+                                muss also dazwischen liegen. Kommt es zu einem starken Kurssprung (Gap) über deine Limit Order wird der Kauf 
+                                nicht ausgeführt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-trailing-stop-order.svg" width=""  alt="Grafik für Trailing Stop Buy Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Trailing Stop Buy</h4>
+                            <p>Die Trailing Stop Buy Order ist eine Stop Buy Order. Der einzige Zusatz ist, dass du die 
+                                Stop Buy Order mit einem Offset zum aktuellen Kurs eingibst. Der Trailing Stop bewegt sich 
+                                dann mit dem Kurs und wird ausgeführt, sobald dein Offset erreicht wird. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-trailing-stop-limit-order.svg" width=""  alt="Grafik für Trailing Stop Buy Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Trailing Stop Buy Limit</h4>
+                            <p>Die Trailing Stop Buy Limit Order ist eine Stop Limit Kauforder. 
+                                Mit dem Zusatz, dass zum aktuellen Zeitpunkt ein Offset definiert wird, 
+                                der mit dem Kurs läuft. Erst wenn der Offset erreicht ist, wird die Order 
+                                wie eine Stop Limit Buy Order zweistufig ausgeführt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row">
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-oco-order.svg" width=""  alt="Grafik für Buy OCO Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>OCO Buy</h4>
+                            <p>Die OCO Kauforder sind zwei kombinierte Ordertypen. Eine Limit Order unterhalb des aktuellen 
+                                Kurses und eine Stop Order oberhalb des aktuellen Kurses. Sobald der Kurs eine der beiden Ordergrenzen 
+                                erreicht, wird die eine ausgeführt und die andere gelöscht (One canlcels the other). 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/buy-bracket-order.svg" width=""  alt="Grafik für Bracket Buy Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Bracket Order Buy</h4>
+                            <p>Die Bracket Kauforder (If Done Order) ist eine dreistufige Order. 
+                                Nämlich alles vom Kaufen eines Finanzprodukts bis zum Verkaufen in einer Kombi Order. 
+                                Dabei beginnt alles mit einer Kauforder, der jeweils eine Stop Loss Order und Limit Order 
+                                zum Verkaufen angehängt ist. Man könnte auch sagen, der initialen Kauforder ist eine OCO Order angehängt. 
+                                Dabei kann die Kauforder natürlich eine Market Order, Stop Order oder Limit Order sein.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section>
+                    <h3 class="article__heading-three" id="point-verkauf">Ordertypen Verkauf</h3>
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-stop-order.svg" width=""  alt="Grafik für Sell Stop Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Stop Sell</h4>
+                            <p>Du verwendest diese Order, wenn du dich gegen unbegrenzte Verluste schützen möchtest.
+                                Den Stop Loss Kurs setzt du unterhalb des aktuellen Kurses. Die Order wird bestmöglich 
+                                ausgeführt, sobald dein Kurs erreicht oder unterschritten wird. Das heißt, der tatsächliche 
+                                Verkaufskurs kann niedriger als dein Stop Loss sein. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-limit-order.svg" width=""  alt="Grafik für Sell Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Sell Limit</h4>
+                            <p>Mit der Sell Limit Order stellst du sicher, dass du die Gewinne realisierst, 
+                                die du ins Auge gefasst hast. Du legst den Sell Limit Kurs oberhalb des aktuellen Kurses. 
+                                Die Order wird ausgeführt, wenn ein Verkauf zu diesem Kurs oder besser möglich ist. 
+                                Auch hier kann es nicht zu negativen Slippagen kommen. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-stop-limit-order.svg" width=""  alt="Grafik für Sell Stop Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Sell Stop Limit</h4>
+                            <p>Die Stop Loss Limit Order ist eine zweistufige Order, bei welcher du den Stop Loss Kurs unterhalb des 
+                                aktuellen Kurses definierst. Der Stop Loss Kurs wird unterschritten und die Sell Limit Order aktiviert. 
+                                Dies begrenzt deine Slippage. Du verkaufst deine Position zum Sell Limit Kurs oder darüber. Sollte dein 
+                                Sell Limit Kurs übersprungen (Gap) werden, wird der Verkauf nicht ausgeführt. Verwende daher diese Order niemals 
+                                dafür, um dein Verlustrisiko zu begrenzen!
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-trailing-stop-order.svg" width=""  alt="Grafik für Sell Trailing Stop Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Trailing Stop Loss</h4>
+                            <p>Die Trailing Stop Loss Order ist eine Stop Loss Order. Der einzige Zusatz ist, dass du die Stop Sell Order 
+                                mit einem Offset zum aktuellen Kurs eingibst. Der Trailing Stop bewegt sich dann mit dem Kurs und wird 
+                                ausgeführt sobald dein Offset erreicht wird.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-trailing-stop-limit-order.svg" width=""  alt="Grafik für Sell Trailing Stop Limit Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Trailing Stop Loss Limit</h4>
+                            <p>Die Trailing Stop Limit Sell Order ist eine Stop Limit Sell Order. Mit dem Zusatz, 
+                                dass zum aktuellen Zeitpunkt ein Offset definiert wird, der mit dem Kurs läuft. Erst wenn der 
+                                Offset erreicht ist, wird die Order wie eine Stop Limit Sell Order zweistufig ausgeführt.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-oco-order.svg" width=""  alt="Grafik für Sell OCO Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>OCO Sell</h4>
+                            <p>Die OCO Verkaufsorder sind zwei kombinierte Ordertypen. Eine Limit Order zur Gewinnsicherung oberhalb des 
+                                aktuellen Kurses und eine Stop Loss Order zur Risikobegrenzung unterhalb des aktuellen Kurses. Wird eine der 
+                                beiden Orders ausgelöst, wird die andere gelöscht (One cancelst the other).
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="article__row"> 
+                        <div class="column  half  article__column">
+                            <img class="article__column--image" src="../images/sell-bracket-order.svg" width=""  alt="Grafik für Sell Bracket Order">
+                        </div>
+                        <div class="column half  article__column">
+                            <h4>Bracket Order Sell</h4>
+                            <p>Die Bracket Verkaufsorder (If Done Order) ist eine dreistufige Order. 
+                                Dabei beginnt sie mit der Eröffnung einer Short-Position, dem Verkauf eines Finanzprodukts. 
+                                Es wird eine Stop Order und eine Limit Order zum Schließen (zurückkaufen) des Finanzprodukts angehängt. 
+                                Man könnte auch sagen, der initialen Verkaufsorder ist eine OCO Order angehängt. Dabei kann die 
+                                Verkaufsorder natürlich eine Market Order, Stop Order oder Limit Order sein.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h3 class="article__heading-three" id="point-daytrading">Spezielle Ordertypen im Daytrading oder 
+                        auch für Aktien mit sehr geringer Liquidität (Pennystocks)</h3>
+                    <h4>Fill or Kill (FOK)</h4>
+                    <p>Eine Fill or Kill Order (FOK) ist ein Auftrag zum Kauf oder Verkauf einer Aktie, 
+                        der sofort in seiner Gesamtheit ausgeführt werden muss. Ist das nicht möglich, wird der gesamte Auftrag storniert 
+                        (d.h. eine Teilausführung des Auftrags ist nicht zulässig).</p>
+
+    
+                    <h4>All or None (AON)</h4>
+                    <p>Eine All or None Order (AON) ist ein Auftrag zum Kauf oder Verkauf einer Aktie, 
+                        der entweder vollständig oder gar nicht ausgeführt werden muss.  AON Orders, 
+                        die nicht sofort ausgeführt werden können, bleiben aktiv, bis sie ausgeführt oder gelöscht werden.
+                    </p>
+
+                    <h4>Immediate or Cancel (IOC)</h4>
+                    <p>Eine Immediate or Cancel Order (IOC) ist ein Auftrag zum Kauf oder Verkauf einer Aktie, 
+                        der sofort ausgeführt werden muss. Jeder Teil einer IOC Order, der nicht sofort ausgeführt werden kann, 
+                        wird storniert. Es werden nur so viele Aktien gekauft oder verkauft, wie verfügbar sind. Der Rest der Order 
+                        wird storniert.</p>
+                </section>
+
+                <section>
+                    <h3 class="article__heading-three" id="point-synthtypen">Synthetische Ordertypen</h3>
+                    <p>Wenn du ein Konto bei <a class="link" href="https://www.interactivebrokers.com">Interactive Brokers</a> oder einem deutschen Ableger 
+                        wie <a class="link" href="https://www.lynxbroker.de/">Lynx</a>, <a class="link" href="https://www.captrader.com/">Captrader</a> 
+                        oder <a class="link" href="https://www.banxbroker.de/">Banx</a> 
+                        hast, kannst du auch mit synthetischen Ordertypen handeln. Diese Ordertypen werden vom Broker künstlich erzeugt und 
+                        unterliegen daher dem Risiko in Extremsituationen nicht ausgeführt zu werden. Unter normalen Marktsituationen können 
+                        sie aber durchaus Vorteile bieten.</p>
+
+                    <h4>Market on Close</h4>
+                    <p>Market on Close (MOC) ist eine Market Order zum Kaufen oder Verkaufen, die erst am Ende eines Handelstages 
+                        ausgeführt wird. Du platzierst die Order im Laufe des Tages und sie wird dann automatisch kurz vor Börsenschluss 
+                        ausgeführt.</p>
+
+    
+                    <h4>Market if touched</h4>
+                    <p>Market if touched (MIT) ist vergleichbar mit einer Limit Order. Bei der Limit Order ist der Limit Kurs garantiert, 
+                        außer es fehlt an Handelsvolumen. Dann wird so lange gewartet bis das Handelsvolumen vorhanden ist, sodass die Order 
+                        ausgeführt werden kann. Eine Market if touched Order wird direkt beim Berühren des Trigger Kurses in eine Markt Order 
+                        umgewandelt und ausgelöst. Somit kann es zu Slippagen bei der Ausführung kommen.
+                    </p>
+                    
+                    <h4>Limit if touched</h4>
+                    <p>Limit if touched ist eine zweistufige Order. Es gibt wie bei der Market if touched Order einen Trigger Kurs. 
+                        Wenn dieser erreicht wird, wird die Limit Order platziert. Sie funktioniert somit spiegelverkehrt wie die Stop 
+                        Limit Order.</p>
+
+                    <h4>Limit on Close</h4>
+                    <p>Limit On Close (LOC) ist eine Limit Order, die bei Marktschluss ausgeführt werden soll. 
+                        Limit Aufträge steuern den Preis, der für ein Finanzprodukt gekauft oder verkauft wird. Der zusätzliche Parameter 
+                        "on close" bedeutet, dass der Auftrag nur ausgeführt wird, wenn der Schlusskurs innerhalb des Preislimits dieser 
+                        Order liegt.</p>
+                </section>
+
+
+                <section>
+                    <h3 class="article__heading-three" id="point-iceberg">Iceberg Order</h3>
+                    <p>Die Iceberg Order ist eine Limit Order für große Marktteilnehmer, die so groß sind, dass sie die Kurse 
+                        beeinflussen können. Dieser Ordertyp teilt eine sehr große Orderstückzahl in viele kleine auf und nur 
+                        eine kleine Orderstückzahl ist im Orderbuch sichtbar. Normalerweise werden solche Orders durch automatisierte 
+                        Programme aufgegeben. Der Name Iceberg ist vom Eisberg im Wasser abgeleitet, bei welchem auch nur die Spitze 
+                        sichtbar ist.
+                    </p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point-broker">Welche Ordertypen gibt es bei welchem Broker?</h2>
+                    <p>Gute Frage.</p>
+                    <p>Es hat etwas gedauert aber hier ist sie: Eine Tabelle mit den bekanntesten Brokern und ihren Ordertypen. 
+                        Vergleiche diese Tabelle mit deinem Broker. Sollte dein Broker nicht diese Ordervielfalt anbieten, frage dich, 
+                        ob das für dich wichtig ist.</p>
+                    <p>Für die Richtigkeit der Informationen übernehme ich keine Haftung. Ich habe mir größte Mühe gegeben die 
+                        Informationen zusammenzutragen. Bitte prüfe selbst nach!</p>  
+                </section>
+            </div>
+
+
+                <div class="table--big  wrapper-content">
+                        <div class="responsive-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>Stand: Nov. 2022</th>
+                                        <th><a class="link" href="https://www.interactivebrokers.co.uk/de/index.php?f=6448">Interactive Brokers</a> (Captrader, Lynx, Banx)</th>
+                                        <th><a class="link" href="https://www.comdirect.de/wertpapierhandel/cfd/handel/ordertypen.html">Comdirect</a></th>
+                                        <th><a class="link" href="https://www.flatex.de/online-broker/ordertyp/">Flatex</a></th>
+                                        <th><a class="link" href="https://de.scalable.capital/finanzen-boerse/ordertypen-einfach-erklaert-so-handeln-sie-an-der-boerse">Scalable</a></th>
+                                        <th><a class="link" href="https://support.traderepublic.com/de-de/48-Welche-Orderarten-werden-angeboten">Trade Republic</a></th>
+                                        <th><a class="link" href="https://www.justtrade.com/ordertypen">Just Trade</a></th>
+                                        <th><a class="link" href="https://smartbroker.de/faq">Smart Broker</a></th>
+                                        <th><a class="link" href="https://www.ing.de/sparen-anlegen/direkt-depot/kundenservice/kaufen-verkaufen/">ING Direkt</a></th>
+                                        <th><a class="link" href="https://www.degiro.de/helpdesk/orders/ordertypen/was-sind-die-verschiedenen-ordertypen">Degiro</a></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Market</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Limit</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stop</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Stop Limit</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Trailing Stop</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>OCO</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Bracket Order</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Synthetische</td>
+                                        <td><img src="../images/check.svg" width="20"  alt="Ja"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                        <td><img src="../images/no-check.svg" width="20"  alt="Nein"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </diV>
+            </div>
+
+            <div class="wrapper-content-blog">
+
+                <section>
+                    <h2 class="article__heading-two" id="point-auswahl">Wie wählst du die richtige Order aus?</h2>
+                    <p>Du beantwortest die folgenden Fragen nacheinander:</p>
+                    <ol class="article__list--order">
+                        <li>Willst du sofort eine Order ausüben oder handelst du strategisch?</li>
+                        <li>Willst du kaufen oder verkaufen?</li>
+                        <li>Ab jetzt bitte in die Grafik schauen. </li>
+                    </ol>
+                    <p>Warum?</p>
+                    <p>Es wäre zu viel Text, für dich und für mich.</p>
+                    <img src="../images/wie-du-ordertypen-aussuchst.svg" width="730"  alt="Grafik für wie du eine Order aussuchst">
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point-zusatz">Welche Orderzusätze gibt es?</h2>
+                    <p>Es gibt nur die Ordergültigkeit als Orderzusatz. Du wählst neben dem Finanzprodukt 
+                        und der Orderanzahl, auch aus wie lange die Order im System sein soll. 
+                        Du kannst offene Orders (Orders, die noch nicht ausgeführt wurden) jederzeit kostenlos stonieren.</p>
+                    
+                    <h3 class="article__heading-three">Ordergültigkeit</h3>
+                    <p>Bei guten Brokern gibt es alle drei Auswahlmöglichkeiten. Vor allem solltest du darauf achten, 
+                        das die Ordergültigkeit GTC (Good till cancel, Gültig bis zur Ausführung oder Löschung) möglich ist. 
+                        Darüber hinaus gibt es noch die Ordergültigkeit Good for day (Gültig für den aktuellen Handelstag) 
+                        und Good till date (Gültig für einen bestimmten Zeitraum).</p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point-kosten">Wie hoch sind Orderkosten?</h2>
+                    <p>Es ist heute üblich keine Kosten für die Aufgabe oder Änderung einer Order zu bezahlen. 
+                        Bei den meisten Brokern werden die Orderkosten erst fällig, wenn die Order auch ausgeführt wurde.</p>
+                    <p>Die Orderkosten unterscheiden sich meist zwischen den Banken oder Brokern. Dabei gibt es Discount 
+                        Broker, Direktbanken oder Filialbanken. Erkundige dich, bevor du mit dem Investieren beginnst, welche 
+                        Bank oder Broker zu dir passt. Achte dabei aber besonders auf die Orderkosten und versteckten Gebühren 
+                        bei der Ausführung, denn diese können je nach Portfolio und Handelsfrequenz mehrere 100 € im Jahr ausmachen.</p>
+                    <p>Ich bin bei <a class="link" href="https://www.interactivebrokers.com/">Interactive Brokers</a>. 
+                        Das ist der größte Broker weltweit mit sehr niedrigen Orderkosten für alle Finanzprodukte. 
+                        Der Nachteil an Interactive Brokers ist, dass du deine Steuererklärung am Ende des Jahres 
+                        selbst machen musst. Ein Broker in Deutschland macht das automatisch.</p>
+                    <p>Wenn du also günstig die gängigsten ETF's oder Aktien handeln möchtest, 
+                        empfehle ich ein Konto bei <a class="link" href="https://www.comdirect.de/">Comdirect</a>, 
+                        <a class="link" href="https://de.scalable.capital/">Scalable Capital</a>, <a class="link" href="https://www.flatex.de/">Flatex</a> oder 
+                        <a class="link" href="https://traderepublic.com/">Trade Republic</a>.
+                    </p>
+                </section>
+
+
+                <section>
+                    <h2 class="article__heading-two" id="point-schluss">Ergebnis</h2>
+                    <p>Du weißt jetzt, wann du welche Order verwendest. Du kennst alle Ordertypen, 
+                        die es bei Interactive Brokers gibt und kannst einschätzen, ob du für dein Handeln 
+                        einen anderen Ordertyp als die Market Order verwenden möchtest. Übe die Ordereingabe. 
+                        Überlege dir bei jedem Kauf eines Finanzprodukts dein Ziel und wie du deine Verluste begrenzen kannst. 
+                        Im besten Fall gibst du alles zusammen direkt mit einer Bracket Order ein.
+                    </p>
+                        <p>Du findest das zu kompliziert</p>
+                        <p>Ist es zu Beginn auch.</p>
+                        <p>Mit Übung wirst du besser. Die Profis machen das auch so und sind erfolgreich.</p>
+                </section>
+
+
+
+            </div>
+        </main>
+    </div>
+
+
+
+
+    <!-- FOOTER -->
+
+    <footer class="site-footer">
+        <section>
+            <h2 class="site-footer__heading">inloopo</h2>
+            <p class="site-footer__text--center">Dein Investment. Deine Freiheit.</p>
+            <p class="site-footer__text--center">
+                <a class="site-footer__link--center" href="../../datenschutz">Datenschutz</a> |
+                <a class="site-footer__link--center" href="../../nutzungsbedingungen">Nutzungsbedingungen</a> |
+                <a class="site-footer__link--center" href="../../risikohinweis">Risikohinweis</a> |
+                <a class="site-footer__link--center" href="../../impressum">Impressum</a>
+            </p>
+            <p class="site-footer__text--center">Copyright © 2022 KW³ Business Ltd</p>
+
+            <div class="wrapper-content  site-footer__text--legal">
+                <p class="site-footer__text">Risiko Offenlegung: Der Handel mit ETFs, Futures oder Aktien birgt ein
+                    hohes
+                    Risiko und ist nicht für jeden Investor geeignet. Ein Investor kann möglicherweise mehr als das
+                    eingezahlte Kapital verlieren. Für den Handel sollte nur Risikokapital verwendet werden, bzw. Teile
+                    des
+                    Risikokapitals. Risikokapital ist Geld, bei dessen Verlust sich keine Änderung der Finanzsituation
+                    ergibt bzw. keinen Einfluss auf das Leben mit sich bringt. Eine in der Vergangenheit erzielte
+                    Performance ist keine Garantie für zukünftige Gewinne.</p>
+                <p class="site-footer__text">
+                    Offenlegung der hypothetischen Performance: Hypothetische Performanceergebnisse haben viele
+                    inhärente
+                    Einschränkungen, von denen einige im Folgenden beschrieben werden. Die dargestellten Ergebnisse des
+                    Kontos können in den Gewinnen und Verlusten stark abweichen. Einer der Einschränkungen der
+                    hypothetischen Ergebnisse ist, dass Sie durch bekannte historische Daten entstanden sind. Darüber
+                    hinaus
+                    beinhaltet der hypothetische Handel kein finanzielles Risiko – kein hypothetischer Track Record kann
+                    die
+                    finanziellen Risiken des tatsächlichen Handels darstellen. Beispielsweise besteht die Möglichkeit,
+                    dass
+                    der Handel bei Verlusten ausgesetzt bzw. abgebrochen wird, dies kann die tatsächlichen Ergebnisse
+                    stark
+                    verändern. Des Weiteren gibt es zahlreiche weitere Faktoren die bei der Umsetzung eines
+                    Handelsprogramms
+                    nicht vollständig in der hypothetischen Performance berücksichtigt werden können und somit die
+                    tatsächlichen Ergebnisse beeinflussen können.
+                </p>
+            </div>
+        </section>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+    <script src="../../scripts/function.js"></script>
+
+</body>
+
+</html>

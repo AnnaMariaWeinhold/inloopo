@@ -161,6 +161,68 @@ width: 50%;
 
 
 
+/* ---------------------------------*\
+    #FONTS
+\* ---------------------------------*/
+
+
+/* Cera Pro */
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Light.otf);
+    src: url(../fonts/Cera\ Pro\ Light.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Regular\ Italic.otf);
+    src: url(../fonts/Cera\ Pro\ Regular\ Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Medium.otf);
+    src: url(../fonts/Cera\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Medium.otf);
+    src: url(../fonts/Cera\ Pro\ Medium.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Bold.otf);
+    src: url(../fonts/Cera\ Pro\ Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Cera Pro';
+    src: url(../fonts/Cera\ Pro\ Black.otf);
+    src: url(../fonts/Cera\ Pro\ Black.ttf);
+}
+
+/* Quattrocento */
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Italic.ttf);
+}
+
+@font-face {
+    font-family: 'Quattrocento Sans';
+    src: url(../fonts/QuattrocentoSans-Regular.ttf);
+}
 
 
 
@@ -176,6 +238,7 @@ h4,
 h5, 
 h6 {
     font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 h1 {
@@ -227,7 +290,7 @@ p{
 
 .heading-two--bigger {
     font-size: 62px;
-    font-size: 3.875;
+    font-size: 3.875rem;
     line-height: 1.2;
   }
 
@@ -401,7 +464,8 @@ color: #fff;
 
 /* #Links */
 
-.link {
+.link,
+.secondary-teaser__link {
     color: #ff6b35;
     text-decoration: none;
 }
@@ -430,6 +494,7 @@ font-weight: bold;
 .link__blog:hover {
     cursor: pointer;
 }
+
 
 
 
@@ -669,7 +734,7 @@ justify-content: center;
 
 .column__heading {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 30px;
     padding-left: 25px;
     padding-right: 25px;
 }
@@ -731,6 +796,7 @@ justify-content: center;
 .secondary-teaser__image-at-work {
     background-image: url('../images/image-at-work.jpg');
     color: var(--text-color);
+    padding: 30px 0;
 }
 
 .secondary-teaser__heading {
@@ -1023,7 +1089,7 @@ padding: 0;
     margin-right: 0;
     margin-bottom: 20px;
     text-align: center;
-    font-size: 24px;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -1033,11 +1099,17 @@ padding: 0;
 
 
 
-/* #Tabells */
+/* #Table */
 
-.responsive-table{
+.responsive-table {
     overflow-x: auto;
 }
+
+.table--big {
+    overflow-x: auto;
+    padding: 0 7%;
+}
+
 
 table, 
 thead, 
@@ -1120,7 +1192,7 @@ padding: 0 15%;
 }
 
 .list__link {
-    margin-bottom: 5px 0;
+    margin: 5px 0;
 }
 
 .box__link {
@@ -1383,6 +1455,8 @@ padding: 0 15%;
     width: 30.5%;
     border: 1px solid #DCDCDC;
     padding: 0;
+    margin-bottom: 25px;
+    height: 672px;
 }
 
 .blog__details {
@@ -1398,6 +1472,10 @@ padding: 8%;
 .blog__article:first-child {
     margin-left: 2%;
     }
+
+.blog__article:last-child {
+    margin-left: 2%;
+}
 
 .blog__subheading {
     margin-top: 50px;
@@ -1437,7 +1515,8 @@ padding: 8%;
 }
 
 .article__heading-three {
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-bottom: 25px;
 }
 
 .article__figure {
@@ -1512,7 +1591,24 @@ padding: 8%;
     margin-bottom: 35px;
 }
 
+.article__column {
+    padding: 15px 30px 0 0;
+}
 
+.article__column:last-child {
+    padding-right: 0;
+}
+
+.article__column--image {
+    padding-top: 15%;
+}
+
+.article__row {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -1600,7 +1696,7 @@ padding: 8%;
     top: 0;
     left: 0;
     overflow: hidden;
-    padding-top: 180px;
+    padding-top: 120px;
     margin-left: 20px;
     float: left;
     position: fixed;
@@ -1618,7 +1714,7 @@ padding: 8%;
     text-decoration: none;
     list-style: none;
     display: block;
-    padding: 2px 0;
+    padding: 6px 0;
     color: #171614;
     transition: all 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
@@ -1890,7 +1986,7 @@ nav li,
 
 
 /* ---------------------------------*\
-    #HEADINGS
+    #HEADINGS 
 \* ---------------------------------*/
 
 h1{
@@ -2047,6 +2143,14 @@ h4{
     animation: none !important;
 }
 
+/* ---------------------------------*\
+    #TABLE
+\* ---------------------------------*/
+
+.table--big {
+    padding: 0 2%;
+    overflow: auto;
+}
 
 
 /* ---------------------------------*\
@@ -2397,6 +2501,10 @@ h4{
 
     .box__table {
         font-size: 16px;
+    }
+
+    .table--big {
+        padding: 0 2%;
     }
 
 
