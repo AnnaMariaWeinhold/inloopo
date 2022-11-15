@@ -379,7 +379,7 @@ nav ul a{
     border-radius: 4px;
 }
 
-nav input[type="checkbox"]{
+.navbar__checkbox [type="checkbox"]{
     display: none;
 }
 
