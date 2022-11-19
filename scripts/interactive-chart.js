@@ -51,13 +51,10 @@ window.addEventListener("DOMContentLoaded", async function () {
   const dataDescription = data.shift();
   const dates = data.map((row) => row[0]);
 
-  const strategyName = "S&P Strategie";
+  const strategyName = 'inloopo S&P 500 Strategie';
+  const buyAndHoldName = 'Buy-And-Hold S&P 500';
 
   const options = {
-    title: {
-      text: "S&P Strategy vs Buy-and-Hold",
-      align: center
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -65,7 +62,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       }
     },
     legend: {
-      data: ['S&P Strategie', 'Buy and Hold']
+      data: [strategyName, buyAndHoldName]
     },
     grid: {
       left: '3%',
@@ -83,12 +80,16 @@ window.addEventListener("DOMContentLoaded", async function () {
     series: [
       {
         name: strategyName,
-        type: "line",
+        type: 'line',
+        smooth: true,
+        lineStyle: { color: '#ff6b35' },
+        itemStyle: { color: '#ff6b35' },
         data: calculateStrategy(data),
       },
       {
-        name: "Buy and Hold",
+        name: buyAndHoldName,
         type: "line",
+        smooth: true,
         data: calculateSP(data),
       },
     ],
