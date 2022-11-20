@@ -31,7 +31,7 @@
 #chart-controls {
   display: flex;
   justify-content: center;
-  margin-bottom: 30px;
+  margin-bottom: 12px;
 }
 
 
@@ -110,4 +110,20 @@ input#start-year:focus + #year-picker,
 
 #year-picker li + li {
   border-top: 1px solid lightgray;
+}
+
+.drawdowns {
+  display: flex;
+  gap: 30px;
+  font-size: 21px;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+#strategy-drawdown-element {
+  color: #ff6b35;
+}
+#sp-drawdown-element {
+  color: blue;
 }
