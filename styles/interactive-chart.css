@@ -1,6 +1,14 @@
-.chart__input {
-  padding: 20px;
-  margin-right: 10px;
+#interactive-chart {
+  margin-bottom: 90px;
+  margin-left: 12px;
+  float: left;
+  width: 100%;
+  height: 600px;
+}
+
+.chart__heading {
+  text-align: center;
+  padding: 0 25px;
 }
 
 .chart__p {
@@ -10,8 +18,9 @@
 }
 
 .chart__input {
-  margin-left: 20px;
-  margin-right: 40px;
+  padding: 6px 16px;
+  margin: 0 20px 0 10px;
+  font-size: 18px;
 }
 
 .chart__input:focus {
@@ -22,7 +31,7 @@
 #chart-controls {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 12px;
 }
 
 
@@ -68,10 +77,6 @@
   z-index: -1;
 }
 
-#interactive-chart {
-  margin: 0 12px;
-}
-
 label[for="start-year"] {
   position: relative;
 }
@@ -100,9 +105,25 @@ input#start-year:focus + #year-picker,
 }
 #year-picker li:hover {
   cursor: pointer;
-  font-weight: bold;
+  color: #ff6b35;
 }
 
 #year-picker li + li {
   border-top: 1px solid lightgray;
+}
+
+.drawdowns {
+  display: flex;
+  gap: 30px;
+  font-size: 21px;
+  font-weight: bold;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+#strategy-drawdown-element {
+  color: #ff6b35;
+}
+#sp-drawdown-element {
+  color: blue;
 }

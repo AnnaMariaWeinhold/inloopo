@@ -2,34 +2,100 @@ function sliceDataFrom(data, startYear) {
   return data.slice(data.findIndex((row) => row[0].endsWith(startYear)));
 }
 
+class Drawdown {
+  high; // Point
+  low; // Point
+  constructor(high, low) {
+    this.high = high;
+    this.low = low;
+  }
+
+  getDrawdownInPercent() {
+    if (this.high.value && this.low.value) {
+      return (this.low.value / this.high.value) - 1;
+    }
+  }
+}
+
+class Point {
+  date;
+  value;
+
+  constructor(date, value) {
+    this.date = date,
+      this.value = value;
+  }
+
+  setPoint(newDate, newValue) {
+    this.date = newDate;
+    this.value = newValue;
+  }
+}
+
+function calculateDrawdowns() {
+  let allTimeHigh = new Point("", Number.NEGATIVE_INFINITY);
+  let allTimeLow = new Point("", Number.POSITIVE_INFINITY);
+  let drawdowns = []; // Drawdown[]
+
+  return {
+    write(date, newMoney) {
+      // max drawdown
+      if (allTimeHigh.value < newMoney) {
+        if (allTimeLow.value !== Number.POSITIVE_INFINITY) {
+          // there is an existing pair of all-time low and high
+          // push exising pair to drawdown and create new all-time high
+          drawdowns.push(new Drawdown(allTimeHigh, allTimeLow));
+          allTimeHigh = new Point(date, newMoney);
+          allTimeLow = new Point("", Number.POSITIVE_INFINITY);
+        } else {
+          // allTimeLow is still empty
+          // allTimeHigh has no corresponding all-time low yet
+          allTimeHigh.setPoint(date, newMoney);
+        }
+      } else if (allTimeLow.value > newMoney) {
+        allTimeLow.setPoint(date, newMoney);
+      }
+    },
+    get() {
+      return drawdowns;
+    }
+  }
+}
+
+
 function calculateStrategy(data, startMoney = 10000, startYear = "1998") {
   basis = sliceDataFrom(data, startYear);
   const output = [];
 
   let previousMoney = startMoney;
+  const drawdowns = calculateDrawdowns()
   for (const [date, change, invested] of basis) {
     if (invested === "X") {
-      const newMoney = previousMoney * (1 + change / 100);
+      const newMoney = (previousMoney * (1 + change / 100));
+      drawdowns.write(date, newMoney);
       output.push(newMoney);
       previousMoney = newMoney;
     } else {
       output.push(previousMoney);
     }
   }
-  return output;
+  return { strategyData: output.map((num) => num.toFixed(0)), drawdowns: drawdowns.get() };
 }
+
 
 function calculateSP(data, startMoney = 10000, startYear = "1998") {
   const basis = sliceDataFrom(data, startYear);
-  // echart needs the money values of the y-axis of type number[]
   const output = [];
   let previousMoney = startMoney;
+  const drawdowns = calculateDrawdowns();
+
   for (const [date, change] of basis) {
-    const newMoney = previousMoney * (1 + change / 100);
+    const newMoney = (previousMoney * (1 + change / 100));
     output.push(newMoney);
     previousMoney = newMoney;
+    drawdowns.write(date, newMoney);
   }
-  return output;
+  return { spData: output.map((num) => num.toFixed(0)), drawdowns: drawdowns.get() };
 }
 
 function debounce(delay = 500, handler) {
@@ -43,21 +109,31 @@ function debounce(delay = 500, handler) {
   };
 }
 
+function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
+  const spDrawdownElement = document.getElementById("sp-drawdown-element");
+  const strategyDrawdownElement = document.getElementById("strategy-drawdown-element");
+
+  spDrawdownElement.innerText = `${(Math.min(...spDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
+  strategyDrawdownElement.innerText = `${(Math.min(...strategyDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
+}
+
+
+// ENTRY POINT
 window.addEventListener("DOMContentLoaded", async function () {
   const chart = echarts.init(document.getElementById("interactive-chart"));
-
-  const data = await fetch("../data/sp-basis.json").then((res) => res.json());
+  const data = await fetch("/data/20221119-data.json").then((res) => res.json());
 
   const dataDescription = data.shift();
   const dates = data.map((row) => row[0]);
 
-  const strategyName = "S&P Strategie";
+  const strategyName = 'inloopo S&P 500 Strategie';
+  const buyAndHoldName = 'Buy-And-Hold S&P 500';
+  const { spData, drawdowns: spDrawdowns } = calculateSP(data);
+  const { strategyData, drawdowns: strategyDrawdowns } = calculateStrategy(data);
+
+  displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns);
 
   const options = {
-    title: {
-      text: "S&P Strategy vs Buy-and-Hold",
-      align: center
-    },
     tooltip: {
       trigger: 'axis',
       axisPointer: {
@@ -65,7 +141,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       }
     },
     legend: {
-      data: ['S&P Strategie', 'Buy and Hold']
+      data: [strategyName, buyAndHoldName]
     },
     grid: {
       left: '3%',
@@ -83,22 +159,39 @@ window.addEventListener("DOMContentLoaded", async function () {
     series: [
       {
         name: strategyName,
-        type: "line",
-        data: calculateStrategy(data),
+        type: 'line',
+        smooth: true,
+        lineStyle: { color: '#ff6b35' },
+        itemStyle: { color: '#ff6b35' },
+        data: strategyData,
       },
       {
-        name: "Buy and Hold",
+        name: buyAndHoldName,
         type: "line",
-        data: calculateSP(data),
+        smooth: true,
+        data: spData,
       },
     ],
   };
+  chart.setOption(options);
   const modal = document.getElementById("chart-dialog");
   const modalCloseButton = document.querySelector("#chart-dialog button");
   const startMoneyControl = document.getElementById("start-money");
 
   startMoneyControl.addEventListener("change", (event) => {
     const newStartMoney = Number(event.target.value);
+    const { spData, drawdowns } = calculateSP(
+      data,
+      newStartMoney || undefined,
+      startYearControl.value || undefined
+    );
+    const { strategyData, drawdowns: strategyDrawdowns } = calculateStrategy(
+      data,
+      newStartMoney || undefined,
+      startYearControl.value || undefined
+    );
+    displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns);
+
     // TODO: check if it is NaN
     const newOptions = {
       ...options,
@@ -109,21 +202,17 @@ window.addEventListener("DOMContentLoaded", async function () {
       series: [
         {
           name: strategyName,
-          type: "line",
-          data: calculateStrategy(
-            data,
-            newStartMoney || undefined,
-            startYearControl.value || undefined
-          ),
+          type: 'line',
+          smooth: true,
+          lineStyle: { color: '#ff6b35' },
+          itemStyle: { color: '#ff6b35' },
+          data: strategyData,
         },
         {
-          name: "Buy and Hold",
-          type: "line",
-          data: calculateSP(
-            data,
-            newStartMoney || undefined,
-            startYearControl.value || undefined
-          ),
+          name: buyAndHoldName,
+          type: 'line',
+          smooth: true,
+          data: spData,
         },
       ],
     };
@@ -131,13 +220,13 @@ window.addEventListener("DOMContentLoaded", async function () {
   });
 
   const yearPicker = document.getElementById("year-picker");
+  const startYearControl = document.getElementById("start-year");
 
   yearPicker.addEventListener("click", function (event) {
     startYearControl.value = event.target.dataset.value;
     startYearControl.dispatchEvent(new Event("change"));
   });
 
-  const startYearControl = document.getElementById("start-year");
 
   startYearControl.addEventListener(
     "change",
@@ -148,6 +237,20 @@ window.addEventListener("DOMContentLoaded", async function () {
       const startIndex = data.findIndex((row) => row[0].endsWith(year));
 
       if (startIndex > -1) {
+        const { spData, drawdowns: spDrawdowns } = calculateSP(
+          data,
+          Number(startMoneyControl.value) || undefined,
+          year
+        );
+        const { strategyData, drawdowns: strategyDrawdowns } = calculateStrategy(
+          data,
+          Number(startMoneyControl.value) || undefined,
+          year
+        );
+
+        displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns);
+
+
         const newOptions = {
           ...options,
           xAxis: {
@@ -157,21 +260,17 @@ window.addEventListener("DOMContentLoaded", async function () {
           series: [
             {
               name: strategyName,
-              type: "line",
-              data: calculateStrategy(
-                data,
-                Number(startMoneyControl.value) || undefined,
-                year
-              ),
+              type: 'line',
+              smooth: true,
+              lineStyle: { color: '#ff6b35' },
+              itemStyle: { color: '#ff6b35' },
+              data: strategyData,
             },
             {
-              name: "Buy and Hold",
+              name: buyAndHoldName,
               type: "line",
-              data: calculateSP(
-                data,
-                Number(startMoneyControl.value) || undefined,
-                year
-              ),
+              smooth: true,
+              data: spData,
             },
           ],
         };
@@ -186,6 +285,4 @@ window.addEventListener("DOMContentLoaded", async function () {
       }
     })
   );
-
-  chart.setOption(options);
 });
