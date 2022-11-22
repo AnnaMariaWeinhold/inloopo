@@ -225,6 +225,7 @@ width: 50%;
 }
 
 
+
 /* ---------------------------------*\
     #BASE ELEMENTS
 \* ---------------------------------*/
@@ -237,6 +238,7 @@ h4,
 h5, 
 h6 {
     font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+    font-weight: 300;
 }
 
 h1 {
@@ -288,7 +290,7 @@ p{
 
 .heading-two--bigger {
     font-size: 62px;
-    font-size: 3.875;
+    font-size: 3.875rem;
     line-height: 1.2;
   }
 
@@ -379,7 +381,7 @@ nav ul a{
     border-radius: 4px;
 }
 
-.navbar__checkbox [type="checkbox"]{
+nav input[type="checkbox"]{
     display: none;
 }
 
@@ -398,7 +400,6 @@ nav ul a{
     justify-content: space-between;
 }
 
-
 .nav__lang {
     color: #fff;
     background-color: #ff6b35;
@@ -411,6 +412,8 @@ nav ul a{
 cursor: pointer;
 color: #fff;
 }
+
+
 
 
 
@@ -461,7 +464,8 @@ color: #fff;
 
 /* #Links */
 
-.link {
+.link,
+.secondary-teaser__link {
     color: #ff6b35;
     text-decoration: none;
 }
@@ -494,6 +498,7 @@ font-weight: bold;
 
 
 
+
 /* #Teaser */
 
 .main-teaser {
@@ -509,7 +514,6 @@ font-weight: bold;
     width: 45%;
     margin-left: 10%;  
     margin-top: 160px;
-    font-weight: 300;
 }
 
 
@@ -518,6 +522,9 @@ font-weight: bold;
     color: #fff;
 }
 
+.main-teaser__heading--page-copytrading {
+    font-size: 58px;
+}
 
 
 .main-teaser__text {
@@ -581,10 +588,6 @@ font-weight: bold;
 
 .main-teaser__heading--page-investieren {
     margin-bottom: 10%;
-}
-
-.main-teaser__heading--page-copytrading {
-    font-size: 58px;
 }
 
 .main-teaser__container {
@@ -794,6 +797,7 @@ justify-content: center;
 .secondary-teaser__image-at-work {
     background-image: url('../images/image-at-work.jpg');
     color: var(--text-color);
+    padding: 30px 0;
 }
 
 .secondary-teaser__heading {
@@ -913,7 +917,7 @@ padding: 0;
 
 /* #Blockqoute #Quote */
 
-.quote{
+.quote {
     font-size: 28px;
     color: #242325;
     text-align: center;
@@ -921,7 +925,7 @@ padding: 0;
     padding: 0 220px;
 }
 
-.quote:before{
+.quote:before {
     content: '"';
     color: #ff6b35;
     font-size: 100px;
@@ -945,7 +949,7 @@ padding: 0;
 }
 
 .quote__page-copy-trading:after {
-    content: "My daily mantra";
+    content: "Mein tägliches Mantra";
     font-size: 16px;
 }
 
@@ -984,7 +988,6 @@ padding: 0;
     font-weight: normal;
     text-align: center;
     padding: 8px 0;
-    margin-bottom: 50px;
 }
 
 .box__subheading--left {
@@ -1016,7 +1019,6 @@ padding: 0;
     font-weight: bold;
     font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
     text-align: center;
-    margin-top: 35px;
 }
 
 .box__column {
@@ -1098,12 +1100,17 @@ padding: 0;
 
 
 
-/* #Tabells */
+/* #Table */
 
-.responsive-table{
+.responsive-table {
     overflow-x: auto;
-    margin-bottom: 15px;
 }
+
+.table--big {
+    overflow-x: auto;
+    padding: 0 7%;
+}
+
 
 table, 
 thead, 
@@ -1161,7 +1168,7 @@ td{
 
 /* #Lists */
 
-.list__row{
+.list__row {
     background: #ff6b35;
     color: #fff;
     text-align: center;
@@ -1186,7 +1193,7 @@ padding: 0 15%;
 }
 
 .list__link {
-    margin-bottom: 5px 0;
+    margin: 5px 0;
 }
 
 .box__link {
@@ -1303,6 +1310,8 @@ padding: 0 15%;
     width: 30.5%;
     border: 1px solid #DCDCDC;
     padding: 0;
+    margin-bottom: 25px;
+    height: 672px;
 }
 
 .blog__details {
@@ -1318,6 +1327,10 @@ padding: 8%;
 .blog__article:first-child {
     margin-left: 2%;
     }
+
+.blog__article:last-child {
+    margin-left: 2%;
+}
 
 .blog__subheading {
     margin-top: 50px;
@@ -1357,7 +1370,8 @@ padding: 8%;
 }
 
 .article__heading-three {
-    margin-top: 50px;
+    margin-top: 60px;
+    margin-bottom: 25px;
 }
 
 .article__figure {
@@ -1432,7 +1446,24 @@ padding: 8%;
     margin-bottom: 35px;
 }
 
+.article__column {
+    padding: 15px 30px 0 0;
+}
 
+.article__column:last-child {
+    padding-right: 0;
+}
+
+.article__column--image {
+    padding-top: 15%;
+}
+
+.article__row {
+    width: 100%;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 
 
 
@@ -1520,7 +1551,7 @@ padding: 8%;
     top: 0;
     left: 0;
     overflow: hidden;
-    padding-top: 180px;
+    padding-top: 120px;
     margin-left: 20px;
     float: left;
     position: fixed;
@@ -1538,7 +1569,7 @@ padding: 8%;
     text-decoration: none;
     list-style: none;
     display: block;
-    padding: 2px 0;
+    padding: 6px 0;
     color: #171614;
     transition: all 0.3s cubic-bezier(0.230, 1.000, 0.320, 1.000);
 }
@@ -1644,8 +1675,9 @@ color: #ff6b35;
     left: -100%;
 }
 
+
 /* ---------------------------------*\
-    #RIGHTS
+    #RIGHTS for English Website
 \* ---------------------------------*/
 
 .rights__p--caps{
@@ -1670,6 +1702,9 @@ color: #ff6b35;
     font-size: 18px;
     font-size: 1.125rem;
 }
+
+
+
 
 
 /* ---------------------------------*\
@@ -1725,14 +1760,11 @@ color: #ff6b35;
 
 /* Media Queries * * * * * * * * */
 
-
 @media only screen and (min-width:980px) and (max-width:1920px){
 
 
 
 }
-
-
 
 @media only screen and (min-width:760px) and (max-width:979px){
 
@@ -1839,7 +1871,7 @@ nav li,
 
 
 /* ---------------------------------*\
-    #HEADINGS
+    #HEADINGS 
 \* ---------------------------------*/
 
 h1{
@@ -1908,11 +1940,11 @@ h4{
     #TEASER-HOMEPAGE
 \* ---------------------------------*/
 
-.main-teaser-homepage__image{
+.main-teaser-homepage__image {
     margin-top: 0;
 }
 
-.main-teaser-homepage{
+.main-teaser-homepage {
     padding: 5%;
 }
 
@@ -1924,8 +1956,6 @@ h4{
 .mobile__below-header {
     display: none;
 }
-
-
 
  .circle {
     margin-left: auto;
@@ -1996,6 +2026,14 @@ h4{
     animation: none !important;
 }
 
+/* ---------------------------------*\
+    #TABLE
+\* ---------------------------------*/
+
+.table--big {
+    padding: 0 2%;
+    overflow: auto;
+}
 
 
 /* ---------------------------------*\
@@ -2036,7 +2074,8 @@ h4{
     #TEXT-LEGAL
 \* ---------------------------------*/
 
-.wrapper-content-rights, .wrapper-content-blog {
+.wrapper-content-rights, 
+.wrapper-content-blog {
     padding: 0 25px;
 }
 
@@ -2071,7 +2110,8 @@ h4{
         #LAYOUT
     \* ---------------------------------*/
     
-    .wrapper-content-rights, .wrapper-content-blog {
+    .wrapper-content-rights, 
+    .wrapper-content-blog {
         padding-left: 25px;
         padding-right: 25px;
     }
@@ -2089,12 +2129,12 @@ h4{
     margin-top: 10px;
    }
 
-   .logo:hover{
+   .logo:hover {
     border-bottom: none;
     cursor: pointer;
    }
 
-    .toggle-button{
+    .toggle-button {
         display: flex;
     }
 
@@ -2346,6 +2386,10 @@ h4{
 
     .box__table {
         font-size: 16px;
+    }
+
+    .table--big {
+        padding: 0 2%;
     }
 
 
