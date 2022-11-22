@@ -1,4 +1,5 @@
-// Code By Webdevtrick ( https://webdevtrick.com )
+// Code for FAQ
+
 const items = document.querySelectorAll(".accordion a");
 
 function toggleAccordion(){
