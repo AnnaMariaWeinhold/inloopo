@@ -285,7 +285,8 @@ p{
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 1.75rem;
-    margin-bottom: 24px;
+    margin-bottom: 12px;
+    margin-top: 12px;
 }
 
 .heading-two--bigger {
@@ -324,7 +325,7 @@ header nav {
     width: 100%;
     left: 0;
     z-index: 3;
-    
+    box-shadow: 1px 1px 4px #f1f1f1;    
 }
 
 nav ul{
@@ -899,7 +900,7 @@ padding: 0;
 
 .box__ul {
     list-style: none;  
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     
 }
 
