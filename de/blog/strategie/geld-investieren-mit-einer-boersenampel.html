@@ -10,7 +10,7 @@
     <meta name="keywords" content="Börsenampel, Börsenampel Indikatoren, Geld vermehren">
     <meta name="author" content="Philipp Kozalla">
     
-    <link rel="stylesheet" href="../../styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/interactive-chart.css">
     <link href="../../fonts/" rel="stylesheet">
 
@@ -573,8 +573,9 @@
                 <h2 class="chart__heading">Meine ETF Strategie schlägt den Markt</h2>
                 <div id="chart-controls">
                 <form>
-                    <label class="chart__p" for="start-money">Startkapital</label>
+                    <label class="chart__p" for="start-money">Startkapital
                     <input id="start-money" class="chart__input" type="number" value="10000">
+                    </label>
                     <label class="chart__p" style="position: relative" for="start-year">Startjahr
                         <input id="start-year" class="chart__input" type="number" min="1998" max="2021" value="1998">
                         <ul id="year-picker">
@@ -608,7 +609,7 @@
                 </div>
 
                 <div class="drawdowns">
-                    <span>Max. Drawdown</span>
+                    <p>Max. Drawdown</p>
                     <div id="strategy-drawdown-element"></div>
                     <div id="sp-drawdown-element"></div>
                 </div>
