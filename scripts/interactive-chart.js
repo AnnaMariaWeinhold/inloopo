@@ -117,11 +117,26 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
   strategyDrawdownElement.innerText = `${(Math.min(...strategyDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
 }
 
+const chartSection = document.getElementById("interactive-chart-section");
+
+window.addEventListener("DOMContentLoaded", function () {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (typeof window.echarts !== "undefined") observer.disconnect();
+      if (entry.isIntersecting) {
+        chartSection.dispatchEvent(new Event("load-interactive-chart"));
+      }
+    });
+  }, { root: null, rootMargin: "0px", threshold: 0.1 });
+  observer.observe(chartSection);
+});
+
 
 // ENTRY POINT
-window.addEventListener("DOMContentLoaded", async function () {
-  const chart = echarts.init(document.getElementById("interactive-chart"));
+chartSection.addEventListener("load-interactive-chart", async function () {
+  await import("/scripts/echarts.js");
   const data = await fetch("/data/20221119-data.json").then((res) => res.json());
+  const chart = echarts.init(document.getElementById("interactive-chart"));
 
   const dataDescription = data.shift();
   const dates = data.map((row) => row[0]);
@@ -234,7 +249,7 @@ window.addEventListener("DOMContentLoaded", async function () {
       // hide year-picker list
       startYearControl.blur();
       const year = event.target.value;
-      const startIndex = data.findIndex((row) => row[0].endsWith(year));
+      const startIndex = data.findIndex((row) => row[0].endsWith(year)); // picks first trading day of selected year
 
       if (startIndex > -1) {
         const { spData, drawdowns: spDrawdowns } = calculateSP(

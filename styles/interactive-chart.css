@@ -34,6 +34,24 @@
   margin-bottom: 12px;
 }
 
+@media screen and (max-width: 768px) {
+  #chart-controls form input {
+    width: 100%;
+    margin: 6px 0 12px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #interactive-chart-section .drawdowns {
+    display: block;
+  }
+  .drawdowns #strategy-drawdown-element,
+  .drawdowns #sp-drawdown-element {
+    display: inline-block;
+    width: 45%;
+  }
+}
+
 
 #chart-dialog {
   padding: 1rem 2rem;
