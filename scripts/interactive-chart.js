@@ -1,3 +1,6 @@
+const dynamicChartElement = document.getElementsByTagName("dynamic-chart");
+const shadow = dynamicChartElement[0].shadowRoot;
+
 function sliceDataFrom(data, startYear) {
   return data.slice(data.findIndex((row) => row[0].endsWith(startYear)));
 }
@@ -64,7 +67,7 @@ function calculateDrawdowns() {
 
 
 function calculateStrategy(data, startMoney = 10000, startYear = "1998") {
-  basis = sliceDataFrom(data, startYear);
+  const basis = sliceDataFrom(data, startYear);
   const output = [];
 
   let previousMoney = startMoney;
@@ -110,33 +113,18 @@ function debounce(delay = 500, handler) {
 }
 
 function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
-  const spDrawdownElement = document.getElementById("sp-drawdown-element");
-  const strategyDrawdownElement = document.getElementById("strategy-drawdown-element");
+  const spDrawdownElement = shadow.getElementById("sp-drawdown-element");
+  const strategyDrawdownElement = shadow.getElementById("strategy-drawdown-element");
 
   spDrawdownElement.innerText = `${(Math.min(...spDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
   strategyDrawdownElement.innerText = `${(Math.min(...strategyDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
 }
 
-const chartSection = document.getElementById("interactive-chart-section");
-
-window.addEventListener("DOMContentLoaded", function () {
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (typeof window.echarts !== "undefined") observer.disconnect();
-      if (entry.isIntersecting) {
-        chartSection.dispatchEvent(new Event("load-interactive-chart"));
-      }
-    });
-  }, { root: null, rootMargin: "0px", threshold: 0.1 });
-  observer.observe(chartSection);
-});
-
-
 // ENTRY POINT
-chartSection.addEventListener("load-interactive-chart", async function () {
+(async function () {
   await import("/scripts/echarts.js");
   const data = await fetch("/data/20221119-data.json").then((res) => res.json());
-  const chart = echarts.init(document.getElementById("interactive-chart"));
+  const chart = echarts.init(shadow.getElementById("interactive-chart"));
 
   const dataDescription = data.shift();
   const dates = data.map((row) => row[0]);
@@ -189,9 +177,7 @@ chartSection.addEventListener("load-interactive-chart", async function () {
     ],
   };
   chart.setOption(options);
-  const modal = document.getElementById("chart-dialog");
-  const modalCloseButton = document.querySelector("#chart-dialog button");
-  const startMoneyControl = document.getElementById("start-money");
+  const startMoneyControl = shadow.getElementById("start-money");
 
   startMoneyControl.addEventListener("change", (event) => {
     const newStartMoney = Number(event.target.value);
@@ -234,8 +220,8 @@ chartSection.addEventListener("load-interactive-chart", async function () {
     chart.setOption(newOptions);
   });
 
-  const yearPicker = document.getElementById("year-picker");
-  const startYearControl = document.getElementById("start-year");
+  const yearPicker = shadow.getElementById("year-picker");
+  const startYearControl = shadow.getElementById("start-year");
 
   yearPicker.addEventListener("click", function (event) {
     startYearControl.value = event.target.dataset.value;
@@ -248,7 +234,7 @@ chartSection.addEventListener("load-interactive-chart", async function () {
     debounce(600, (event) => {
       // hide year-picker list
       startYearControl.blur();
-      const year = event.target.value;
+      const year = event.path[0].value;
       const startIndex = data.findIndex((row) => row[0].endsWith(year)); // picks first trading day of selected year
 
       if (startIndex > -1) {
@@ -290,14 +276,7 @@ chartSection.addEventListener("load-interactive-chart", async function () {
           ],
         };
         chart.setOption(newOptions);
-      } else {
-        // requested start date is likey a weekend
-        // debounce properly and/or disallow weekends entirey
-        modal.style.display = "block";
-        modalCloseButton.addEventListener("click", (event) => {
-          modal.style.display = "none";
-        });
       }
     })
   );
-});
+})();
