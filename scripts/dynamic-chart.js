@@ -57,10 +57,15 @@ class DynamicChart extends HTMLElement {
       width: 100%;
       height: 600px;
     }
+
+    #interactive-chart-section {
+      margin-top: 40px;
+    }
     
     .chart__heading {
       text-align: center;
-      padding: 0 25px;
+      padding: 40px 25px 15px 25px;
+      font-size: 28px;
     }
     
     .chart__p {
@@ -182,7 +187,7 @@ class DynamicChart extends HTMLElement {
       color: #ff6b35;
     }
     #sp-drawdown-element {
-      color: blue;
+      color: #253C78;
     }
     `;
     // if (this.hasAttribute("element")) {
