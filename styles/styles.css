@@ -230,7 +230,7 @@ width: 50%;
 /* ---------------------------------*\
     #BASE ELEMENTS
 \* ---------------------------------*/
-/* Headings */
+/* #Headings */
 
 h1, 
 h2, 
@@ -326,7 +326,7 @@ header nav {
     width: 100%;
     left: 0;
     z-index: 3;
-    box-shadow: 1px 1px 4px #f1f1f1;    
+    box-shadow: 1px 1px 4px #d2d2d2;    
 }
 
 nav ul{
@@ -418,6 +418,51 @@ color: #fff;
 
 
 
+/* ---------------------------------*\
+    #BREADCRUMBS
+\* ---------------------------------*/
+.breadcrumbs {
+    margin-top: 180px;
+}
+
+.breadcrumbs__category-page {
+    margin-top: 0;
+    padding-left: 2%;
+}
+
+.breadcrumbs__ul {
+    list-style: none;
+    padding: 10px 0;
+    color: var(--text-color);
+}
+
+.breadcrumbs__li {
+    display: inline;
+    font-size: 16px;
+}
+
+.breadcrumbs__li+.breadcrumbs__li:before {
+    content: ">";
+    padding: 8px;
+    width: 20%;
+    height: 20%;
+}
+
+.breadcrumbs__a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.breadcrumbs__a:hover {
+    color: var(--accent-color);
+}
+
+.breadcrumbs--active {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+
 
 /* ---------------------------------*\
     #COMPONENTS
@@ -436,6 +481,10 @@ color: #fff;
     font-size: 18px;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+.button__img {
+    margin-right: 10px;
 }
 
 
@@ -511,7 +560,7 @@ font-weight: bold;
 }
 
 .main-teaser__heading,
-.main-teaser__heading--page-copytrading {
+.main-teaser__heading--page-wikifolio {
     color: #fff;
     width: 45%;
     margin-left: 10%;  
@@ -524,7 +573,7 @@ font-weight: bold;
     color: #fff;
 }
 
-.main-teaser__heading--page-copytrading {
+.main-teaser__heading--page-wikifolio {
     font-size: 58px;
 }
 
@@ -575,8 +624,8 @@ font-weight: bold;
     padding-top: 1%;
 }
 
-.main-teaser__page-copy-trading{
-    background-image: url('../images/image-teaser-copytrading.jpg');
+.main-teaser__page-wikifolio {
+    background-image: url('../images/image-teaser-wikifolio.jpg');
     background-position: right;  
     padding-top: 1%;
 }
@@ -760,6 +809,49 @@ justify-content: center;
 
 
 
+
+
+/* #Columns mit Foto und Text */
+.column--blue {
+    background-color: var(--dark-background-color);
+    color: #fff;
+    text-align: left;
+    width: 90%;
+    padding: 60px 40px;
+}
+
+.column__foto-text {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    margin-bottom: 90px;
+}
+
+.column__foto {
+    padding: 30px 0;
+}
+
+
+.box__heading--white-left {
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 32px;
+    padding-top: 30px;
+}
+
+.box__p--white {
+    margin-bottom: 30px;
+}
+
+.row--blue-background {
+    padding: 0;
+    margin: 0;
+}
+
+
+
+
   /* #Icons Animation */
 
   .icon__circle {
@@ -785,7 +877,7 @@ justify-content: center;
     background-size: cover;
     width: 100%;
     margin-bottom: 20px;
-    margin-top: 90px;
+    margin-top: 30px;
     color: #fff;
 }
 
@@ -793,6 +885,13 @@ justify-content: center;
     background-image: url('../images/image-teaser-philipp.jpg');
     background-position: center;
     padding-bottom: 2%;
+    padding-top: 2%;
+}
+
+.secondary-teaser__image--philipp-wikifolio {
+    background-image: url('../images/philipp-wikifolio.jpg');
+    background-position: center;
+    padding-bottom: 8%;
     padding-top: 2%;
 }
 
@@ -951,7 +1050,7 @@ padding: 0;
 }
 
 .quote__page-copy-trading:after {
-    content: "Mein tägliches Mantra";
+    content: "Albert Einstein";
     font-size: 16px;
 }
 
@@ -1323,7 +1422,9 @@ padding: 8%;
 .box--orange-background {
     background: #ff6b35;
     padding-bottom: 90px;
-    margin-bottom: 90px;
+    margin-bottom: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
 }
 
 .blog__article:first-child {
@@ -1339,8 +1440,162 @@ padding: 8%;
 }
 
 
+/* #Rating */
+
+/* .rating {
+   display: flex;
+   justify-content: center;
+   height: 300px;
+   margin-top: 60px;
+} */
+
+/* .rating__stars {
+    position: absolute;
+} */
+
+.rating {
+    width: 100%;
+}
+
+.rating__heading {
+    margin-bottom: 60px;
+}
+
+.rating,
+.rating__feedback {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating__stars {
+    margin: 0 auto;
+    position: relative;
+    left: 45%;
+    transform: translateX(-50%);
+}
+
+.rating__stars input {
+    display: none;
+}
+
+.rating__stars label {
+    float: right;
+    font-size: 80px;
+    color: lightgrey;
+}
+
+.rating__stars label:before {
+    content: '☆';
+   
+}
+
+.rating__stars input:checked ~ label {
+    color: var(--accent-color);
+}
+
+.rating__stars:not(:checked) > label:hover,
+.rating__stars:not(:checked) > label:hover ~ label {
+    color: var(--accent-color);
+}
+
+.rating__stars input:checked > label:hover,
+.rating__stars input:checked > label:hover ~ label {
+    color: var(--accent-color);
+}
 
 
+
+.rating__result:before {
+    text-align: center;
+    margin-bottom: 20px;
+    content: '';
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--accent-color);
+    display: none;
+    position: absolute;
+    left: 55%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.rating__stars input:checked ~ .rating__result:before {
+    display: block;
+    margin: 0 auto;
+}
+
+.rating__stars #five:checked ~ .rating__result:before {
+    content: 'Es ist großartig!';
+}
+
+.rating__stars #four:checked ~ .rating__result:before {
+    content: 'Gefällt mir';
+}
+
+.rating__stars #three:checked ~ .rating__result:before {
+    content: 'Ist ganz ok.'
+}
+
+.rating__stars #two:checked ~ .rating__result:before {
+    content: 'Ich finds eher schlecht.';
+}
+
+.rating__stars #one:checked ~ .rating__result:before {
+    content: 'Geht gar nicht.'
+}
+
+.rating__submit-btn {
+    color: #fff;
+    background: #ff6b35;
+    border: 2px solid #ff6b35;
+    padding: 15px 20px;
+    text-decoration: none;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-size: 1.25rem;
+    font-family: 'QuattrocentoSans', Arial, Helvetica, sans-serif;
+    width: 100%;
+}
+
+.rating__submit-btn:hover {
+    background: #fff;
+    color: #ff6b35; 
+    border: 2px solid #ff6b35;
+}
+
+
+.rating__feedback-heading {
+    font-size: 24px;
+    margin-top: 28px;
+    margin-bottom: 20px;
+    font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+}
+
+.rating__feedback-text {
+    padding: 8px;
+    font-size: 16px;
+    font-family: 'QuattrocentoSans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    height: 200px;
+    width: 100%;
+}
+
+.rating__feedback-text:hover,
+.rating__feedback-text:focus {
+    border: 1px solid var(--accent-color);
+}
+
+textarea[type=text] {
+    border: 1px solid var(--text-color);
+}
+
+textarea[type=text]:focus {
+    border: 2px solid var(--accent-color);
+}
 
 
 /* #Article */
@@ -1348,6 +1603,7 @@ padding: 8%;
 .article__main-heading {
     color: #171614;
     width: 90%;
+    margin-top: 30px;
 }
 
 .article__list {
@@ -1778,8 +2034,13 @@ color: #ff6b35;
     margin-top: 30px;
 }
 
-.main-teaser__page-copy-trading {
+.main-teaser__page-wikifolio {
     background-position: center;
+}
+
+
+.main-teaser__heading--page-wikifolio {
+    width: 70%;
 }
 
 .wrapper-content {
@@ -1978,6 +2239,15 @@ h4{
     background-position: center;
 }
 
+/* ---------------------------------*\
+    #TEASER BLOG
+\* ---------------------------------*/
+
+.box--orange-background {
+    padding-top: 120px;
+    margin-bottom: 90px;
+}
+
 
 
 /* ---------------------------------*\
@@ -2005,17 +2275,19 @@ h4{
 
 
 
-
-
 /* ---------------------------------*\
         #BLOG #ARTICLE
 \* ---------------------------------*/
 
     .article__main-heading {
-        margin-top: 120px;
+        margin-top: 30px;
         width: 100%;
     }
 
+    
+    .blog__article {
+        height: 730px;
+    }
 
 
 
@@ -2036,6 +2308,38 @@ h4{
     padding: 0 2%;
     overflow: auto;
 }
+
+
+/* ---------------------------------*\
+    #COLUMNS
+\* ---------------------------------*/
+
+
+
+
+.column__foto-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-flow: column-reverse;
+}
+
+.column__foto {
+    margin-bottom: -360px;
+    z-index: 1;
+}
+
+.column--blue {
+    width: 100%;
+    z-index: 2;
+}
+
+.box__heading--white-left {
+    padding-top: 0;
+}
+
+
+
 
 
 /* ---------------------------------*\
@@ -2280,7 +2584,7 @@ h4{
     
 
     .main-teaser {
-        margin-top: 90px;
+        margin-top: 80px;
         padding: 60px 0;
         margin-bottom: 30px;
     }
@@ -2334,7 +2638,8 @@ h4{
         margin-top: 20px;
     }
 
-    .main-teaser__heading--page-investieren {
+    .main-teaser__heading--page-investieren,
+    .main-teaser__heading--page-wikifolio {
         width: 60%;
         margin-top: 0;
         margin-bottom: 0;
@@ -2357,8 +2662,9 @@ h4{
         background-position: center;
     }
 
-    .main-teaser__page-copy-trading {
+    .main-teaser__page-wikifolio {
         background-position: center;
+        margin-bottom: 0;
     }
 
     .main-teaser__page-wer-wir-sind {
@@ -2369,10 +2675,6 @@ h4{
         width: 100%;
     }
 
-    .secondary-teaser__image--philipp {
-        padding-left: 10%;
-        padding-right: 50%;
-    }
 
 
     /* #FAQ */
@@ -2407,6 +2709,7 @@ h4{
         display: block;
     }
 
+
     /* ---------------------------------*\
         #CONTENT #BOX PROBLEMS-SOLUTIONS
     \* ---------------------------------*/
@@ -2417,6 +2720,7 @@ h4{
         padding-right: 25px;
         padding-bottom: 30px;
         margin-top: 0;
+        margin-bottom: 60px;
     }
 
     .box__container {
@@ -2501,10 +2805,27 @@ h4{
     }
 
     .column__heading {
-        margin-bottom: 20px;
+        margin-bottom: 0;
+        margin-top: 30px;
     }
     
+    
+    .column__foto-text {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        flex-flow: column-reverse;
+    }
 
+    .column__foto {
+        margin-bottom: -60px;
+    }
+
+    .column--blue {
+        width: 100%;
+    }
+
+   
 
 
 
@@ -2520,7 +2841,7 @@ h4{
    .secondary-teaser__heading,
    .secondary-teaser__quote {
     margin-left: 25px;
-    width: 300px;
+    width: 60%;
    }
 
    .secondary-teaser__image-at-work {
@@ -2564,8 +2885,13 @@ h4{
         #LIST #TOOLS 
     \* ---------------------------------*/
 
-  
+    /* ---------------------------------*\
+            #BREADCRUMBS
+    \* ---------------------------------*/
 
+    .breadcrumbs {
+        display: none;
+    }
 
 
     /* ---------------------------------*\
@@ -2573,7 +2899,7 @@ h4{
     \* ---------------------------------*/
 
     .box--orange-background {
-        margin-top: 90px;
+        margin-top: 80px;
     }
 
     .box__main-heading {
@@ -2609,8 +2935,6 @@ h4{
     .article__box {
         width:100%;
     }
-
-   
 
     .article__info {
         margin-right: 0;
