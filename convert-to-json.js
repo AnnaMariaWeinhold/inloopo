@@ -9,7 +9,8 @@ fs.readFile(path.join(__dirname, pathToCsv), { encoding: "utf8" }, (err, data) =
     throw new Error("Error reading file", err);
   }
   const rows = data.split("\n");
-  const json = rows.map((row) => row.split("\t")).map(([date, change, invest]) => ([date, Number(change?.replace("%", "")), invest]));
+  // const json = rows.map((row) => row.split("\t")).map(([date, change, invest]) => ([date, Number(change?.replace("%", "")), invest]));
+  const json = rows.map((row) => row.split("\t")).map(([date, _, change]) => ([date, Number(change?.replace("%", ""))].filter(Boolean))).filter((set) => set.length);
   // const selected = json.map((row) => {
   //   if (typeof row[5] === 'string') {
   //     row[5] = Number(row[5].replace("%", ""));
