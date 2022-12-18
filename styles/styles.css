@@ -1455,18 +1455,8 @@ padding: 8%;
 }
 
 
-/* #Rating */
+/* #Feedback */
 
-/* .rating {
-   display: flex;
-   justify-content: center;
-   height: 300px;
-   margin-top: 60px;
-} */
-
-/* .rating__stars {
-    position: absolute;
-} */
 
 .rating {
     width: 100%;
@@ -1474,6 +1464,7 @@ padding: 8%;
 
 .rating__heading {
     margin-bottom: 60px;
+    text-align: center;
 }
 
 .rating,
@@ -1504,7 +1495,6 @@ padding: 8%;
 
 .rating__stars label:before {
     content: '☆';
-   
 }
 
 .rating__stars input:checked ~ label {
@@ -1588,6 +1578,7 @@ padding: 8%;
     margin-top: 28px;
     margin-bottom: 20px;
     font-family: 'Cera Pro', Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
 .rating__feedback-text {
@@ -2527,7 +2518,8 @@ h4{
         #HEADINGS
     \* ---------------------------------*/
 
-    h1 {
+    h1,
+    .main-teaser__heading--page-wikifolio {
         font-size: 40px;
         margin-top: 0;
     }
@@ -2952,8 +2944,22 @@ h4{
         margin-right: 0;
     }
 
-    
+     /* ---------------------------------*\
+        #FEEDBACK
+    \* ---------------------------------*/
 
+    .rating__stars label {
+        font-size: 50px;
+        padding: 5px;
+    }
+
+    .rating__stars {
+        margin: 0 auto;
+        position: relative;
+        left: 40%;
+        transform: translateX(-50%);       
+    }
+    
    
     
 
