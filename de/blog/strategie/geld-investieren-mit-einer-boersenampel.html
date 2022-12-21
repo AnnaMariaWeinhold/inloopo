@@ -10,7 +10,7 @@
     <meta name="keywords" content="Börsenampel, Börsenampel Indikatoren, Geld vermehren">
     <meta name="author" content="Philipp Kozalla">
     
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="../../../styles/styles.css">
 
     <!-- Robot -->
     <meta name="robots" content="index">
@@ -110,21 +110,16 @@
         <aside id="toc" class="toc">
             <h6>Inhaltsverzeichnis</h6>
             <ol class="toc__nav">
-                <li><a rel="nofollow" href="#point-typen" class="toc__link">1. Börsenampel Typen</a></li>
+                <li><a rel="nofollow" href="#point-definition" class="toc__link">1. Was ist eine Börsenampel</a></li>
                 <li><a rel="nofollow" href="#point-nutzen" class="toc__link">2. Der Nutzen einer Börsenampel</a></li>
-                <li><a rel="nofollow" href="#point-inloopo" class="toc__link">3. Die Inloopo Börsenampel</a></li>
-                <li><a rel="nofollow" href="#point-cot" class="toc__link">3.1. COT Daten</a></li>
-                <li><a rel="nofollow" href="#point-moving" class="toc__link">3.2. 52 Moving Average</a></li>
-                <li><a rel="nofollow" href="#point-trend" class="toc__link">3.3. Trendanalyse</a></li>
-                <li><a rel="nofollow" href="#point-momentum" class="toc__link">3.4. Momentum Indikator</a></li>
-                <li><a rel="nofollow" href="#point-divergenz" class="toc__link">3.5. Divergenz</a></li>
-                <li><a rel="nofollow" href="#point-spread" class="toc__link">3.6. Spread der VIX Futures</a></li>
-                <li><a rel="nofollow" href="#point-performance" class="toc__link">4. Performance</a></li>
-                <li><a rel="nofollow" href="#point-fond" class="toc__link">5. Börsenampel Fond</a>
-                </li>
-                <li><a rel="nofollow" href="#point-indikator" class="toc__link">7. Börsenampel Indikator berechnen</a>
-                </li>
-                <li><a rel="nofollow" href="#point-schluss" class="toc__link">8. Zusammenfassung</a></li>
+                <li><a rel="nofollow" href="#point-typen" class="toc__link">3. Börsenampel Typen</a></li>
+                <li><a rel="nofollow" href="#point-hybrid" class="toc__link">4. Hybrid System</a></li>
+                <li><a rel="nofollow" href="#point-fundamental" class="toc__link">5. Fundamentales System</a></li>
+                <li><a rel="nofollow" href="#point-preis" class="toc__link">6. Preisbasiertes System</a></li>
+                <li><a rel="nofollow" href="#point-weitere" class="toc__link">7. Weitere Börsenampeln</a></li>
+                <li><a rel="nofollow" href="#point-indikator" class="toc__link">8. Börsenampel Indikator berechnen</a></li>
+                <li><a rel="nofollow" href="#point-fond" class="toc__link">9. Börsenampel Fond</a></li>
+                <li><a rel="nofollow" href="#point-schluss" class="toc__link">10. Zusammenfassung</a></li>
             </ol>
         </aside>
 
@@ -158,15 +153,12 @@
                     </div>
                 </div>
             </div>
-            <p>Fast jeder kennt das Dilemma. Die Börsen steigen und steigen und du hast die
-                Chance wieder einmal verpasst dein Geld zu investieren. Oder auch umgekehrt. Die Börsen fallen über
-                Wochen und Monate oder gar Jahre und du steckst immer noch voll drin. Das Ergebnis: Die Gewinne der
-                Vorjahre sind wieder weg. In solchen Momenten würdest du am liebsten an die Decke gehen.</p>
-            <p>Eine einfache und recht effektive Abhilfe ist der Einsatz einer Börsenampel. Eine Börsenampel zeigt
-                dir,
-                wann es gut ist, investiert zu sein, wann du aufpassen musst oder lieber auf dem Cash sitzen
-                solltest.
-                Sie signalisiert das über die klassischen Farben einer Ampel - Grün, Orange und Rot.</p>
+            <p>Fast jeder kennt das Dilemma.</p>
+            <p>Die Börsen steigen und steigen und du hast die Chance wieder einmal verpasst dein Geld zu investieren. Oder auch umgekehrt. Die Börsen fallen über Wochen und Monate oder gar Jahre und du steckst immer noch voll drin. Das Ergebnis: Die Gewinne der Vorjahre sind wieder weg. Mist!</p>
+            <p>Geht das nicht besser?</p>
+            <p>Ja.</p>
+            <p>Mit einer Börsenampel.</p>
+            <p>Sie zeigt, wann es gut ist, investiert zu sein, wann du aufpassen musst oder lieber auf dem Cash sitzen solltest. Eine Börsenampel signalisiert das über die klassischen Farben einer Ampel - Grün, Orange und Rot.</p>
             <figure class="article__figure">
                 <img src="../../../images/boersenampel-thumbnail.svg" alt="Überblick der Börsenampelfarben"
                     width="730" >
@@ -177,386 +169,383 @@
                     anschauen sowie Kommentare und Fragen hinterlassen.
                 </figcaption>
             </figure>
+            <p>Mit einer Börsenampel handelst du profitabel. Du musst dich nur für eine entscheiden. Hier erfährst du welche es gibt.</p>
 
 
 
             <!-- Hauptinhalt -->
-
             <section>
-                <h2 class="article__heading-two  visible" id="point-typen">Börsenampel Typen</h2>
-                <p>Alexander Elder hat ein <a class="link"
-                        href="https://www.erfolgreiche-trader-strategien.de/trading/trading-doktor-alexander-elder"
-                        target="_blank">Impulssystem</a> entwickelt, welches als Börsenampel bzw. Börsenbarometer
-                    verwendet wird. Die Börsenmedien AG bietet die
-                    <a class="link" href="https://www.boersenmedien.de/shop/tsi-premium.html" target="_blank">TSI
-                        Börsenampel</a> an.
-                    Beide basieren auf Trendfolge Indikatoren und Oszillatoren, welche vom Preis
-                    abgeleitet sind. Ist das ein Problem?
-                </p>
-                <p>Nein. Aber die Signale sind langsamer. Diese Börsenbarometer zeigen dir Einstiegs- und
-                    Ausstiegssignale
-                    an,
-                    wenn der Markt schon längst fällt oder steigt. Sie können keine Warnsignale erzeugen, die
-                    bestimmte
-                    Marktbewegungen vorhersagen. Es fehlt eine fundamentale Analyse, die das bereitstellt, aber auch
-                    Fehlsignale erzeugen kann.</p>
-                <p>Eine freie Börsenampel mit Fundamentalanalyse bietet Matthias Wiemert von <a class="link"
-                        target="_blank" href="https://www.w5invest.com/">W5Invest</a> an. Das Börsenbarometer
-                    funktioniert und warnt vor großen Crashs oder Korrekturen. Da die Signale täglich entstehen können,
-                    ist sie für sehr aktive Anleger geeignet. </p>
-
-                <p>Die <a class="link" target="_blank" href="https://t.me/+Km1-SZkNz-s2ZWRi">Inloopo Börsenampel</a> liefert nur
-                    am Sonntag Signale. Kauf und Verkauf
-                    im Signaldienst werden mit einer <a class="link" target="_blank"
-                        href="https://www.inloopo.com/de/blog/basiswissen/limit-order">Limit Order</a>
-                    oder einer <a class="link" target="_blank"
-                        href="https://www.inloopo.com/de/blog/basiswissen/stop-order">Stop
-                        Order</a> umgesetzt. Daher ist keine Aufmerksamkeit unter der Woche notwendig, was speziell für
-                    viel
-                    Beschäftigte oder Menschen mit anderen Prioritäten als die Börse hervorragend geeignet ist.</p>
-                <p>Die Inloopo Börsenampel beinhaltet eine fundamentale Analyse als auch Indikatoren,
-                    die
-                    auf
-                    dem
-                    Preis beruhen. Diese Art von Börsenampel signalisiert dir Einstiege und Ausstiege, noch bevor
-                    der
-                    Markt
-                    in eine bestimmte Richtung läuft. Da können auch Fehlsignale dabei sein, aber diese werden durch
-                    verschiedene Schritte der Börsenampel minimiert und durch Stopp Orders abgesichert.</p>
+                <h2 class="article__heading-two  visible" id="point-definition">Was ist eine Börsenampel?</h2>
+                <p>Eine Börsenampel ist ein System, welches dir mit den Farben einer Ampel (Grün, Gelb, Rot) die aktuelle Börsenverfassung anzeigt. Auf Basis der Ampelfarbe oder dem Wechsel kannst du deine Investitionsentscheidungen treffen. Das Ziel einer Börsenampel ist es, nach einem erfolgreichen System zu handeln. Rational. Somit kannst du besser als der Aktienindex sein.</p>
             </section>
 
-
             <section>
-                <h2 class="article__heading-two" id="point-nutzen">Der Nutzen eines Börsenbarometers</h2>
-                <p>Eine Börsenampel ermöglicht eine hohe Rendite mit geringem Zeitaufwand. Sie warnt vor größeren
-                    Marktkorrekturen oder Crashs. Mit einem Börsenbarometer ist es möglich, rechtzeitig wieder in den
-                    Markt
-                    nach
-                    einem Crash einzusteigen, um bei der anschließenden Rally mit dabei zu sein. Außerdem hat sie
-                    das
-                    Ziel
-                    möglichst wenig Fehlsignale in langfristig steigenden Märkten, die sogenannten Bullenmärkte, zu
-                    geben.
+                <h2 class="article__heading-two" id="point-nutzen">Welchen Nutzen hat eine Börsenampel?</h2>
+                <p>Eine Börsenampel ermöglicht eine hohe Rendite mit geringem Zeitaufwand. Sie warnt vor größeren Marktkorrekturen oder Crashs. Mit einer Börsenampel ist es möglich, rechtzeitig wieder in den Markt nach einem Crash einzusteigen, um bei der anschließenden Rally mit dabei zu sein. Außerdem hat sie das Ziel möglichst wenig Fehlsignale in langfristig steigenden Märkten, die sogenannten Bullenmärkte, zu geben.
                 </p>
-                <p>Die Börsenampel basiert auf Daten und bewahrt dich vor emotionalen Entscheidungen. Das ist
-                    besonders
-                    wichtig. Sobald du denkst „Da ist doch noch mehr drin“ spricht die Gier aus dir. Und wenn du gar
-                    keine
-                    Einstiege eingehst, weil du denkst, dass du dein gut verdientes Geld verlieren könntest, bist du
-                    zu
-                    ängstlich. Wenn du emotional handelst steigen deine Verluste oder deine Gewinne bleiben aus.</p>
-                <p>Du weißt, was an den Märkten passiert. Noch bevor es in den Nachrichten steht. Denn du benutzt
-                    ein
-                    Börsenbarometer und nicht die News als Informationsquelle. Beispielsweise berichten die
-                    Finanznachrichten
-                    erst über eine Börsenrally, wenn diese schon weit fortgeschritten ist, und auch erst über den
-                    Crash,
-                    wenn dieser schon längst da ist. Daher können Nachrichten nicht als Börsenampel oder
-                    Richtungsgeber
-                    genutzt werden.</p>
+                <p>Die Börsenampel basiert auf Daten und bewahrt dich vor emotionalen Entscheidungen. Das ist besonders wichtig. Sobald du denkst „Da ist doch noch mehr drin“ spricht die Gier aus dir. Und wenn du gar keine Einstiege eingehst, weil du denkst, dass du dein gut verdientes Geld verlieren könntest, bist du zu ängstlich. Wenn, du emotional handelst steigen deine Verluste oder deine Gewinne bleiben aus.</p>
+                <p>Du weißt, was an den Märkten passiert. Noch bevor es in den Nachrichten steht. Denn du benutzt eine Börsenampel und nicht die News als Informationsquelle. Beispielsweise berichten die Finanznachrichten erst über eine Börsenrally, wenn diese schon weit fortgeschritten ist, und auch erst über den Crash, wenn dieser schon längst da ist. Daher können Nachrichten nicht als Börsenampel oder Richtungsgeber genutzt werden.</p>
             </section>
 
+            <section>
+                <h2 class="article__heading-two" id="point-typen">Börsenampel und Börsenbarometer Typen</h2>
+                <p>Börsenampeln basieren auf verschiedenen Indikatoren und werden unterschiedlich berechnet: Auf Basis des Preises, mit einer Fundamental Analyse oder eine Kombination aus beidem.  Es ist wichtig zu wissen, welche Indikatoren, welchen Zweck in der Börsenampel erfüllen und wie sie untereinander gewichtet werden, um XXX</p>
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Vorteile</th>
+                                <th>Nachteile</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Indikatoren auf Basis des Preises</td>
+                                <td>Prinzipiell auf jeden Markt übertragbar (Aktienindex, Einzelaktien, FOREX, Gold, Öl, Bitcoin, …)</td>
+                                <td>Reagiert erst wenn die Marktreaktion vorhanden ist <br>
+                                    Kann keine Warnsignale anzeigen
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Fundamentale Analyse</td>
+                                <td>Kann Warnsignale vor einer Marktreaktion anzeigen mit denen und rechtzeitig vor einen Marktreaktion deine Positionen absicherst</td>
+                                <td>Bedingt auf andere Märkte übertragbar <br>
+                                    Komplexer in der Erstellung und Berechnung
+                                    </td>
+                            </tr>
+                            <tr>
+                                <td>Hybride Systeme</td>
+                                <td>Kann Warnsignale vor einer Marktreaktion anzeigen mit denen und rechtzeitig vor einen Marktreaktion deine Positionen absicherst</td>
+                                <td>Bedingt auf andere Märkte Übertragbar<br>
+                                    Komplexer in der Erstellung und Berechnung
+                                    </td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </section>
 
             <section>
-                <h2 class="article__heading-two" id="point-inloopo">Die Inloopo Börsenampel</h2>
-                <p>Ich habe eine eigene Börsenampel entwickelt, da mir bei anderen Börsenampeln etwas gefehlt hat.
-                    Es
-                    war
-                    unklar, wie Signale oder auch Fehlsignale entstehen und in welchem Rhythmus die Börsenampel
-                    aktualisiert
-                    wird.</p>
-                    <p>Es ist wichtig, viele verschiedene Bestätigungen für seine Handels- oder
-                        Investitionsentscheidungen
-                        heranzuziehen. Daher habe ich meine Börsenampel mehrstufig aufgebaut und untersuche insgesamt 6
-                        Börsenampel
-                        Indikatoren, um das richtige Timing für den Ein- und Ausstieg zu finden.</p>
-                    <p>Außerdem ist es hilfreich die Datenbasis zu kennen, zu wissen wie die jeweiligen Indikatoren
-                        berechnet
-                        werden
-                        bzw. wie sie entstehen. Denn es macht wenig Sinn, viele verschiedene Trendfolgeindikatoren oder
-                        Oszillatoren zu
-                        verwenden. Da alle auf derselben Datenbasis – dem Preis – basieren.</p>
-                    <p>Daher habe ich zwei Indikatoren in meiner Börsenampel, die nicht auf Grundlage von
-                        Preisschwankungen
-                        berechnet
-                        werden: Das COT Signal und der Spread auf die VIX Futures des S&P 500 Index. So funktioniert der
-                        Ein-
-                        und
-                        Ausstieg aus dem Markt besser und es gibt weniger Fehlsignale.</p>
-                    <p>Auf Basis der hier gezeigten Informationen kannst du dir deine eigene Börsenampel entwickeln oder
-                        auch
-                        einfach
-                        meinem <a class="link" href="https://t.me/+Km1-SZkNz-s2ZWRi" target="_blank">kostenlosen Telegram
-                            Channel</a>
-                        beitreten.
-                        Jeden Sonntag
-                        erfährst du hier den aktuellen Stand.</p>
-                    <p>Natürlich ist auch dieses System nicht 100 % perfekt, aber darum geht es an der Börse auch nicht.
-                        Langfristig
-                        sind diejenigen erfolgreich, die Ihr Risiko und die offenen Positionen korrekt managen. Am Ende
-                        müssen
-                        die
-                        Gewinner größer sein als die Verluste, um erfolgreich zu sein.</p>
-                <p>Die Inloopo Börsenampel habe ich für die S&P 500 Strategie entwickelt. Ich benutze folgende
-                    Börsenampel
-                    Indikatoren, die jede Woche Sonntag aktualisiert werden.</p>
+                <h2 class="article__heading-two" id="point-hybrid">Börsenampel mit Hybridsystem</h2>
+                <h3 class="article__heading-three">inloopo Börsenampel</h3>
+                <p>Ich habe eine eigene Börsenampel entwickelt, da mir bei anderen Börsenampeln etwas gefehlt hat. Es war unklar, wie Signale oder auch Fehlsignale entstehen und in welchem Rhythmus die Börsenampel aktualisiert wird.</p>
+                <div class="article__box--info-item">
+                    <h6 class="article__box--info">Kurzportrait: Philipp Kozalla</h6>
+                </div>
+                <div class="article__box">
+                    <h4>Gründer von inloopo</h4>
+                    <p>XXX</p>
+                </div>
+                <p>Die <a class="link" href="https://t.me/ETFAmpel" target="_blank">inloopo Börsenampel</a> liefert nur am Sonntag Signale. Kauf und Verkauf im Signaldienst werden mit einer <a class="link" href="https://www.inloopo.com/de/blog/basiswissen/limit-order">Limit Order</a> oder einer <a class="link" href="https://www.inloopo.com/de/blog/basiswissen/stop-order">Stop Order</a> umgesetzt. Daher ist keine Aufmerksamkeit unter der Woche notwendig, was für viel Beschäftigte oder Menschen mit anderen Prioritäten als die Börse hervorragend geeignet ist.</p>
+                <p>Die inloopo Börsenampel ist ein hybrides System, welches auf einer Fundamentalanalyse und einer technischen Analyse basiert. Dadurch werden zwei Welten verbunden: Es werden die jeweiligen Vorteile genutzt, um das richtige Timing zu erreichen. Der Aufbau der inloopo Börsenampel setzt sich aus folgenden Börsenindikatoren zusammen.</p>
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Fundamentalanalyse</th>
+                                <th>klassischen Chartanalyse</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>COT Daten</td>
+                                <td>52 Moving Average (Wochenchart)</td>
+                            </tr>
+                            <tr>
+                                <td>Spread der VIX Futures</td>
+                                <td>Trendanalyse</td>
+                            </tr>
+                            <tr>
+                                <td>POIV Indicator (Preis, Open Interest und Volumen)</td>
+                                <td>Momentum Indikator</td>
+                            </tr>
+                            <tr>
+                                <td>Sentiment (aktuell in der Testphase)</td>
+                                <td>Divergenzen (Momentum, POIV, ProGo)</td>
+                            </tr>
+                            <tr>
+                            <td>Saisonaler Trend (aktuell in der Testphase)</td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <section>
+                <h3 class="article__heading-three">Morgenroutine von Jens Rabe / Ähnlichkeit mit einer Börsenampel</h3>
+                <p>Auch Jens Rabe verwendet eine Art Börsenampel für seine täglichen Handelsaktivitäten – die Morgenroutine. Die Morgenroutine besteht aus einem großem Excel Sheet in dem täglich und wöchentlich die Aktienmärkte bewertet werden. Auch dort kommen die Farben Grün und Rot zum Einsatz, um die Gesamtstimmung farblich darzustellen. </p>
+                <p>Jens Rabe verwendet für seine <a class="link" href="https://www.youtube.com/watch?v=Kg5saoRT9T4&t=64s" target="_blank">Morgenroutine</a> folgende Indikatoren:</p>
                 <ul class="article__list">
-                    <li>COT Daten</li>
-                    <li>52 Moving Average</li>
-                    <li>Trendanalyse</li>
-                    <li>Momentum Indikator</li>
-                    <li>Divergenz</li>
-                    <li>Spread der VIX Futures</li>
+                    <li>Volatilität der <a class="link" href="http://www.vixcentral.com/" target="_blank">VIX Futures</a> (Wert und Contango oder Backwardation)</li>
+                    <li>VVIX</li>
+                    <li>Advance Decline Line Analyse</li>
+                    <li><a class="link" href="https://edition.cnn.com/markets/fear-and-greed" target="_blank">Fear & Geed Index</a></li>
+                    <li>Indices im Vergleich (S&P 500, Dow Jones Industrial, Dow Jones Transport, Nasdaq, Russel 2000, DAX, Thomson Reuters Index (Rohstoffe)</li>
+                    <li>Sektorenanalyse</li>
+                    <li><a class="link" href="https://www.cboe.com/us/options/market_statistics/#current-stats" target="_blank">Put/Call Ratio</a></li>
+                    <li>Up / Down Volumen</li>
                 </ul>
+                <p>Und noch einige weitere Werte wie Distributionstage, Panikzeichen und weitere Termine.</p>
+                <p>Ich habe viele Monate während meines Coachings bei Jens Rabe die Börsenampel gepflegt und so ein gutes Gefühl für die Märkte entwickelt. Besonders die <a class="link" href="https://school.stockcharts.com/doku.php?id=market_analysis:sector_rotation_analysis" target="_blank">Sektorenanalyse</a> des ETFs Sektor ist interessant in kritischen Phasen. Denn mit dieser Hilfe lassen sich ebenfalls Wendepunkte deutlich vor dem Wendepunkt des S&P 500 Index erkennen. </p>
+                <p>Ein klares Regelwerk fehlt, um die Gesamtfarbe des Marktes zu bestimmen. Ebenfalls können diese Vorgehensweise nur leidenschaftliche Investoren mit viel Zeit durchführen, da jeden Tag einige Werte manuell ausgefüllt werden. </p>
+                <p>Die manuelle Auswertung hat den Vorteil, dass du alles selbst einträgst. Und je nachdem, ob man weiß, was die Werte bedeuten, kann man diese für seine Investitionen benutzen. Das erfordert viel Wissen, Zeit und eine tägliche Routine.</p>
+                <p>Für Investoren, die sich täglich mit tiefen Details der Märkte beschäftigen und mehr Zusammenhänge verstehen wollen, ist die Morgenroutine von Jens Rabe definitiv zu empfehlen. Mit der richtigen Gewichtung und Kategorisierung kannst du dir so eine funktionierende Börsenampel bauen.</p>
             </section>
 
             <section>
-                <h3 class="article__heading-three" id="point-cot">COT Daten</h3>
-                <p>Die COT Daten aus dem Commitment of Traders Report (COT Report) werden jede Woche Freitag nach
-                    Börsenschluss von der Commodity Futures Trading Commission (CFTC) im Tabellenformat
-                    veröffentlicht.
-                    Es
-                    gibt ein <a class="link" href="https://insider-week.com/de/cot/" target="_blank">Tool</a>, das
-                    alle
-                    COT
-                    Daten – seit Beginn der ersten Veröffentlichung des COT Reports – als Graph darstellt. So können
-                    sie
-                    am
-                    einfachsten verglichen und ausgewertet werden.
-                </p>
-                <p>Wenn du mehr über die COT Daten erfahren willst, findest du bei <a class="link"
-                        href="https://insider-week.com/de/trading-lernen-kurs/" target="_blank">InsiderWeek</a>
-                    einen
-                    kostenlosen Kurs mit 33
-                    Videos, in denen auch
-                    ausführlich der COT Report erklärt wird. </p>
+                <h2 class="article__heading-two" id="point-fundamental">Börsenampel mit Fundamentaler Analyse</h2>
+                <h3 class="article__heading-three">W5Invest Börsenbarometer / Börsenampel</h3>
+                <p>Das Börsenbarometer von Matthias Wiemert (<a class="link" href="https://www.w5invest.com/" target="_blank">W5Invest</a>) ist kostenlos. Es funktioniert und warnt vor großen Crashs oder Korrekturen.</p>
+                <p>Signale entstehen jeden Tag, da das Börsenbarometer täglich berechnet wird. Daher eignet es sich für sehr aktive Anleger. Zusätzlich veröffentlicht Matthias fast jeden Tag einen Marktkommentar mit seiner Einschätzung zur aktuellen Börsenlage.</p>
+                <div class="article__box--info-item">
+                    <h6 class="article__box--info">Kurzportrait: Matthias Wiemert</h6>
+                </div>
+                <div class="article__box">
+                    <h4>Gründer von W5Invest</h4>
+                    <p>Matthias Wiemert ist gebürtiger Hamburger und war vor der Gründung von W5Invest Inhaber eines Unternehmens mit Geschäften in Deutschland und Österreich. An den Aktienmärkten ist er seit 1998 aktiv und hat sehr viel Erfahrung in der Dotkom-Krise ab dem Jahr 2000 gemacht. Dort hat er viel gelernt und ein System entwickelt, dass er in der darauffolgenden Finanzkrise ab dem Jahr 2008 zu den Gewinnern zählte.</p>
+                </div>
+                <p>Das W5Invest Börsenbarometer wird mit 5 Kategorien berechnet.</p>
+                <ul class="article__list">
+                    <li>Breath Indikatoren</li>
+                    <li>Sentiment Indikatoren</li>
+                    <li>Industries</li>
+                    <li>Volumen</li>
+                    <li>Makro Economics</li>
+                </ul>
+                <p>Jede Kategorie wird mit einem Wert von 0 bis 5 berechnet und addiert. Leider kann man die vergangenen Stände nicht analysieren oder nachvollziehen.</p>
                 <figure class="article__figure">
-                    <img src="../images/image-article-cot-tool.jpg" alt="Auszug des COT Tools von InsiderWeek"
-                        width="730">
-                    <figcaption class="article__caption">Die Abbildung zeigt dir einen Auszug vom COT Tool von
-                        InsiderWeek
-                        am Beispiel vom
-                        S&P 500 Index im Wochenchart</figcaption>
+                    <img src="../images/Boersenampel_W5Invest_Beispiel.jpg"
+                        alt="Börsenampel von W5Invest ein Beispiel" width="730">
+                    <figcaption class="article__caption">Bildquelle: https://www.w5invest.com/w5-b%C3%B6rsenbarometer (Stand 07.12.2022)</figcaption>
                 </figure>
+                <p>Das W5Invest Börsenbarometer verwendet für die Berechnung keine Trendlinien, gleitenden Durchschnitte oder andere vom Chart abgeleiteten Hilfsmittel. Es werden keine technischen Analysen gemacht. </p>
+                <p>Ist das wichtig?</p>
+                <p>Nein.</p>
+                <p>Der Market Allert Index ist eine Zusammensetzung aus 20 Unterindikatoren. Es geht nach dem Mehrheitsprinzip. Erst wenn die Mehrheit der Indikatoren eine Richtung anzeigt, bewegt sich die Börsenampel. Dadurch kann der Zustand des Marktes bewertet werden. </p>
+                <ul class="article__list">
+                    <li>Breath Indikatoren (Advanced Decline Lines, New Highs, New Lows, Up/Down Volumen, n</li>
+                    <li>Sentiment / Volatilität (VIX)</li>
+                    <li>Industries / Aktienbranchen (wie Transport, Technologie, Energie, Gesundheit, Finanzen, Industrie, Versorger, Immobilien, …)</li>
+                    <li>Macro Economics / Gesamtwirtschaftliche Fundamentaldaten (Zinsen, Inflation, Devisen, Quartalsergebnisse, …)</li>
+                </ul>
+                <p>Dadurch soll sichergestellt werden, dass man vor jedem Crash aussteigt und rechtzeitig, wenn die Rally beginnt, wieder einsteigt. Matthias Wiemert möchte vor jedem Crash rechtzeitig gewarnt werden. Somit entstehen im Backtest in den Jahren 1998 bis 2020 ca. 86 Trades mit einer durchschnittlichen Haltedauer von ungefähr 3 Monaten. </p>
+                <p>Das von W5Invest entwickelte Börsenbarometer basiert vollkommen auf der fundamentalen Analyse. Es gibt keine vom Preis abgleiten Indikatoren und es wird täglich berechnet. Dadurch können Ein- und Ausstiegssignale auf täglicher Basis entstehen, wodurch das System eher für aktive Anleger geeignet ist. Eine Positionsabsicherung per <a class="link" href="https://www.inloopo.com/de/blog/basiswissen/stop-order">Stop Loss Order</a> findet, soweit ich weiß, nicht statt.</p>
+                <p>Auf dem Youtube Kanal von Max Schulz von InsiderWeek findest du ein Interview, in dem Matthias das <a class="link" href="https://www.youtube.com/watch?v=me_DRL1Ybqg&t=1823s" target="_blank">W5Invest Börsenbarometer</a> genauer erklärt. </p>
+                <p>Ich schätze die Arbeit von Matthias Wiemert sehr, denn seine Börsenampel liefert gute Signale mit täglichem Update.</p>
+            </section>
 
-                <p>Da die COT Daten nur auf Wochenbasis veröffentlicht werden, findet die Analyse für die
-                    Börsenampel
-                    auf
-                    dem Wochenchart statt und nicht auf dem Minuten- oder Tageschart. Für die Inloopo Börsenampel werte
-                    ich
-                    die
-                    Nettopositionen der Commercials aus und verwende den COT Index auf verschiedenen Zeitebenen.
-                </p>
-
+            <section>
+                <h2 class="article__heading-two" id="point-preis">Preisbasierte Börsenampeln</h2>
+                <h3 class="article__heading-three">Impulssystem von Alexander Elder</h3>
+                <p>Alexander Elder hat ein <a class="link" href="https://www.erfolgreiche-trader-strategien.de/trading/trading-doktor-alexander-elder" target="_blank">Impulssystem</a> entwickelt, welches als Börsenampel bzw. Börsenbarometer verwendet wird. Die Börsenmedien AG bietet die <a class="link" href="https://www.boersenmedien.de/shop/tsi-premium.html" target="_blank">TSI Börsenampel</a> an. Beide basieren auf Trendfolge Indikatoren und Oszillatoren, welche vom Preis abgeleitet sind. </p>
+                <p>Ist das ein Problem?</p>
+                <p>Nein.</p>
+                <p>Aber die Signale sind langsamer. Diese Börsenbarometer zeigen dir Einstiegs- und Ausstiegssignale an, wenn der Markt schon längst fällt oder steigt. Sie können keine Warnsignale erzeugen, die bestimmte Marktbewegungen vorhersagen. Es fehlt eine fundamentale Analyse, die das bereitstellt, aber auch Fehlsignale erzeugen kann.</p>
+                <p>Das <a class="link" href="https://www.tradingview.com/script/Wk82N1D9-Elder-Impulse-System/" target="_blank">Elder Impulssystem als Indikator</a> findest du in der freien Chartsoftware TradingView.</p>
+                <div class="article__box--info-item">
+                    <h6 class="article__box--info">Kurzportrait: Alexander Elder</h6>
+                </div>
+                <div class="article__box">
+                    <h4>Buchautor und Trader</h4>
+                    <p><a class="link" href="https://www.elder.com/about" target="_blank">Alexander Elder</a>, M.D., ist professioneller Trader und Ausbilder für Trader. Seine Bücher sind internationale Bestseller und wurden in 17 Sprachen übersetzt.</p>
+                    <p>Dr. Alexander Elder wuchs in Estland auf, wo er im Alter von 16 Jahren ein Medizinstudium aufnahm. Mit 23 Jahren, als er als Schiffsarzt arbeitete, sprang er in Afrika von einem sowjetischen Schiff und erhielt politisches Asyl in den Vereinigten Staaten. </p>
+                    <p>Er arbeitete weiter als Psychiater in New York und lehrte an der Columbia University. Seine Erfahrung als Psychiater verschafft ihm einen einzigartigen Einblick in die Psychologie des Tradings.</p>
+                </div>
+                <p>In seinem Buch „Alles was Sie über Trading wissen müssen“ beschreibt er das Impuls-System und wie man es verwenden kann. Das Impuls-System wird mit Hilfe von beiden technischen Indikatoren EMA und MACD-Histogramm berechnet. Der EMA zeigt dabei die Trägheit des Marktes an und das MACD-Histogramm die Kraft. </p>
                 <div class="article__box--info-item">
                     <h6 class="article__box--info">Info</h6>
                 </div>
                 <div class="article__box">
-                    <h4>Wer ist kommerzieller Marktteilnehmer und großer Spekulant im Börsenindex S&P 500?</h4>
-                    <p>Die Commercials oder auch kommerziellen Marktteilnehmer sind für den S&P 500 Index die großen
-                        Pensionsfonds und Versicherungsunternehmen in den USA.</p>
+                    <h4>Einfärbung der Kerzen</h4>
                     <p>
-                        Die Large Speculators oder auch große Spekulanten sind für den S&P 500 Index die Banken oder
-                        auch
-                        großen Händler, die über der Meldegrenze liegen. Wer im S&P 500 mehr als 1000 Futures
-                        Kontrakte
-                        handelt, ist meldepflichtig und wird in eine der beiden Kategorien einsortiert.</p>
-                    <p>
-                        Alle Marktteilnehmer, die weniger als 1000 Futures Kontrakte handeln, sind nicht
-                        meldepflichtige
-                        kleine Spekulanten wie du und ich. 😊
+                        <ul>
+                            <li>Grün: Beide Indikatoren steigen</li>
+                            <li>Rot: Beide Indikatoren fallen</li>
+                            <li>Blau / Orange: Beide Indikatoren in die jeweils andere Richtung</li>
+                        </ul>
                     </p>
                 </div>
+                <p>Alexander Elder verwendet das Impuls-System als Zensursystem auf dem Wochen- oder Tageschart. Somit zeigt die Kerzenfarbe ihm an, was er nicht tun darf. Eine rote Kerze auf Tages- oder Wochenbasis bedeutet, dass er nicht kaufen durfte. Eine grüne Kerze, dass er nicht shorten durfte.</p>
+                <p>Er benutzt das System bei all seinen Trades. Im Jahr 2002 hat er sein System in dem Buch „Come into My Trading Room“ veröffentlicht. </p>
+                <div class="responsive-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>EMA</th>
+                                <th></th>
+                                <th>MACD-H</th>
+                                <th>Farbe</th>
+                                <th>Erlaubt</th>
+                                <th>Nicht erlaubt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Steigend</td>
+                                <td>+</td>
+                                <td>Steigend</td>
+                                <td>Grün</td>
+                                <td>Kaufen, abwarten</td>
+                                <td>Short</td>
+                            </tr>
+                            <tr>
+                                <td>Fallend</td>
+                                <td>+</td>
+                                <td>Fallend</td>
+                                <td>Rot</td>
+                                <td>Shorten, abwarten</td>
+                                <td>Long</td>
+                            </tr>
+                            <tr>
+                                <td>Steigend</td>
+                                <td>+</td>
+                                <td>Fallend</td>
+                                <td>Blau</td>
+                                <td>Long oder Short</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>Fallend</td>
+                                <td>+</td>
+                                <td>Steigend</td>
+                                <td>Blau</td>
+                                <td>Long oder Short</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p>Mit diesen Regeln kannst du eine Börsenampel für deine Investitionen entwickeln. Sobald eine blaue oder rote Wochenkerze auftritt ist das ein Zeichen, dass du deine bestehenden Long Position enger mit einer Stop Loss Order absichern solltest. Somit vermeidest du Kapitalrückgänge. Du kannst auch eine Kombination der Kerzenfarben auf dem Wochen- und Tageschart verwenden.</p>
+                <p>Das Impulssystem ist einfach, klar und übersichtlich aufgebaut. Die Signalentstehung ist nachvollziehbar und transparent. Auch wenn mir persönlich die Fundamentalanalyse bei diesem System fehlt, werfe ich immer mal einen Blick auf die Kerzenfarbe auf dem Wochenchart.</p>
+                <p>Ein Vorteil dieses Systems ist, dass in allen Märkten wie Aktien, Futures, Rohstoffe, Forex und Anleihen anwendbar ist. Ebenso kannst du dieses System zusätzlich zu deiner Fundamentalanalyse benutzen.</p>
 
-                <p>Bei meiner Analyse achte ich auf COT Kaufsignale. Diese entstehen, wenn der COT Index Wert über
-                    75
-                    liegt
-                    und in Verbindung mit einer positiven Wochenkerze auftritt. Ein COT Verkaufssignal entsteht,
-                    wenn
-                    der
-                    COT Index Wert unter 25 fällt und in Verbindung mit einer negativen Wochenkerze zusammenfällt.
-                    Die
-                    daraus resultierenden Signale dienen als fundamentale Analyse und sind ein erster Indikator für
-                    eine
-                    Bodenbildung nach einem Crash.</p>
-                <p>Der Vorteil dieses Indikators ist, dass er nicht vom Preis des Index abgeleitet ist, sondern von
-                    der
-                    Positionierung der großen Marktteilnehmer, die mit ihrer Größe die Preise beeinflussen können.
-                </p>
-                <figure class="article__figure">
-                    <img src="../images/image-article-cot-signale.jpg"
-                        alt="COT Verkaufs- und Kaufsignale für den S&P 500" width="730">
-                    <figcaption class="article__caption">Die Grafik zeigt einen Auszug vom COT Tool von InsiderWeek
-                        am
-                        Beispiel vom
-                        S&P 500 Index im Wochenchart. Du siehst, dass die beiden Rallys in Jahr 2019 und 2020 gut
-                        vom
-                        COT
-                        Kaufsignal angezeigt wurden. COT Verkaufssignale hingegen werden in der Börsenampel nicht
-                        als
-                        Ausstiegssignal gewertet, da die COT Daten hierfür nicht der richtige Indikator sind.
-                    </figcaption>
-                </figure>
+            <h3 class="article__heading-three">TSI Börsenampel mit TSI Indikator </h3>
+            <p>TSI Börsenampel basiert auf der Berechnung der Relativen Stärke nach Levy:</p>
+            <figure class="article__figure">
+                <img src="../images/formel-nach-levy.jpg"
+                    alt="Berechnung der Relativen Stärke nach Levy" width="730">
+                <figcaption class="article__caption">Die Formel teilt einen Index in eine rote Ampel oder grüne Ampel Phase auf. Bei einer roten Ampel lohnt es sich nicht in Trendaktien zu investieren. Bei einer Grünen Ampel kann man einen Index ETF kaufen, oder noch besser in die stärksten Trendaktien investieren.</figcaption>
+            </figure>
+            <p>Die Formel wurde für die TSI Börsenampel 2.0 etwas geglättet, um nicht zu früh aus einem Markt auszusteigen. Das führt auch dazu, dass man erst später in einem Markt einsteigt, nach einem Crash. </p>
+            <p>Mit dem Aktienportfolio soll die Performance zum Index nochmal deutlich gesteigert werden, da man mit der Analyse der Trendstärke nur in die stärksten Aktien investiert.</p>
+            <div class="article__box--info-item">
+                <h6 class="article__box--info">Kurzportrait: Börsenmedien AG</h6>
+            </div>
+            <div class="article__box">
+                <h4>hinter der TSI Börsenampel</h4>
+                <p>Die Börsenmedien AG ist der Herausgeber der Börsenzeitschrift „Der Aktionär“. Dort und in dem TSI Premium Abonnent wird die TSI Börsenampel veröffentlicht.</p>
+                <p>Seit 1989 Jahren versorgt die Börsenmedien AG interessierte Anleger mit aktuellen Informationen zu den internationalen Finanzmärkten, mit diversen Medien wie Zeitschriften, Büchern, digitalen Produkten und TV-Sendungen. </p>
+                <p>Mittlerweile ist die Börsenmedien AG das im deutschsprachigen Raum führende Medienhaus mit den Marken: der Aktionär, Börse Online, €uro am Sonntag sowie einfach Börse. </p>
+            </div>
+            <p>Einen <a class="link" href="https://www.tradingview.com/script/SDCx5OWv-Relative-Strength-Levy/" target="_blank">freien RSL Indikator</a> findest du unter anderem in der freien Software TradingView. Ebenfalls findest du einen <a class="link" href="https://www.tradingview.com/support/solutions/43000592290-true-strength-index/" target="_blank">TSI Indikator</a> der sogar in der Software TradingView mit eingebaut ist.</p>
+            <p>Auch diese Börsenampel basiert rein auf einem Indikator, der mit dem Preis berechnet wird. Daher kann es erst Signale geben, wenn diese schon sichtbar sind und es schon eine Marktreaktion gegeben hat. Eine fundamentale Analyse könnte hier ergänzt werden, um die Fehlsignale besser bewerten zu können und die Signalqualität zu erhöhen.</p>
+
+            <h3 class="article__heading-three">Hellmeyer Report mit Börsenampel</h3>
+            <p>Der <a class="link" href="https://www.netfonds.de/hellmeyer-report" target="_blank">Hellmeyer Report</a> enthält ebenfalls eine Börsenampel, die in dem kostenlosen Report auf der Seite der <a class="link" href="https://www.netfonds.de/" target="_blank">Netfonds AG</a> angeboten wird.</p>
+            <div class="article__box--info-item">
+                <h6 class="article__box--info">Kurzportrait: Folker Hellmeyer</h6>
+            </div>
+            <div class="article__box">
+                <h4>Chefvolkswirt der Netfonds Gruppe</h4>
+                <p>Folker Hellmeyer, geboren 1961, begann seine Laufbahn in der Finanzwelt 1984 als Devisenhändler bei der Deutschen Bank in Hamburg und London. Als gelernter Bankfachwirt arbeitete er von 1995 bis 2017 als Chefanalyst für zwei deutsch Landesbanken, bevor er dann im Jahr 2018 die Solvecon Invest GmbH mitgründete.</p>
+                <p>Dort war er Chefanalyst und Gesellschafter. Seit April 2022 ist Volker Hellmeyer Chefvolkswirt der Netfonds AG und publiziert wöchentlich den Hellmeyer Report.</p>
+                <p>Folker Hellmeyer ist darüber hinaus gern gesehener Gast in finanzorientierten Fernsehsendungen und Talkrunden, z.B. bei n-tv oder Bloomberg TV.</p>
+            </div>
+            <p>Leider habe ich keine Information wie genau die Börsenampel im Hellmeyer Report berechnet wird. Allerdings findet man ein <a class="link" href="https://service.netfonds.de/marketing/Hellmeyer_Report/2022/2022-08-24.pdf" target="_blank">Beispielexemplar</a> des Hellmeyer Reports. In diesem Report wird der Aktuelle Stand der Börsenampel zum 24. August 2022 gezeigt.</p>
+            <figure class="article__figure">
+                <img src="../images/hellmeyer-report-beispiel.jpg"
+                    alt="Hellmeyer Report aktueller Stand der Börsenampel vom 24.08.2022" width="730">
+                <figcaption class="article__caption">Quelle: https://service.netfonds.de/marketing/Hellmeyer_Report/2022/2022-08-24.pdf</figcaption>
+            </figure>
+            <p>In dem Beispielreport werden exakte Werte genannt, bei denen die Börsenampel auf Gelb (13.950 Punkte) oder Grün (14.650 Punkte) springen würde. Ich habe diese Werte mal in den Chart eingezeichnet und festgestellt, dass diese Werte ziemlich exakt mit den vorherigen Hochpunkten im Dax übereinstimmen. Daher gehe ich davon aus, dass die Börsenampel im Hellmeyer Report rein auf Basis der Chartanalyse berechnet wird.</p>
+            <figure class="article__figure">
+                <img src="../images/Hellmeyer-boersenampel-chart.jpg"
+                    alt="Chart der Hellmeyer Börsenampel vom 24.08.2022" width="730">
+                <figcaption class="article__caption">Quelle: https://service.netfonds.de/marketing/Hellmeyer_Report/2022/2022-08-24.pdf</figcaption>
+            </figure>
+            <p>Sollte das der Fall sein, ist die Basis der Börsenampel deutlich ausbaufähig.</p>
+            <p>Leider finde ich hierzu auch keine Signale aus der Vergangenheit, sodass ich nicht einschätzen kann, wie gut die Börsenampel vor Crashs wie im Jahr 2020 oder auch im Jahr 2022 gewarnt hat.</p>
+
+            <h3 class="article__heading-three">Lars Hattwig Börsenampel</h3>
+            <p><a class="link" href="https://larshattwig.com/boersenampel" target="_blank">Lars Hattwig</a> veröffentlicht seine Börsenampel in unregelmäßigen Abständen.</p>
+            <div class="article__box--info-item">
+                <h6 class="article__box--info">Kurzportrait: Lars Hattwig</h6>
+            </div>
+            <div class="article__box">
+                <h4>finanziell unabhängig</h4>
+                <p>Lars Hattwig hat es im Jahr 2014 geschafft von seinen Investments zu leben und somit seine finanzielle Unabhängigkeit zu erreichen. Er ist gefragter Speaker in der deutschen Finanzszene und hat die Passiver Geldfluss Academy aufgebaut. </p>
+                <p>In seinen Fachbüchern und seinem YouTube Kanal gibt er einen Blick hinter die Kulissen und Einblick in seine Methoden und Investmentstrategien.</p>
+            </div>
+            <p>Es gibt insgesamt 4 verschiedene Kategorien für die eine Börsenampel angezeigt wird:</p>
+            <ul class="article__list">
+                <li>Aktien – S&P 500</li>
+                <li>Gold in US-Dollar</li>
+                <li>Währungspaar Euro / US-Dollar</li>
+                <li>Bitcoin in US-Dollar</li>
+            </ul>
+            <p>Die Berechnung einer jeder Ampel basiert auf demselben Ansatz. Dieser basiert ausschließlich auf der technischen Analyse. Fundamentale Kennzahlen, die nicht vom Preis abgeleitet sind, werden nicht berücksichtigt.</p>
+            <p>Die Farbe der <a class="link" href="https://larshattwig.com/boersenampel_beschreibung" target="_blank">Börsenampel von Lars Hattwig</a> wird von den folgenden Indikatoren abgeleitet:</p>
+            <ul class="article__list">
+                <li>Ichimoku Indikator</li>
+                <li>Super Trend Indikator</li>
+                <li>Bollinger Bänder</li>
+                <li>Relative Stärke Index (RSI)</li>
+                <li>EMA 100 / 200 (Exponential Moving Average)</li>
+                <li>MACD (Moving Average Convergence / Divergence)</li>
+                <li>Farbintensität der Kerzen</li>
+            </ul>
+            <figure class="article__figure">
+                <img src="../images/Boersenampel_Lars_Hattwig_Erlaeuterungen.jpg"
+                    alt="Börsenampel von Lars Hattwig Chart mit Erklärung" width="730">
+                <figcaption class="article__caption">Quelle: Bildquelle: https://larshattwig.com/boersenampel_beschreibung</figcaption>
+            </figure>
+            <p>Ich bewerte diesen Ansatz der Börsenampel nicht, da es nicht meiner Denkweise über die Finanzmärkte entspricht. </p>
+            <p>Ich habe im Jahr 2012 angefangen mein Geld zu investieren, auf Basis der TSI Börsenampel, die ebenfalls ausschließlich vom Preis abgeleitet ist. Mittlerweile weiß ich, dass man viele Marktreaktionen mit einer fundamentalen Analyse gut vorab erkennen kann.</p>
+
+            <h3 class="article__heading-three">Investorenwerkstatt Börsenampel</h3>
+            <p>Die Börsenampel der <a class="link" href="https://investorenwerkstatt.de/signalgeber/die-boersenampel-der-investorenwerkstatt/" target="_blank">Investorenwerkstatt</a> basiert ebenfalls nur auf Indikatoren die vom Preis abgeleitet sind. Dabei gibt es:</p>
+            <ul class="article__list">
+                <li>Hoch/Tief Kanal (Donchian-Channel) mit einer Einstellung von 51 Wochen</li>
+                <li>Gleitende Durchschnitte mit 3, 9, 25, und 50 Wochen</li>
+            </ul>
+            <p>Die letzte Aktualisierung der öffentlichen Börsenampel der Investorenwerkstatt erfolgte im Juni 2020. Ich gehe davon aus, dass Robert Weigl seinen Service eingestellt hat.</p>
+        </section>
+
+            <h2 class="article__heading-two" id="point-weitere">Weitere Börsenampeln</h2>
+            <p>Es gibt noch zwei weitere Börsenampeln die leider nicht öffentlich zugänglich sind und ich nur wenige weiteren Informationen darüber verfüge.</p>
+            <h3 class="article__heading-three">Inside Markets Börsenampel</h3>
+            <p>In dem kostenpflichtigen <a class="link" href="https://inside-markets.com/inside-markets-das-vermoegensmagazin/" target="_blank">Vermögensmagazin</a> von Inside Markets ist ebenfalls eine Börsenampel enthalten. Mir sind leider keine Informationen über den Aufbau vorhanden.</p>
+            <div class="article__box--info-item">
+                <h6 class="article__box--info">Kurzportrait: Inside Markets</h6>
+            </div>
+            <div class="article__box">
+                <h4>Eichhorn Coaching</h4>
+                <p>Die Gründer und Betreiber von <a class="link" href="https://inside-markets.com/" target="_blank">Inside Markets</a> sind Alexander Eichhorn und Maximilian Bothe. Ebenso betreiben sie die Seite <a class="link" href="https://eichhorn-coaching.de/" target="_blank">Eichhorn Coaching</a> und die gleichnamigen YouTube Kanäle.</p>
+                <p>Beide sind leidenschaftliche und erfolgreiche Börsenhandler. Sie haben Kenntnisse im Aktienhandel, Optionshandel und Futures Handel. Seit 2022 sind sie mit ihrem aktiv gemanagten Account in der Vermögensverwaltung tätig.</p>
+            </div>
+            <figure class="article__figure">
+                <img src="../images/Inside-markets-boersenampel.jpg"
+                    alt="Inside Markets Börsenampel mit Crash Indikator" width="730">
+                <figcaption class="article__caption">Quelle: https://inside-markets.com/inside-markets-das-vermoegensmagazin/</figcaption>
+            </figure>
+            <p>Alexander Eichhorn hat ein <a class="link" href="https://www.youtube.com/watch?v=OvQQ8LXjO8A" target="_blank">Einführungsvideo</a> erstellt, indem er die <a class="link" href="https://inside-markets.com/boersenampel-inside-markets/" target="_blank">Inside Markets Börsenampel</a> erklärt und Tipps gibt, wie du prinzipiell eine Börsenampel aufbaust. </p>
+            <p>Seinen Tipps zufolge basiert die Börsenampel nicht nur auf technischen Indikatoren, sondern berücksichtigt unter anderem die Volatilität der VIX Futures.</p>
+
+            <h3 class="article__heading-three">RFV Börsenampel</h3>
+            <p>Die Website der <a class="link" href="https://www.boersen-ampel.de/" target="_blank">RFV Börsenampel</a> ist fehlerbehaftet und eine Anmeldung zur kostenlosen Börsenampel ist nicht möglich. Auch andere Unterseiten wie das Impressum führen zu einer Error Seite. Ich denke der Dienst wurde eingestellt.</p>
             </section>
-
 
             <section>
-                <h3 class="article__heading-three" id="point-moving">52 Moving Average</h3>
-                <p>Ich schaue mir an, ob sich der Kurs oberhalb oder unterhalb des 52 Moving Average befindet. Der
-                    52
-                    Moving
-                    Average ist ein Trendfolgeindikator, mit dem man die Stärke eines Trends messen kann. Ich
-                    verwende
-                    den
-                    52 Moving Average, weil jedes Jahr 52 Wochen hat.</p>
-                <p>Du kannst im obigen Chart erkennen, dass auch dieser Börsenampel Indikator einigermaßen die
-                    letzten
-                    Börsencrashs angezeigt hat. Aber vor allem nutze ich diesen Indikator, um die Trendstärke in
-                    Rally
-                    Phasen sichtbar zu machen.</p>
+                <h2 class="article__heading-two" id="point-indikator">Börsenampel Indikator in TradingView selbst berechnen</h2>
+                <p>In dem Börsentool TradingView kann jeder, der ein Konto hat, seine eigenen Indikatoren programmieren, berechnen und anzeigen lassen. Dort findest du das <a class="link" href="https://www.tradingview.com/script/Wk82N1D9-Elder-Impulse-System/" target="_blank">Impulssystem</a> von Alexander Elder und eine <a class="link" href="https://www.tradingview.com/support/solutions/43000592290-true-strength-index/" target="_blank">TSI Börsenampel</a>.</p>
+                <p>Die inloopo Börsenampel findest du noch nicht.</p>
+                <p>Warum?</p>
+                <p>Weil ich keine Ahnung vom Programmieren habe. </p>
+                <p>Wenn du über Programmierkenntnisse verfügst und Interesse hast, meine Börsenampel zu programmieren, <a class="link" href="https://www.inloopo.com/de/kontakt">kontaktiere mich</a> sehr gerne. Ich unterstütze dich mit all meinem Wissen. 😊</p>
             </section>
-
-
-            <section>
-                <h3 class="article__heading-three" id="point-trend">Trendanalyse</h3>
-                <p>Die Analyse des Trends erfolgt auf Wochen- und Tagesbasis und dient ebenfalls der
-                    Markteinordnung.
-                    Denn
-                    mit dem Trend kannst du die Gesundheit bzw. Stärke oder Schwäche des Marktes einordnen. Ich
-                    analysiere
-                    den Trend nach Markttechnik, wie er in dem Buch „Das große Buch der Markttechnik“ von Michael
-                    Voigt
-                    beschrieben ist.</p>
-            </section>
-
-
-            <section>
-                <h3 class="article__heading-three" id="point-momentum">Momentum Indikator</h3>
-                <p>Es gibt ganze Trading Strategien, die sich nur auf das Momentum konzentrieren. In der Inloopo
-                    Börsenampel
-                    nutze ich den Momentum Indikator, um ebenfalls einzuschätzen, in welcher Verfassung sich der
-                    Markt
-                    befindet und ob es ein positives Momentum gibt.</p>
-                <p>Denn nur wenn ein positives Momentum vorhanden ist, kannst du mit der S&P 500 Strategie dein
-                    Geld
-                    vermehren. Ich benutze einen Momentum Indikator, der auf dem PercentR (%R) Indikator von Larry
-                    Williams
-                    basiert. </p>
-            </section>
-
-
-            <section>
-                <h3 class="article__heading-three" id="point-divergenz">Divergenz</h3>
-                <p>Ich analysiere die Divergenz, um den richtigen Zeitpunkt für den Einstieg in den Markt zu finden.
-                    Quasi
-                    als eine weitere Bestätigung in Zusammenspiel mit dem COT Kaufsignal nach einem Crash oder
-                    längeren
-                    fallenden Marktphasen, einem sogenannten Bärenmarkt.</p>
-                <p>Als Basis für meine Divergenz-Analyse benutze ich drei Indikatoren, den ProGo Indikator und POIV
-                    Indikator von Larry Williams und eine Divergenz auf Basis des Momentums, und vergleiche sie mit dem
-                    aktuellen Kurs.
-                </p>
-                <figure class="article__figure">
-                    <img src="../images/image-article-divergenz-progo-indikator.jpg"
-                        alt="Ein Beispiel für Divergenz mit ProGO Indikator" width="730">
-                    <figcaption class="article__caption">Der ProGo Indikator (rote Linie) hat eine Divergenz zum
-                        Preis
-                        (schwarze Tageskerzen) ausgebildet. Am 12.03.2020 hat der ProGo Indikator sein tiefstes Tief
-                        verzeichnet. Das nächste Tief des ProGo Indikators am 20.03.2020 ist höher als das
-                        vorherige.
-                        Anders
-                        als der Kurs des S&P 500, der sein tiefstes Tief am 20.03.2020 ausgebildet hat. Somit ist
-                        der
-                        Indikator vor dem Kurs gestiegen und hat den darauffolgenden Trendwechsel zuverlässig
-                        angezeigt.
-                    </figcaption>
-                </figure>
-                <p>Alle drei Indikatoren sind gleich gewichtet und es muss im Falle eines Signals nur eine Divergenz
-                    vorhanden sein.</p>
-                <p>Die Divergenz-Analyse verwende ich nur, wenn die Börsenampel auf Rot ist, um eine weitere
-                    Bestätigung
-                    für
-                    das richtige Timing und den Wiedereinstieg in den Markt zu finden. Sobald eine Position eröffnet
-                    wurde,
-                    schaue ich nicht mehr auf die Divergenz, sondern analysiere die Spreads auf die VIX Futures, um
-                    den
-                    Ausstieg zu timen.</p>
-            </section>
-
-
-            <section>
-                <h3 class="article__heading-three" id="point-spread">Spread der VIX Futures als Crash Indikator</h3>
-                <p>Seit dem 26. März 2007 veröffentlicht die Seite <a class="link" href="http://www.vixcentral.com/"
-                        target="_blank">VIX
-                        Central</a> die
-                    Terminstrukturkurve der VIX Futures. Diese Daten können ebenfalls als Crash Indikator oder
-                    Frühwarnsystem herangezogen werden.</p>
-                <figure class="article__figure">
-                    <img src="../images/image-article-vix-futures-01.jpg"
-                        alt="Eine Beispielsituation für den VIX Futures" width="730">
-                    <figcaption class="article__caption">Zwischen dem 28.01.2021 und dem 02.12.2022 ist die
-                        Terminstrukturkurve im sogenannten Contango. Jeder Futures Kontrakt hat mit größerer
-                        Laufzeit
-                        auch
-                        einen höheren Kurs.
-                    </figcaption>
-                </figure>
-                <p>Bei der Auswertung des Spreads reicht es mir, wenn der Wert des ersten Kontrakts größer oder
-                    gleich
-                    dem
-                    Wert des zweiten Kontrakts ist. Dies ist schon eine unnormale Situation und signalisiert
-                    erhöhten
-                    Absicherungsbedarf der großen Marktteilnehmer. Wenn so eine Situation auftritt, heißt es
-                    Achtung!
-                    Ich
-                    sichere dann die offene Position enger mit einem Stopp ab.</p>
-                <figure class="article__figure">
-                    <img src="../images/image-article-vix-futures-02.jpg"
-                        alt="Terminstrukturkurve VIX Futures am 03.12.20221" width="730">
-                    <figcaption class="article__caption">Die Terminstrukturkurve ist plötzlich für nur einen Tag in
-                        einer
-                        Backwardation. Obwohl der Zustand nur einen Tag anhält, ist es ein Warnsignal, dass die
-                        großen
-                        Marktteilnehmer ihre Positionen absichern und es bald zu einer größeren Korrektur oder sogar
-                        Crash
-                        an den Börsen kommen kann.
-                    </figcaption>
-                </figure>
-                <figure class="article__figure">
-                    <img src="../images/image-article-vix-futures-03.jpg" alt="S&P 500 Futures Tageschart" width="730">
-                    <figcaption class="article__caption">Die roten Balken markieren die Tage mit einer Backwardation
-                        der
-                        VIX Futures. Nach dem eintägigen Event der Backwardation am 03.12.2021 scheint sich die
-                        Situation in
-                        den
-                        darauffolgenden Wochen zu normalisieren, denn der S&P 500 macht nochmals neuen Allzeithochs
-                        ab
-                        dem 27.12.2021. Doch schon ca. 3 Wochen später am 21.01.2022 tritt erneut eine Backwardation
-                        in
-                        den VIX Futures auf und der Bärenmarkt des Jahres 2022 beginnt.
-                    </figcaption>
-                </figure>
-                <p>Nach meiner Börsenampel und dem Warnsignal vom 03.12.2021 habe ich meine Position komplett am
-                    19.01.2021 geschlossen. Nur 6 % unter dem Allzeithoch des S&P 500.</p>
-            </section>
-
-
-            <section>
-                <h2 class="article__heading-two" id="point-performance">Warum erreicht meine Börsenampel eine bessere
-                    Performance als der Gesamtmarkt?</h2>
-                <p>Durch die drei Komponenten der COT Daten, Divergenz und Trendaufbau wird das richtige Timing für
-                    den Einstieg in den Markt nach einem Börsencrash oder seitwärts Phase angezeigt. Die
-                    ausgewählten Börsenampel Indikatoren spielen sich in die Karten, weswegen sehr wenig Fehlsignale
-                    bei dem Einstieg in den Markt und dem Positionsaufbau entstehen.</p>
-                <p>Sobald eine Position aufgebaut ist, werden die beiden Komponenten Momentum Indikator und Spread
-                    auf die VIX Futures wöchentlich analysiert. Auf Basis dieser beiden Werte erfolgt eine
-                    konsequente Stopp Setzung und somit Absicherung der Position.</p>
-                <p>Alle Handelsentscheidungen werden ausschließlich am Wochenende getroffen. Durch eine konsequente
-                    Absicherung werden unangenehm negative Überraschungen unter der Woche vermieden. Sobald es – wie
-                    im Jahr 2020 im Corona Crash – unter der Woche deutlich nach unten geht, wird die Position per
-                    Stopp Order aufgelöst.</p>
-            </section>
-
 
             <section>
                 <h2 class="article__heading-two" id="point-fond">Kann ich mein Geld in einem Börsenampel Fond anlegen?
@@ -579,46 +568,12 @@
             <!-- grafik sp500 strategie vs buy and hold -->
             <dynamic-chart></dynamic-chart>
 
-            <section>
-                <h2 class="article__heading-two" id="point-indikator">Börsenampel Indikator in TradingView selbst berechnen
-                </h2>
-                <p>In dem Börsentool TradingView kann jeder, der ein Konto hat, seine eigenen Indikatoren
-                    programmieren,
-                    berechnen
-                    und anzeigen lassen. Leider reichen meine rudimentären Programmierkenntnisse nicht aus, um meine
-                    Börsenampel in
-                    TradingView zu programmieren. Wenn du über Programmierkenntnisse verfügst und Interesse hast,
-                    meine
-                    Börsenampel
-                    zu programmieren, kontaktiere mich sehr gerne. Ich unterstütze dich mit all meinem Wissen. 😊
-                </p>
-            </section>
-
 
             <section>
                 <h2 class="article__heading-two" id="point-schluss">Zusammenfassung</h2>
-                <p>Wenn du die Inloopo Börsenampel nutzt, schlägst du den Markt, da:
-                </p>
-                <ol class="article__list--order">
-                    <li>du in Phasen steigender Börsen investiert bist.</li>
-                    <li>du bei größeren Marktkorrekturen oder vor einem Crash nicht investiert
-                        bist (100 % Cash Quote). So
-                        schützt
-                        du dein Kapital.</li>
-                    <li>der Zinseszinseffekt eine wunderbare Outperformance zum
-                        Vergleichsmarkt entstehen lässt.</li>
-                </ol>
-                <p>Das System ist für jeden mit sehr wenig Zeitaufwand umsetzbar und es funktioniert mit jeder
-                    Kontogröße.
-                </p>
-                <figure class="article__figure">
-                    <img src="../images/boersenampel-indikatoren.svg"
-                        alt="Überblick der Börsenampel Indikatoren" width="730" >
-                </figure>
-                <p>Wenn du weitere Fragen oder Anregungen hast, schreib mir gerne eine E-Mail an <a
-                        href="mailto:info@inloopo.com" class="link">info@inloopo.com</a>. Ich
-                    freue
-                    mich auf deine Rückmeldung.</p>
+                <p>Mit einer Börsenampel kannst du deine Rendite deutlich steigern. Aber noch viel wichtiger ist, dass du unabhängig von Börsenmagazinen, Nachrichten oder sonstigen Hilfsmitteln entscheiden kannst.</p>
+                <p>Lies dir meinen Artikel zur <a class="link" href="XXX">inloopo Börsenampel</a> durch. </p>
+                <p>P.S. Ich empfehle dir ein Hybrides System oder ein System mit Fundamentalanalyse zu nutzen. </p>
             </section>
 
            
