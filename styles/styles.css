@@ -374,6 +374,7 @@ nav ul a{
     display: none;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .bar{
@@ -391,17 +392,6 @@ nav input[type="checkbox"]{
     color: #ff6b35;
 }
 
-.toggle-button{
-    width: 35px;
-    height: 25px;
-    position: absolute;
-    top: 25px;
-    right: 25px;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
 .nav__lang {
     color: #fff;
     background-color: #ff6b35;
@@ -414,6 +404,31 @@ nav input[type="checkbox"]{
 cursor: pointer;
 color: #fff;
 }
+
+
+.toggle-button span.bar {
+    transition: transform 200ms linear, opacity 100ms linear;
+}
+.toggle-button span.bar:nth-child(1) {
+    transform: translateY(0) rotate(0deg);
+}
+.toggle-button span.bar:nth-child(2) {
+    opacity: 1;
+}
+.toggle-button span.bar:nth-child(3) {
+    transform: translateY() rotate(0deg);
+}
+#toggle-button:checked ~ .toggle-button span.bar:nth-child(1) {
+    transform: translateY(10.5px) rotate(135deg);
+}
+#toggle-button:checked ~ .toggle-button span.bar:nth-child(2) {
+    opacity: 0;
+}
+#toggle-button:checked ~ .toggle-button span.bar:nth-child(3) {
+    transform: translateY(-10.5px) rotate(-135deg);
+}
+
+
 
 
 
@@ -2141,9 +2156,6 @@ nav li,
 #toggle-button:checked ~ ul {
     display: block;
 }
-
-
-
 
 
 /* ---------------------------------*\

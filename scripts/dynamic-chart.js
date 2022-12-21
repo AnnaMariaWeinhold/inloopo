@@ -50,14 +50,15 @@ class DynamicChart extends HTMLElement {
   </section>
     `;
     const styles = `
-    #interactive-chart {
-      margin-bottom: 200px;
-      margin-left: 12px;
-      float: left;
-      width: 100%;
-      height: 600px;
+    * {
+      box-sizing: border-box;
     }
-
+    @media screen and (max-width: 600px) {
+      :host {
+        margin-left: 12px;
+        margin-right: 12px;
+      }
+    }
     #interactive-chart-section {
       margin-top: 40px;
     }
