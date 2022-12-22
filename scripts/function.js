@@ -25,9 +25,6 @@ const observer = new IntersectionObserver((entries) => {
 headings.forEach((heading) => observer.observe(heading));
 
 
-
-
-
 var isTocShown = false;
 // Show TOC when scroll down
 window.addEventListener("scroll", showFunction);
@@ -40,16 +37,11 @@ function showFunction() {
   }
 }
 
-
-
-
-
 // Reading Progress Bar
-
-// const readingProgress = document.querySelector('.reading-progress');
-// const footerHeight = 250;
-// document.addEventListener('scroll', function (e) {
-//   let w = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight - footerHeight) * 100;
-//   readingProgress.style.setProperty('width', w + '%');
-// });
+const readingProgress = document.querySelector('.reading-progress');
+const footerHeight = 250;
+document.addEventListener('scroll', function (e) {
+  let w = (document.body.scrollTop || document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight - footerHeight) * 100;
+  readingProgress.style.setProperty('width', w + '%');
+});
 
