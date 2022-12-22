@@ -25,7 +25,7 @@
             <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="96x96" href="images/favicon-96x96.png">
             <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
-            <link rel="manifest" href="images/manifest.json">
+            <link rel="manifest" href="/images/manifest.json">
             <meta name="msapplication-TileColor" content="#ffffff">
             <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
             <meta name="theme-color" content="#ffffff">
@@ -41,8 +41,8 @@
             <meta property="og:locale" content="de">
 
             <!-- Register Custom Elements -->
+            <!-- Load Dynamic Chart Skript -->
             <script src="/scripts/dynamic-chart.js" defer></script>
-
         </head>
 
     <body>
@@ -51,7 +51,7 @@
             <header>
 
                 <nav>
-                    <a href="/de" class="logo"><img src="images/logo.svg" width="150" alt="Logo inloopo"></a>
+                    <a href="/de" class="logo"><img src="/images/logo.svg" width="150" alt="Logo inloopo"></a>
                     <input type="checkbox" id="toggle-button">
                     <label for="toggle-button" class="toggle-button">
                         <span class="bar"></span>
@@ -97,17 +97,17 @@
             <div class="row  box--grey-background  box--desktop">
                 <div class="wrapper-content">
                     <div class="column  half  box__container">
-                        <img class="box__icon" src="images/sad.svg" width="70" height="70" alt="Trauriges Gesicht">
+                        <img class="box__icon" src="/images/sad.svg" width="70" height="70" alt="Trauriges Gesicht">
                         <h3 class="box__heading">Du hast keine Lust mehr...</h3>
                         <ul class="box__ul">
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">dich durch
                                 die Medienlandschaft nach aktuellen Börsentipps zu
                                 wühlen.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">den
                                 Ausstiegszeitpunkt vor einem Crash zu verpassen.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">unsicher
                                 und verwirrt darüber zu sein wann die Rally wieder
                                 beginnt.</li>
@@ -115,18 +115,18 @@
                     </div>
 
                     <div class="column  half  box__container">
-                        <img class="box__icon" src="images/happy.svg" width="70" height="70" alt="Fröhliches Gesicht">
+                        <img class="box__icon" src="/images/happy.svg" width="70" height="70" alt="Fröhliches Gesicht">
                         <h3 class="box__heading">Du möchtest lieber...</h3>
                         <ul class="box__ul">
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">weniger
                                 Suchen und Interpretieren.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">vor einem
                                 Börsencrash informiert werden und nicht danach wenn
                                 es
                                 vorüber ist.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                            <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
                                     alt="Pfeil Icon">wissen,
                                 wann du wirklich einsteigen und aussteigen solltest.
                             </li>
@@ -150,7 +150,7 @@
 
 
  <!-- grafik sp500 strategie vs buy and hold -->
- <dynamic-chart></dynamic-chart>
+ <dynamic-chart msci-emerging nasdaq dow dax></dynamic-chart>
 
 
         <!-- PRODUCT DETAILS -->
@@ -161,7 +161,7 @@
             <div class="wrapper-content">
             <div class="row  column--no-background">
                 <div class="column  fourth  column__col">
-                    <img src="images/eye-open.svg" class="column__icon" width="70" height="70" alt="Offenes Auge Icon">
+                    <img src="/images/eye-open.svg" class="column__icon" width="70" height="70" alt="Offenes Auge Icon">
                     <h3 class="column__subheading">Einfach und klar</h3>
                     <p class="column__text">Die Ampelfarben sind verständlich und du kannst sie in vielen
                         Strategien
@@ -170,7 +170,7 @@
                 </div>
 
                 <div class="column fourth  column__col">
-                    <img src="images/clock-time.svg" class="column__icon" width="70" height="70" alt="Uhr Icon">
+                    <img src="/images/clock-time.svg" class="column__icon" width="70" height="70" alt="Uhr Icon">
                     <h3 class="column__subheading">Wenig Zeit</h3>
                     <p class="column__text">Du kannst die Strategie eins-zu-eins mit durchschnittlich zwei
                         Transaktionen
@@ -179,7 +179,7 @@
                 </div>
 
                 <div class="column fourth  column__col">
-                    <img src="images/chart.svg" class="column__icon" width="70" height="70" alt="Geldschein">
+                    <img src="/images/chart.svg" class="column__icon" width="70" height="70" alt="Geldschein">
                     <h3 class="column__subheading">Outperformance</h3>
                     <p class="column__text">Du schlägst den Markt.
                         Mit meiner ETF Strategie für den S&P 500 bist du bei steigenden Märkten investiert und bei
@@ -188,7 +188,7 @@
                 </div>
 
                 <div class="column fourth  column__col">
-                    <img src="images/gears.svg" class="column__icon" width="70" height="70" alt="Einstellungen Icon">
+                    <img src="/images/gears.svg" class="column__icon" width="70" height="70" alt="Einstellungen Icon">
                     <h3 class="column__subheading">Vielseitig</h3>
                     <p class="column__text">Die Börsenampel kannst du mit verschiedenen Trading Strategien auf
                         Finanzprodukte wie ETF's, Aktien, Optionen und Futures umsetzen.
@@ -281,7 +281,7 @@
 
             <div class="row  row--no-background">
                 <div class="column third  column__col">
-                    <img src="images/books.svg" class="column__icon" width="70" height="70" alt="Buch Icon">
+                    <img src="/images/books.svg" class="column__icon" width="70" height="70" alt="Buch Icon">
                     <h3 class="column__subheading">Börsenerfahrung</h3>
                     <p class="column__text">Du suchst nach einem erfahrenen Trader. Ich bin seit 2008 aktiv an der Börse
                         und habe anfangs CFD's, später Aktien, Optionsscheine auf Trendaktien und Optionen gehandelt.
@@ -290,7 +290,7 @@
                 </div>
 
                 <div class="column third  column__col">
-                    <img src="images/hat.svg" class="column__icon" width="70" height="70" alt="Hut Icon">
+                    <img src="/images/hat.svg" class="column__icon" width="70" height="70" alt="Hut Icon">
                     <h3 class="column__subheading">Nachweisbarer Erfolg</h3>
                     <p class="column__text">Du brauchst Sicherheit. Ich habe mit meiner Futures Trading Strategie an der
                         Trading Weltmeisterschaft teilgenommen. Mit 64,1 % Rendite pro Jahr den 5. Platz belegt. Dieses
@@ -299,7 +299,7 @@
                 </div>
 
                 <div class="column third  column__col">
-                    <img src="images/data.svg" class="column__icon" width="70" height="70" alt="Datan und Charts">
+                    <img src="/images/data.svg" class="column__icon" width="70" height="70" alt="Datan und Charts">
                     <h3 class="column__subheading">Analytische Denkweise</h3>
                     <p class="column__text">Du möchtest einem strategisch denkenden Menschen folgen. Ich mache meine
                         Analysen präzise und sorfältig. Meine Entscheidungen treffe ich rational und auf Basis von
@@ -849,10 +849,6 @@
             </div>
         </section>
     </footer>
-
-    <!-- JAVASCRIPT -->
-<script src="/scripts/function.js"></script>
-
 
 </body>
 

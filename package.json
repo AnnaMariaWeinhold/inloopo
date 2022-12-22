@@ -2,6 +2,6 @@
   "name": "inloopo",
   "scripts": {
     "serve": "npx http-server ./ -c-1 --port 3000 --ext html -o",
-    "build-js": "npx esbuild scripts/interactive-chart.js --target=es2017 --platform=browser --minify --outfile=scripts/interactive-chart.min.js"
+    "build-js": "npx esbuild scripts/dynamic-chart-core.js --target=es2017 --platform=browser --minify --outfile=scripts/dynamic-chart.min.js"
   }
 }

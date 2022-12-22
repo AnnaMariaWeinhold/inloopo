@@ -191,8 +191,8 @@ class DynamicChart extends HTMLElement {
       color: #253C78;
     }
     `;
-    // if (this.hasAttribute("element")) {
-    // }
+
+    window.dcIndices = {};
     const observer = new IntersectionObserver((entries, observerRef) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -200,8 +200,21 @@ class DynamicChart extends HTMLElement {
           style.textContent = styles;
           this.shadowRoot.innerHTML = markup;
           this.shadowRoot.appendChild(style);
-          import(`./interactive-chart.min.js`);
           observerRef.unobserve(entry.target);
+          try {
+            import(`./dynamic-chart-core.js`);
+
+            for (let i = 0; i < this.attributes.length; i++) {
+              const indexName = this.attributes[i].name;
+              fetch(`/data/${indexName}.json`)
+                .then((data) => data.json())
+                .then((jsonData) => {
+                  window.dcIndices[indexName] = jsonData;
+                });
+            }
+          } catch (e) {
+            console.error(e);
+          }
         }
       });
     });
