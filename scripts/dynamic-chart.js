@@ -54,13 +54,14 @@ class DynamicChart extends HTMLElement {
       box-sizing: border-box;
     }
     @media screen and (max-width: 600px) {
-      :host {
+      #interactive-chart-section {
         margin-left: 12px;
         margin-right: 12px;
       }
     }
     #interactive-chart-section {
       margin-top: 40px;
+      margin-bottom: 40px;
     }
     
     .chart__heading {
