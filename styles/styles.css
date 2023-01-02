@@ -368,7 +368,7 @@ nav ul a{
     color: var(--text-color);
 }
 
-.toggle-button{
+.toggle-button {
     width: 35px;
     height: 25px;
     position: absolute;
@@ -380,14 +380,14 @@ nav ul a{
     cursor: pointer;
 }
 
-.bar{
+.bar {
     height: 4px;
     width: 100%;
     background: #171614;
     border-radius: 4px;
 }
 
-nav input[type="checkbox"]{
+nav input[type="checkbox"] {
     display: none;
 }
 
@@ -1455,6 +1455,18 @@ padding: 8%;
     padding-right: 25px;
 }
 
+.blog__article:first-child {
+    margin-left: 2%;
+    }
+
+.blog__article:nth-child(4) {
+    margin-left: 2%;
+}
+
+.blog__article:nth-child(7){
+    margin-left: 2%;
+}
+
 .blog__subheading {
     margin-top: 50px;
 }
@@ -1739,6 +1751,12 @@ textarea[type=text]:focus {
     } 
 }
 
+.article__p--bigger {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 28px;
+}
+
 
 
 /* #Slider */
@@ -1859,6 +1877,16 @@ color: #ff6b35;
     color: #ff6b35;
     border-left: 3px solid #ff6b35;
   }
+
+
+.toc input[type="checkbox"] {
+    display: none;
+}
+
+.toc__toggle-button {
+    display: none;
+}
+
 
 
 
@@ -2441,7 +2469,10 @@ color: #ff6b35;
     /* ---------------------------------*\
         #LAYOUT
     \* ---------------------------------*/
-    
+    html {
+        scroll-padding-top: 160px;
+    }
+
     .wrapper-content-rights, 
     .wrapper-content-blog {
         padding-left: 25px;
@@ -2981,14 +3012,45 @@ color: #ff6b35;
     #TOC
 \* ---------------------------------*/
 
+/*
+#toc__toggle-button:checked ~ ol {
+    display: block;
+}
 
-.toc {
-    display: none !important;
-    animation: none !important;
+#toc__toggle-button:checked ~ .toc__toggle-button {
+    transform: translateY(-116px) translateX(228px) rotate(135deg);
+}
+
+.toc__toggle-button {
+    display: inline-block;
+    transform: translateY(-17px) translateX(90px);
+}
+
+.toc__heading--mobile {
+    background-color: #fff;
+    padding: 10px 10px 10px 0;
+    width: 100%;
+    font-size: 16px;
+}
+
+.toc ol {
+    display: none;
 }
 
 
+.toc {
+    display: none;
+    padding-top: 80px;
+    width: 100%;
+}
 
+  .toc__nav {
+    background-color: #fff;
+    padding-top: 10px;  
+    margin-top: -40px;
+  }
+
+*/
 
 
 
