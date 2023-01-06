@@ -1837,15 +1837,16 @@ textarea[type=text]:focus {
 
   .toc {
     display: none;
-    height: 100%;
-    width: 260px;
     z-index: 1;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     overflow: hidden;
     padding-top: 120px;
     margin-left: 20px;
     position: fixed;
+    background-color: white;
     animation: fadeEffect 3s; /* fading effect takes 3s */
   }
   

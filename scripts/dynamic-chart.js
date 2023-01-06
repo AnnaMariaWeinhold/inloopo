@@ -12,30 +12,7 @@ class DynamicChart extends HTMLElement {
         <label class="chart__p" style="position: relative" for="start-year">Startjahr
             <input id="start-year" class="chart__input" type="number" min="1998" max="2021" value="1998">
             <ul id="year-picker">
-                <li data-value="1998">1998</li>
-                <li data-value="1999">1999</li>
-                <li data-value="2000">2000</li>
-                <li data-value="2001">2001</li>
-                <li data-value="2002">2002</li>
-                <li data-value="2003">2003</li>
-                <li data-value="2004">2004</li>
-                <li data-value="2005">2005</li>
-                <li data-value="2006">2006</li>
-                <li data-value="2007">2007</li>
-                <li data-value="2008">2008</li>
-                <li data-value="2009">2009</li>
-                <li data-value="2010">2010</li>
-                <li data-value="2011">2011</li>
-                <li data-value="2012">2012</li>
-                <li data-value="2013">2013</li>
-                <li data-value="2014">2014</li>
-                <li data-value="2015">2015</li>
-                <li data-value="2016">2016</li>
-                <li data-value="2017">2017</li>
-                <li data-value="2018">2018</li>
-                <li data-value="2019">2019</li>
-                <li data-value="2020">2020</li>
-                <li data-value="2021">2021</li>
+                ${[...Array(24).keys()].map((n) => `<li data-value=${n + 1998}>${n + 1998}</li>`).join("")}
             </ul>
         </label>
       </form>
