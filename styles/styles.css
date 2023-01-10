@@ -1220,6 +1220,8 @@ padding: 0;
 
 .responsive-table {
     overflow-x: auto;
+    margin-top: 25px;
+    margin-bottom: 30px;
 }
 
 .table--big {
@@ -1232,27 +1234,26 @@ table,
 thead, 
 th, 
 tr, 
-tbody{
+tbody {
  border-collapse: collapse;
  } 
 
- thead{
+ thead {
     text-align: left;
  }
 
-thead, tbody{
+thead, tbody {
     background: #fff;
 }
 
-th{
+th {
     padding: 20px;
     border-bottom: 2px solid #ff6b35;
 }
 
-td{
+td {
     border-bottom: 1px solid #DCDCDC;
     padding: 25px 10px;
-
 }
 
 
@@ -3008,6 +3009,10 @@ h4{
    /* ---------------------------------*\
     #TOC
 \* ---------------------------------*/
+.toc {
+    display: none !important;
+    animation: none !important;
+}
 
 /*
 #toc__toggle-button:checked ~ ol {
