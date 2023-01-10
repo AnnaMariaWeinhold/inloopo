@@ -120,6 +120,35 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
   strategyDrawdownElement.innerText = `${(Math.min(...strategyDrawdowns.map((dd) => dd.getDrawdownInPercent())) * 100).toFixed(1)} %`;
 }
 
+const indexIdNameMap = {
+  dax: "DAX",
+  nasdaq: "NASDAQ",
+  "msci-world": "MSCI World",
+  "msci-emerging": "MSCI Emerging",
+  dow: "Dow Jones Industrial"
+};
+
+function dcIndices(startMoney = 10000, startIndex = 0) {
+  return Object.entries(window.dcIndices).map(([indexId, changes]) => {
+    if (startIndex)
+      changes = changes.slice(startIndex);
+
+    const data = [];
+    let previousMoney = startMoney;
+    changes.forEach((change) => {
+      const newMoney = (previousMoney * (1 + change / 100));
+      data.push(newMoney);
+      previousMoney = newMoney;
+    });
+    return {
+      name: indexIdNameMap[indexId],
+      type: 'line',
+      smooth: true,
+      data: data.map((num) => num.toFixed(0))
+    };
+  });
+}
+
 // ENTRY POINT
 (async function () {
   await import("/scripts/echarts.js");
@@ -130,7 +159,8 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
   const dates = data.map((row) => row[0]);
 
   const strategyName = 'inloopo S&P 500 Strategie';
-  const buyAndHoldName = 'Buy-And-Hold S&P 500';
+  const buyAndHoldName = 'S&P 500';
+  const legendData = [strategyName, buyAndHoldName, ...Object.keys(window.dcIndices).map((id) => indexIdNameMap[id])];
   const { spData, drawdowns: spDrawdowns } = calculateSP(data);
   const { strategyData, drawdowns: strategyDrawdowns } = calculateStrategy(data);
 
@@ -144,7 +174,7 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
       }
     },
     legend: {
-      data: [strategyName, buyAndHoldName]
+      data: legendData
     },
     grid: {
       left: '3%',
@@ -174,6 +204,7 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
         smooth: true,
         data: spData,
       },
+      ...dcIndices()
     ],
   };
   chart.setOption(options);
@@ -215,6 +246,7 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
           smooth: true,
           data: spData,
         },
+        ...dcIndices(newStartMoney)
       ],
     };
     chart.setOption(newOptions);
@@ -273,6 +305,7 @@ function displayHtmlDrawdowns(spDrawdowns, strategyDrawdowns) {
               smooth: true,
               data: spData,
             },
+            ...dcIndices(Number(startMoneyControl.value), startIndex)
           ],
         };
         chart.setOption(newOptions);

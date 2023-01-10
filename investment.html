@@ -8,7 +8,6 @@
     <meta name="description" content="You want to invest money. Without a bank. Without effort. 
     This can be done with the inloopo Stock Market Indicator for the S&P 500 ETF.">
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/interactive-chart.css">
     <link rel='stylesheet' href='https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css'>
 
 
@@ -43,8 +42,8 @@
      <meta property="og:description" content="You want to invest your money. Use the inloopo market indicator for S&P 500 ETF.">
      <meta property="og:locale" content="en">
 
-     <!-- Register Custom Elements -->
-    <script src="scripts/dynamic-chart.js" defer></script>
+     <script src="/scripts/dynamic-chart.js" defer></script>
+
 
 </head>
 
@@ -106,35 +105,37 @@
         <section>
             <div class="row  box--grey-background  box--desktop">
                 <div class="wrapper-content">
-                    <div class="column  half  box__container">
-                        <img class="box__icon" src="images/sad.svg" width="70" height="70" alt="Sad Face">
-                        <h3 class="box__heading">You are tired of...</h3>
-                        <ul class="box__ul">
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Arrow Icon">digging through the media landscape for the latest stock market
-                                tips.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Arrow Icon">missing out on closing your position before a crash.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Arrow Icon">being unsure and confused about when the rally will start again.
-                            </li>
-                        </ul>
-                    </div>
+                    <div class="row">
+                        <div class="column  half  box__container">
+                            <img class="box__icon" src="/images/sad.svg" width="70" height="70" alt="Sad Face">
+                            <h3 class="box__heading">You are tired of...</h3>
+                            <ul class="box__ul">
+                                <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
+                                        alt="Arrow Icon">digging through the media landscape for the latest stock market
+                                    tips.</li>
+                                <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
+                                        alt="Arrow Icon">missing to close your position before a crash.</li>
+                                <li class="box__li"><img src="/images/icon-arrow.svg" width="35" height="35"
+                                        alt="Arrow Icon">being unsure and confused about when the rally will start again.
+                                </li>
+                            </ul>
+                        </div>
 
-                    <div class="column  half  box__container">
-                        <img class="box__icon" src="images/happy.svg" width="70" height="70" alt="Happy Face">
-                        <h3 class="box__heading">You would rather...</h3>
-                        <ul class="box__ul">
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Pfeil Icon">search less, get signals and market analysis without the need for
-                                interpretation.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Pfeil Icon">be informed before the next stock market crash and not
-                                when it is over.</li>
-                            <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
-                                    alt="Pfeil Icon">know when you should really get in and get out.
-                            </li>
-                        </ul>
+                        <div class="column  half  box__container">
+                            <img class="box__icon" src="images/happy.svg" width="70" height="70" alt="Happy Face">
+                            <h3 class="box__heading">You would rather like to...</h3>
+                            <ul class="box__ul">
+                                <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                                        alt="Pfeil Icon">search less, get signals and market analysis without
+                                    interpretation.</li>
+                                <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                                        alt="Pfeil Icon">be informed before the next stock market crash and not afterwards
+                                    when it is over.</li>
+                                <li class="box__li"><img src="images/icon-arrow.svg" width="35" height="35"
+                                        alt="Pfeil Icon">know when you should really get in and get out.
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
         </section>
@@ -151,10 +152,8 @@
             </blockquote>
         </section>
 
-         <!-- grafik sp500 strategie vs buy and hold -->
- <dynamic-chart></dynamic-chart>
-
-
+        <!-- grafik sp500 strategie vs buy and hold -->
+        <dynamic-chart></dynamic-chart>
 
 
         <!-- PRODUCT DETAILS -->
@@ -210,8 +209,8 @@
     <section>
         <div class="box--blue-background">
             <div class="wrapper-content">
+                <h2 class="box__heading--white">Stay up to date with my Telegram Channel</h2>
                 <div class="row">
-                    <h2 class="box__heading--white">Stay up to date with my Telegram Channel</h2>
                     <div class="column half  box__column">
                         <h3 class="box__subheading--center">Market indicator</h3>
                         <p class="box__text--bigger">free</p>
@@ -219,7 +218,7 @@
                             In addition, you get a short comment on the market and details for each indicator.
                         </p>
                         
-                        <p><a href="https://t.me/+VjY9SyNmnrU0OTYy" target="_blank"
+                        <p class="box__cta"><a href="https://t.me/+VjY9SyNmnrU0OTYy" target="_blank"
                                 class="button  button-table">Yes, I want to
                                 join</a>
                         </p>
@@ -248,10 +247,13 @@
                             </table>
                         </div>
                     
-                        <p><a class="button  button-table" href="https://www.copecart.com/products/84086df4/checkout"
+                        <p class="box__cta"><a class="button  button-table" href="https://www.copecart.com/products/84086df4/checkout"
                                 target="_blank">Buy now</a></p>
 
                     </div>
+                </div>
+            </div>
+        </div>
     </section>
 
  
@@ -846,11 +848,7 @@
     </footer>
 
     <!-- JAVASCRIPT -->
-
-
-    <script src="scripts/function.js"></script>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script>
-
+    <script src="/scripts/faq.js"></script>
 </body>
 
 </html>
