@@ -88,32 +88,6 @@ class DynamicChart extends HTMLElement {
       }
     }
     
-    
-    #chart-dialog {
-      padding: 1rem 2rem;
-      border-radius: 4px;
-      box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
-      position: fixed;
-      z-index: 6;
-      width: 75vw;
-      margin: 100px auto;
-      overflow-y: auto;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      right: 0;
-    }
-    
-    #chart-dialog button {
-      background-color: #ff6b35;
-      border: none;
-      color: #fff;
-      padding: 15px 20px;
-      text-decoration: none;
-      text-align: center;
-      cursor: pointer;
-    }
-    
     label[for="start-year"] {
       position: relative;
     }
@@ -135,6 +109,7 @@ class DynamicChart extends HTMLElement {
       list-style: none;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
+      padding-inline: 0;
     }
     
     #year-picker li {
