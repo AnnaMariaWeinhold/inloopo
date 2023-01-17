@@ -257,7 +257,7 @@ function dcIndices(startMoney = 10000, startIndex = 0) {
 
   yearPicker.addEventListener("click", function (event) {
     startYearControl.value = event.target.dataset.value;
-    startYearControl.dispatchEvent(new Event("change"));
+    startYearControl.dispatchEvent(new CustomEvent("change", { detail: event.target.dataset.value }));
   });
 
 
@@ -266,7 +266,7 @@ function dcIndices(startMoney = 10000, startIndex = 0) {
     debounce(600, (event) => {
       // hide year-picker list
       startYearControl.blur();
-      const year = event.path[0].value;
+      const year = event.detail;
       const startIndex = data.findIndex((row) => row[0].endsWith(year)); // picks first trading day of selected year
 
       if (startIndex > -1) {
