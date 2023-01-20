@@ -54,7 +54,6 @@ class NavBar extends HTMLElement {
         }
         
         .navbar li {
-            height: 100%;
             text-align: center;
             position: relative;
             font-size: 22px;
@@ -70,11 +69,6 @@ class NavBar extends HTMLElement {
         }
         
         .navbar ul a {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             text-decoration: none;
             padding: 20px;
             color: var(--text-color);
@@ -142,9 +136,13 @@ class NavBar extends HTMLElement {
         #toggle-button:checked ~ .toggle-button span.bar:nth-child(3) {
             transform: translateY(-10.5px) rotate(-135deg);
         }
-        
-        `
+        `;
+
+        const style = document.createElement("style");
+        style.textContent = styles;
+        this.shadowRoot.innerHTML = markup;
+        this.shadowRoot.appendChild(style);
     }
 }
 
-customElements.define('navbar', NavBar)
+customElements.define('il-navbar', NavBar);
