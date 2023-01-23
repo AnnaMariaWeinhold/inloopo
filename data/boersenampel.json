@@ -1,0 +1,49 @@
+{
+  "update_id": 306423750,
+  "message": {
+    "message_id": 6,
+    "from": {
+      "id": 640196123,
+      "is_bot": false,
+      "first_name": "Philipp Kozalla",
+      "username": "Philipp87",
+      "language_code": "de"
+    },
+    "chat": {
+      "id": 640196123,
+      "first_name": "Philipp Kozalla",
+      "username": "Philipp87",
+      "type": "private"
+    },
+    "date": 1674468094,
+    "text": "🟢 Status: 22.01.2023 🟢  Die inloopo Börsenampel ist Grün.\n\nKommentar: In den letzten Tagen habe ich mich mit einem Freund über die Börsenampel unterhalten. Dabei ist mir aufgefallen, dass die inloopo Börsenampel vergleichbar ist mit einer Fundamentalanalyse des US-Aktienmarktes.\n\nDas richtige Timing zum Kaufen und Verkaufen von Positionen zeigt die Ampel nicht an!\n\nWenn du ein Regelwerk hast, nach dem du deine Entscheidungen triffst, kannst du die inloopo Börsenampel für deine Fundamentalanalyse nutzen. Wenn nicht abonniere gerne meinen Signaldienst und ich zeige dir genau wann ich meine Positionen eröffne.\n\nMomentan bin ich noch nicht investiert, habe aber eine Kauforder platziert.\n\nIndikatoren:\n- 🟢 COT Signal\n- 🔴 S&P500 unter 52Moving Average\n- 🟢 Trend: steigend\n- 🟢 Momentum\n- 🔴 Divergenz\n- ⚪️ Spread: Kein Warnung\n\n⁉️Du bist neu hier? Ich beantworte alle deine Fragen. 😊\n🌟Schreibe gerne einen Kommentar!",
+    "entities": [
+      {
+        "offset": 3,
+        "length": 18,
+        "type": "bold"
+      },
+      {
+        "offset": 61,
+        "length": 10,
+        "type": "bold"
+      },
+      {
+        "offset": 283,
+        "length": 87,
+        "type": "bold"
+      },
+      {
+        "offset": 545,
+        "length": 12,
+        "type": "text_link",
+        "url": "https://www.inloopo.com/de/investieren"
+      },
+      {
+        "offset": 618,
+        "length": 77,
+        "type": "bold"
+      }
+    ]
+  }
+}
