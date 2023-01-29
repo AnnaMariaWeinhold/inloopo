@@ -7,13 +7,16 @@ class BoersenampelStatus extends HTMLElement {
 
   // Is executed after the web component is connected to the DOM 
   connectedCallback() {
-    fetch("/data/boersenampel.json")
+    fetch("https://christiankozalla.com/boersenampel.json")
       .then((res) => res.json())
       .then((response) => {
-        this.latest = response.message;
+        const updateIds = response.result.map((item) => item["update_id"]);
+        console.log(updateIds);
+        this.latest = response.result.find((item) => item["update_id"] === Math.max(...updateIds))?.message;
       })
       .catch((err) => console.error(err))
       .finally(() => {
+        if (!this.latest) return console.error("Did not find latest message");
         const template = document.createElement("template");
         template.innerHTML = `<div style="margin: 2rem auto; max-width: 85%; font-size: 1.1rem; padding: 1rem; border: 1px solid #ff6b35; border-radius: 8px">${
           this.render({ text: this.latest.text, actions: this.latest.entities })
