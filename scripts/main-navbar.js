@@ -101,7 +101,8 @@ template.innerHTML = `
         cursor: pointer;
     }
 
-    .sub-navbar {
+    .sub-navbar,
+    .to-sub-navbar {
       list-style: none;
       position: absolute;
       top: 70px;
@@ -114,22 +115,26 @@ template.innerHTML = `
       margin-left: 60px;
     }
 
-    .sub-navbar__dropdown {
+    .sub-navbar__dropdown,
+    .to-sub-navbar__dropdown {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
     }
     
-    .sub-navbar__dropdown:hover {
+    .sub-navbar__dropdown:hover,
+    .to-sub-navbar__dropdown:hover {
         color: #ff6b35;
     }
 
-    nav li:hover .sub-navbar {
+    nav li:hover .sub-navbar,
+    nav li:hover .to-sub-navbar {
         display: flex;
     }
 
-    .sub-navbar li a {
+    .sub-navbar li a,
+    .to-sub-navbar li a {
         justify-content: flex-start;
         font-size: 1.25rem;
     }
@@ -217,20 +222,24 @@ template.innerHTML = `
             margin-bottom: 30px;
         }
 
-        .sub-navbar__dropdown {
+        .sub-navbar__dropdown,
+        .to-sub-navbar__dropdown {
             display: block;
             margin-top: 40px;
         }
     
-        .sub-navbar__dropdown:hover .sub-navbar {
+        .sub-navbar__dropdown:hover .sub-navbar,
+        .to-sub-navbar__dropdown:hover .to-sub-navbar {
             display: none;
         }
         
-        .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar {
+        .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar
+        .to-sub-navbar__dropdown input[type="checkbox"]:checked ~ .to-sub-navbar {
             display: block;
         }
         
-        .sub-navbar {
+        .sub-navbar,
+        .to-sub-navbar {
             position: static;
             width: 100%;
             margin-left: 0;
@@ -301,20 +310,26 @@ template.innerHTML = `
             margin-bottom: 30px;
         }
 
-        .sub-navbar__dropdown {
+        .sub-navbar__dropdown,
+        .to-sub-navbar__dropdown {
             display: block;
             margin-top: 40px;
         }
     
-        .sub-navbar__dropdown:hover .sub-navbar {
+        .sub-navbar__dropdown:hover .sub-navbar,
+        .to-sub-navbar__dropdown:hover .to-sub-navbar {
             display: none;
         }
+
         
-        .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar {
+        .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar,
+        .to-sub-navbar__dropdown input[type="checkbox"]:checked ~ .to-sub-navbar {
             display: block;
         }
-        
-        .sub-navbar {
+
+    
+        .sub-navbar,
+        .to-sub-navbar {
             position: static;
             width: 100%;
             margin-left: 0;
@@ -349,6 +364,14 @@ template.innerHTML = `
             <ul class="sub-navbar">
                 <li class="navbar__li"><a class="link" href="investieren">Signaldienst</li>
                 <li class="navbar__li"><a class="link" href="wikifolio">Managed Account</li>
+            </ul>
+        </li>
+        <li class="to-sub-navbar__dropdown">
+        <input type="checkbox" id="to-sub-navbar__checkbox">
+        <label for="to-sub-navbar__checkbox" class="navbar__li">Tools</label>
+            <ul class="to-sub-navbar">
+                <li class="navbar__li"><a class="link" href="boersenampel">Börsenampel</li>
+                <li class="navbar__li"><a class="link" href="sektorenrotation">Sektorenrotation</li>
             </ul>
         </li>
         <li class="navbar__li"><a class="link" href="blog" class="nav--active">Blog</a></li>

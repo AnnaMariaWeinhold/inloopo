@@ -351,6 +351,14 @@ template.innerHTML = `
                 <li class="navbar__li"><a class="link" href="../wikifolio">Managed Account</li>
             </ul>
         </li>
+        <li class="sub-navbar__dropdown">
+        <input type="checkbox" id="sub-navbar__checkbox">
+        <label for="sub-navbar__checkbox" class="navbar__li">Tools</label>
+            <ul class="sub-navbar">
+                <li class="navbar__li"><a class="link" href="../boersenampel">Börsenampel</li>
+                <li class="navbar__li"><a class="link" href="../sektorenrotation">Sektorenrotation</li>
+            </ul>
+        </li>
         <li class="navbar__li"><a class="link" href="../blog" class="nav--active">Blog</a></li>
         <li class="navbar__li"><a class="link" href="../ueber-mich">Über</a></li>
         <li class="navbar__li"><a class="link" href="../kontakt">Kontakt</a></li>

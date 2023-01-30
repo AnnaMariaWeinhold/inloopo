@@ -1210,6 +1210,36 @@ padding: 0 15%;
 }
 
 
+/* #TOOLS OVERVIEW */
+
+.tools {
+    margin-bottom: 60px;
+    margin-left: 25px;
+    margin-right: 25px;
+}
+
+.tools__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
+
+.tools__h-two {
+    text-align: center;
+}
+
+.tools__img {
+    margin-left: 4%;
+    width: 20%;
+    height: 20%;
+}
+
+.tools__img:first-child {
+    margin-left: 0;
+}
+
 
 
 /* #FAQ */
