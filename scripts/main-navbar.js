@@ -362,16 +362,16 @@ template.innerHTML = `
         <input type="checkbox" id="sub-navbar__checkbox">
         <label for="sub-navbar__checkbox" class="navbar__li">Produkte</label>
             <ul class="sub-navbar">
-                <li class="navbar__li"><a class="link" href="investieren">Signaldienst</li>
-                <li class="navbar__li"><a class="link" href="wikifolio">Managed Account</li>
+                <li class="navbar__li"><a class="link" href="investieren">Signaldienst</a></li>
+                <li class="navbar__li"><a class="link" href="wikifolio">Managed Account</a></li>
             </ul>
         </li>
         <li class="to-sub-navbar__dropdown">
         <input type="checkbox" id="to-sub-navbar__checkbox">
         <label for="to-sub-navbar__checkbox" class="navbar__li">Tools</label>
             <ul class="to-sub-navbar">
-                <li class="navbar__li"><a class="link" href="boersenampel">Börsenampel</li>
-                <li class="navbar__li"><a class="link" href="sektorenrotation">Sektorenrotation</li>
+                <li class="navbar__li"><a class="link" href="boersenampel">Börsenampel</a></li>
+                <li class="navbar__li"><a class="link" href="sektorrotation">Sektorrotation</a></li>
             </ul>
         </li>
         <li class="navbar__li"><a class="link" href="blog" class="nav--active">Blog</a></li>

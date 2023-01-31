@@ -1240,7 +1240,95 @@ padding: 0 15%;
     margin-left: 0;
 }
 
+/* #TOOL #SECTOR ROTATION */
 
+.sectorr {
+    display: flex;
+    justify-content: center;
+    margin: 0 25px;
+}
+
+.sectorr td {
+    padding: 5px 10px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.sectorr__table-scnd {
+    margin-right: 50px;
+}
+
+.sectorr__p {
+    width: 30%;
+    margin-right: 25px;
+    margin-top: 45px;
+}
+
+.sectorr__table {
+    margin-bottom: 50px;
+}
+.sectorr__table-scnd td {
+    text-transform: none;
+    text-align: left;
+}
+
+.sectorr__table-scnd td:first-child {
+    text-transform: uppercase;
+}
+
+
+.cons {
+    background-color: #ffaa00;
+}
+
+.inft {
+    background-color: #253C78;
+}
+
+.real {
+    background-color: #124d00;
+}
+
+.util {
+    background-color: #ff2b00;
+}
+
+.finl {
+    background-color: #ff35c9;
+}
+
+.cond {
+    background-color: #ffd035;
+}
+
+.enrs {
+    background-color: #00c6b2;
+
+}
+
+.hlth {
+    background-color: #ff6040;
+}
+
+.matr {
+    background-color: #602578;
+}
+
+.tels {
+    background-color: #35c9ff;
+}
+
+.indu {
+    background-color: #6b35ff;
+}
+
+.sp {
+    background-color: #131e3c;
+}
 
 /* #FAQ */
 
