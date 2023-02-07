@@ -198,68 +198,71 @@ template.innerHTML = `
         cursor: pointer;
        }
     
-        .toggle-button {
-            display: flex;
-        }
-    
-        .navbar {
-            height: 80px;
-        }
-    
-        .navbar__ul {
-            height: min-content;
-            width: 100%;
-            background: #fff;
-            display: none;
-            position: absolute;
-            top: 80px;
-            left: 0;
-            padding-left: 40px;
-            opacity: 0.98;
-        }
+       .toggle-button {
+        display: flex;
+    }
 
-        .navbar__lang {
-            margin-bottom: 30px;
-        }
+    .navbar {
+        height: 80px;
+    }
 
-        .sub-navbar__dropdown,
-        .to-sub-navbar__dropdown {
-            display: block;
-            margin-top: 40px;
-        }
+    .navbar__ul {
+        height: min-content;
+        width: 100%;
+        background: #fff;
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        padding-right: 30px;
+        text-align: right;
+        opacity: 0.98;
+    }
+
+    .navbar__li {
+        height: min-content;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .navbar__lang {
+        margin-bottom: 30px;
+    }
+
+    .sub-navbar__dropdown,
+    .to-sub-navbar__dropdown {
+        display: block;
+        margin-top: 40px;
+    }
+
+    .sub-navbar__dropdown:hover .sub-navbar,
+    .to-sub-navbar__dropdown:hover .to-sub-navbar {
+        display: none;
+    }
+
     
-        .sub-navbar__dropdown:hover .sub-navbar,
-        .to-sub-navbar__dropdown:hover .to-sub-navbar {
-            display: none;
-        }
-        
-        .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar
-        .to-sub-navbar__dropdown input[type="checkbox"]:checked ~ .to-sub-navbar {
-            display: block;
-        }
-        
-        .sub-navbar,
-        .to-sub-navbar {
-            position: static;
-            width: 100%;
-            margin-left: 0;
-        }
-  
-        .navbar__li {
-            height: min-content;
-            width: 80%;
-        }
-        
-        .navbar__button {
-            margin-left: 20px;
-            margin-top: 20px;
-            margin-bottom: 20px;
-        }
-     
-    
-        #toggle-button:checked ~ ul {
-            display: block;
-        }
+    .sub-navbar__dropdown input[type="checkbox"]:checked ~ .sub-navbar,
+    .to-sub-navbar__dropdown input[type="checkbox"]:checked ~ .to-sub-navbar {
+        display: block;
+    }
+
+
+    .sub-navbar,
+    .to-sub-navbar {
+        position: static;
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .navbar__button {
+        margin-right: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #toggle-button:checked ~ ul {
+        display: block;
+    }
     }    
     
     @media only screen and (max-width:759px){

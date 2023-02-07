@@ -18,7 +18,7 @@ class BoersenampelStatus extends HTMLElement {
       .finally(() => {
         if (!this.latest) return console.error("Did not find latest message");
         const template = document.createElement("template");
-        template.innerHTML = `<div style="margin: 2rem auto; max-width: 85%; font-size: 1.1rem; padding: 1rem; border: 1px solid #ff6b35; border-radius: 8px">${
+        template.innerHTML = `<div style="margin: 2rem auto; max-width: 100%; font-size: 1.1rem; padding: 2rem; border: 3px solid #ff6b35">${
           this.render({ text: this.latest.text, actions: this.latest.entities })
         }</div>`;
         this.shadowRoot.appendChild(template.content.cloneNode(true));
